@@ -51,7 +51,9 @@ export default function HeroSection() {
             {/* Untitled UI Signature Display Heading */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white drop-shadow-md">
               Automate your reports.{' '}
-              <span className="block mt-1 bg-gradient-to-r from-white via-[#E9D7FE] to-[#D6BBFB] bg-clip-text text-transparent">Scale your business intelligence.</span>
+              <span className="block mt-1 bg-gradient-to-r from-[#9E77ED] via-[#B692F6] to-[#D6BBFB] bg-clip-text text-transparent">
+                Scale your business intelligence.
+              </span>
             </h1>
 
             {/* Refined Body Lead */}
