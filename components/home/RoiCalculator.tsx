@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Calculator, ArrowRight, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, Clock, Sparkles } from 'lucide-react';
 import { formatCurrencyINR } from '@/lib/utils';
 
 export default function RoiCalculator() {
@@ -24,9 +24,6 @@ export default function RoiCalculator() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
-            <Calculator className="w-3.5 h-3.5" /> INTERACTIVE ROI ESTIMATOR
-          </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
             Calculate What Manual Reporting Costs Your Business
           </h2>

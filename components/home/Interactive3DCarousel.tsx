@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight, Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, TrendingUp, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, TrendingUp } from 'lucide-react';
 
 const carouselItems = [
   {
@@ -98,9 +98,6 @@ export default function Interactive3DCarousel() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
-              <Sparkles className="w-3.5 h-3.5" /> 3D Interactive Showroom
-            </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
               Explore Live Intelligence by Industry
             </h2>

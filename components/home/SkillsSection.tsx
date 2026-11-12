@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { BarChart3, Database, FileSpreadsheet, FileText, Bot, Layers, CheckCircle2, ArrowRight, Sparkles, Cpu } from 'lucide-react';
+import { BarChart3, Database, FileSpreadsheet, FileText, Bot, Layers, CheckCircle2, ArrowRight, Cpu } from 'lucide-react';
 
 const skillsCatalog = [
   {
@@ -58,10 +58,7 @@ export default function SkillsSection() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" /> Technical Skills & Stack
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-2">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
             The Data & Automation Skills We Bring to Your Team
           </h2>
           <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">

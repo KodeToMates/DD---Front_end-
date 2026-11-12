@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Award, ArrowRight, Quote } from 'lucide-react';
+import { ArrowRight, Quote } from 'lucide-react';
 import { caseStudiesData } from '@/data/case-studies';
 
 export default function FeaturedCaseStudy() {
@@ -16,9 +16,6 @@ export default function FeaturedCaseStudy() {
           data-aos="fade-up"
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
-            <Award className="w-3.5 h-3.5" /> FEATURED TRANSFORMATION
-          </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
             Real Proof. Real Numbers. Zero Theory.
           </h2>

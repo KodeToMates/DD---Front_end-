@@ -27,10 +27,7 @@ export default function ProblemSolutionGrid() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD]">
-            THE OPERATIONAL SHIFT
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-4">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
             Why Growing Businesses Outgrow Spreadsheets
           </h2>
           <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">

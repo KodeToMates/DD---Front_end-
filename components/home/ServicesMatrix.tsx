@@ -39,10 +39,7 @@ export default function ServicesMatrix() {
             data-aos="fade-up"
             className="max-w-2xl"
           >
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD]">
-              CORE CAPABILITIES
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-4">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
               Enterprise Data Engineering & Intelligent Automation
             </h2>
             <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">

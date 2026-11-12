@@ -26,10 +26,6 @@ export default function CtaBanner({
           data-aos-duration="700"
           className="max-w-4xl mx-auto space-y-6"
         >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider shadow-2xs">
-            Zero-Disruption &bull; Rapid ROI &bull; Guaranteed Sprint
-          </span>
-
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display leading-[1.12]">
             {title}
           </h2>
