@@ -12,15 +12,25 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-white text-[#101828]">
-      {/* Background: Untitled UI Clean Subtle Radial Glow & Dot Grid */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Soft Purple Radiant Ambient Top Glow */}
-        <div className="absolute inset-0 bg-hero-subtle-glow" />
-        <div className="absolute inset-0 bg-dot-grid-light opacity-30" />
+      {/* Hero Background Image with Untitled UI Clean Radiant Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src="/Home/home-hero.jpg"
+          alt="Enterprise data analyst monitoring live business intelligence dashboards"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center lg:object-[center_right] scale-105 transition-transform duration-1000"
+        />
+        {/* Pristine readability gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/65 lg:via-white/85 lg:to-white/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-transparent to-white" />
+        <div className="absolute inset-0 bg-hero-subtle-glow opacity-50 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-dot-grid-light opacity-20" />
         
-        {/* Subtle Ambient Blur Orbs */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[450px] bg-[#9E77ED]/10 blur-[130px] rounded-full" />
-        <div className="absolute top-1/4 -right-24 w-[400px] h-[400px] bg-[#7F56D9]/8 blur-[120px] rounded-full" />
+        {/* Subtle Ambient Glow Orbs */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[450px] bg-[#9E77ED]/15 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 -right-24 w-[400px] h-[400px] bg-[#7F56D9]/10 blur-[120px] rounded-full pointer-events-none" />
       </div>
 
       {/* Floating 3D Telemetry Badges (Untitled UI White Pill Style) */}
