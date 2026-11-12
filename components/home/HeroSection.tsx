@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-white text-[#101828]">
-      {/* Hero Background Image with Clean Light Overlay */}
+      {/* Hero Background Image - 100% Pure & Zero Overlays */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/images/home-hero-final.jpg"
@@ -22,9 +22,6 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover object-center lg:object-[center_right]"
         />
-        {/* Soft Light Overlay: Clean white wash on the left for crisp text contrast, smoothly revealing the dashboard on the right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/35 z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/40 z-10 pointer-events-none" />
       </div>
 
       {/* Main Hero Content Container */}
