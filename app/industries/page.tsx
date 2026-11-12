@@ -24,7 +24,7 @@ export default function IndustriesPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Sector Solutions
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -43,10 +43,10 @@ export default function IndustriesPage() {
             return (
               <div
                 key={ind.id}
-                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-lg hover:border-[#9E77ED] transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-lg hover:border-[#0284C7] transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
               >
                 <div className="lg:col-span-7 space-y-5">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#F9F5FF] border border-[#E9D7FE] text-[#7F56D9] text-xs font-mono font-bold uppercase tracking-wider">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#F0F9FF] border border-[#BAE6FD] text-[#0284C7] text-xs font-mono font-bold uppercase tracking-wider">
                     <Icon className="w-4 h-4" /> {ind.title}
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#101828] tracking-tight">
@@ -71,7 +71,7 @@ export default function IndustriesPage() {
                   <div className="pt-4 flex items-center gap-4">
                     <Link
                       href={`/industries/${ind.slug}`}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white text-xs sm:text-sm font-semibold shadow-xs transition-all"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs sm:text-sm font-semibold shadow-xs transition-all"
                     >
                       <span>Industry Walkthrough</span>
                       <ArrowRight className="w-4 h-4" />
@@ -79,14 +79,14 @@ export default function IndustriesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 bg-[#F9F5FF] border border-[#D6BBFB] rounded-2xl p-6 sm:p-8 space-y-4">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6941C6] block">
+                <div className="lg:col-span-5 bg-[#F0F9FF] border border-[#BAE6FD] rounded-2xl p-6 sm:p-8 space-y-4">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0369A1] block">
                     Proven Transformation
                   </span>
                   <h4 className="text-base font-bold text-[#101828] font-display leading-snug">
                     {ind.caseStudyHighlight.clientType}
                   </h4>
-                  <div className="p-3.5 rounded-xl bg-white border border-[#D6BBFB] text-xs text-[#027A48] font-semibold font-mono shadow-2xs">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#BAE6FD] text-xs text-[#027A48] font-semibold font-mono shadow-2xs">
                     {ind.caseStudyHighlight.metrics}
                   </div>
                   <p className="text-xs text-[#475467] leading-relaxed font-body">

@@ -19,7 +19,7 @@ export default function FeaturedCaseStudy() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
             <Award className="w-3.5 h-3.5" /> FEATURED TRANSFORMATION
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
@@ -32,11 +32,11 @@ export default function FeaturedCaseStudy() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="rounded-3xl bg-[#F9FAFB] border border-[#D6BBFB] p-8 sm:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+          className="rounded-3xl bg-[#F9FAFB] border border-[#BAE6FD] p-8 sm:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
         >
           {/* Left Summary (7 Cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-xs font-mono font-bold text-[#7F56D9] uppercase tracking-widest block">
+            <span className="text-xs font-mono font-bold text-[#0284C7] uppercase tracking-widest block">
               {featured.clientProfile}
             </span>
 
@@ -49,8 +49,8 @@ export default function FeaturedCaseStudy() {
             </p>
 
             {/* Testimonial Quote */}
-            <div className="p-6 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs relative">
-              <Quote className="w-6 h-6 text-[#7F56D9] mb-2 opacity-70" />
+            <div className="p-6 rounded-2xl bg-white border border-[#BAE6FD] shadow-xs relative">
+              <Quote className="w-6 h-6 text-[#0284C7] mb-2 opacity-70" />
               <p className="text-xs sm:text-sm italic text-[#344054] leading-relaxed font-body">
                 &ldquo;{featured.quote.text}&rdquo;
               </p>
@@ -63,7 +63,7 @@ export default function FeaturedCaseStudy() {
             <div>
               <Link
                 href="/resources/case-studies"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#7F56D9] hover:text-[#6941C6] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0284C7] hover:text-[#0369A1] transition-colors"
               >
                 <span>Read All Case Studies</span>
                 <ArrowRight className="w-4 h-4" />
@@ -76,10 +76,10 @@ export default function FeaturedCaseStudy() {
             {featured.quantifiedResults.map((res, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-colors flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-white border border-[#BAE6FD] shadow-xs hover:border-[#0284C7] transition-colors flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-2xl sm:text-4xl font-extrabold text-[#7F56D9] tracking-tight font-display">
+                  <span className="text-2xl sm:text-4xl font-extrabold text-[#0284C7] tracking-tight font-display">
                     {res.metric}
                   </span>
                   <span className="text-xs font-bold text-[#101828] block mt-0.5 font-display">

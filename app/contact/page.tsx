@@ -67,7 +67,7 @@ export default function ContactPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Connect With A Principal Architect
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -84,13 +84,13 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Left Column: Direct Calendar Scheduler (6 Cols) */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs space-y-6">
+              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center">
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Direct Slot Reservation</span>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Direct Slot Reservation</span>
                     <h2 className="text-xl sm:text-2xl font-bold font-display text-[#101828]">Book via Online Calendar</h2>
                   </div>
                 </div>
@@ -100,10 +100,10 @@ export default function ContactPage() {
                 </p>
 
                 {/* Simulated Interactive Calendar Box */}
-                <div className="p-6 rounded-2xl bg-[#F9F5FF] border border-[#D6BBFB] space-y-4">
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E9D7FE] text-xs">
+                <div className="p-6 rounded-2xl bg-[#F0F9FF] border border-[#BAE6FD] space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#BAE6FD] text-xs">
                     <span className="font-semibold text-[#475467]">Strategy Call Duration:</span>
-                    <span className="font-mono text-[#7F56D9] font-bold">30 Minutes</span>
+                    <span className="font-mono text-[#0284C7] font-bold">30 Minutes</span>
                   </div>
 
                   <div className="space-y-2 text-xs text-[#475467]">
@@ -125,7 +125,7 @@ export default function ContactPage() {
                     href="https://calendly.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white text-sm font-semibold shadow-xs hover:shadow-md transition-all"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white text-sm font-semibold shadow-xs hover:shadow-md transition-all"
                   >
                     <span>Open Live Calendar & Pick Slot</span>
                     <ArrowRight className="w-4 h-4" />
@@ -154,27 +154,27 @@ export default function ContactPage() {
               </div>
 
               {/* Direct Details Card */}
-              <div className="p-6 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs space-y-3 text-xs text-[#475467] font-body">
+              <div className="p-6 rounded-2xl bg-white border border-[#BAE6FD] shadow-xs space-y-3 text-xs text-[#475467] font-body">
                 <div className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-[#7F56D9]" />
+                  <Phone className="w-4 h-4 text-[#0284C7]" />
                   <span>
                     <strong>Direct Phone / WhatsApp:</strong>{' '}
-                    <a href={CONTACT_INFO.phoneHref} className="hover:text-[#7F56D9] font-medium text-[#101828]">
+                    <a href={CONTACT_INFO.phoneHref} className="hover:text-[#0284C7] font-medium text-[#101828]">
                       {CONTACT_INFO.phoneDisplay}
                     </a>
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-[#7F56D9]" />
+                  <Mail className="w-4 h-4 text-[#0284C7]" />
                   <span>
                     <strong>Official Email:</strong>{' '}
-                    <a href={CONTACT_INFO.emailHref} className="hover:text-[#7F56D9]">
+                    <a href={CONTACT_INFO.emailHref} className="hover:text-[#0284C7]">
                       {CONTACT_INFO.email}
                     </a>
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-[#7F56D9]" />
+                  <Clock className="w-4 h-4 text-[#0284C7]" />
                   <span><strong>SLA Guarantee:</strong> {CONTACT_INFO.slaGuarantee}</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -186,13 +186,13 @@ export default function ContactPage() {
 
             {/* Right Column: Inquiry Form (6 Cols) */}
             <div className="lg:col-span-6">
-              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs space-y-6">
+              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Inquiry & Scope Submission</span>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Inquiry & Scope Submission</span>
                     <h2 className="text-xl sm:text-2xl font-bold font-display text-[#101828]">Request A Free Data Audit</h2>
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="e.g. Rajesh Sharma"
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] shadow-2xs"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] shadow-2xs"
                         />
                       </div>
                       <div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                           placeholder="e.g. Precision Auto Pvt Ltd"
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] shadow-2xs"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] shadow-2xs"
                         />
                       </div>
                     </div>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="rajesh@company.com"
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] shadow-2xs"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] shadow-2xs"
                         />
                       </div>
                       <div>
@@ -260,7 +260,7 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+91 98765 43210"
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] shadow-2xs"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] shadow-2xs"
                         />
                       </div>
                     </div>
@@ -273,7 +273,7 @@ export default function ContactPage() {
                         <select
                           value={formData.industry}
                           onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] bg-white shadow-2xs"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] bg-white shadow-2xs"
                         >
                           <option value="Manufacturing">Manufacturing & Industrial</option>
                           <option value="Finance">Finance & Banking / NBFC</option>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] bg-white shadow-2xs"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] bg-white shadow-2xs"
                         >
                           <option value="Power BI Solutions">Power BI Dashboard Setup</option>
                           <option value="MIS Reporting">Automated MIS Flash Reporting</option>
@@ -311,14 +311,14 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="e.g. Month-end reports take 8 days in Excel. We want automated daily Power BI dashboards connected to Tally."
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#7F56D9] focus:border-[#7F56D9] text-sm text-[#101828] shadow-2xs"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] focus:outline-none focus:ring-2 focus:ring-[#0284C7] focus:border-[#0284C7] text-sm text-[#101828] shadow-2xs"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       <span>{isSubmitting ? 'Submitting Audit Request...' : 'Submit Audit Request'}</span>
                       <ArrowRight className="w-4 h-4" />

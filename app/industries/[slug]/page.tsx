@@ -44,11 +44,11 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/industries" className="hover:text-[#101828]">Industries</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#7F56D9] font-medium">{ind.title}</span>
+            <span className="text-[#0284C7] font-medium">{ind.title}</span>
           </div>
 
           <div className="max-w-3xl space-y-6">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider">
               {ind.tagline}
             </span>
 
@@ -63,7 +63,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
             <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-semibold text-sm shadow-xs transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm shadow-xs transition-all"
               >
                 <span>Schedule {ind.title.split('&')[0]} BI Walkthrough</span>
                 <ArrowRight className="w-4 h-4" />
@@ -77,7 +77,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       <section className="py-20 bg-[#F9FAFB] border-b border-[#EAECF0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
               Root Causes
             </span>
             <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">
@@ -87,8 +87,8 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {ind.challenges.map((c, idx) => (
-              <div key={idx} className="p-8 rounded-2xl bg-white border border-[#D6BBFB] hover:border-[#9E77ED] shadow-xs space-y-3">
-                <span className="text-xs font-mono font-bold text-[#7F56D9] px-2.5 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] inline-block">
+              <div key={idx} className="p-8 rounded-2xl bg-white border border-[#BAE6FD] hover:border-[#0284C7] shadow-xs space-y-3">
+                <span className="text-xs font-mono font-bold text-[#0284C7] px-2.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] inline-block">
                   Bottleneck #{idx + 1}
                 </span>
                 <h3 className="text-lg font-bold text-[#101828] font-display">{c.problem}</h3>
@@ -103,7 +103,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       <section className="py-20 bg-white border-b border-[#EAECF0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
               Executive Metrics
             </span>
             <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">
@@ -116,12 +116,12 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ind.trackedKpis.map((kpi, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] shadow-xs space-y-2">
+              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD] shadow-xs space-y-2">
                 <span className="text-xs text-[#667085] font-semibold block uppercase tracking-wider font-body">
                   Frequency: {kpi.frequency}
                 </span>
                 <h4 className="text-base font-bold text-[#101828] font-display">{kpi.name}</h4>
-                <div className="pt-2 text-2xl font-extrabold text-[#7F56D9] font-mono">
+                <div className="pt-2 text-2xl font-extrabold text-[#0284C7] font-mono">
                   {kpi.target}
                 </div>
               </div>
@@ -133,21 +133,21 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       {/* Case Study Benchmark Highlight */}
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-sm space-y-6">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
+          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#BAE6FD] shadow-sm space-y-6">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
               Real-World Verified Benchmark
             </span>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#101828] font-display leading-snug">
               {ind.caseStudyHighlight.clientType}
             </h3>
-            <div className="p-4 rounded-xl bg-[#F9F5FF] border border-[#E9D7FE] text-[#027A48] font-mono font-bold text-sm sm:text-base">
+            <div className="p-4 rounded-xl bg-[#F0F9FF] border border-[#BAE6FD] text-[#027A48] font-mono font-bold text-sm sm:text-base">
               {ind.caseStudyHighlight.metrics}
             </div>
             <p className="text-sm sm:text-base text-[#475467] leading-relaxed font-body">
               {ind.caseStudyHighlight.summary}
             </p>
             <div className="pt-2">
-              <Link href="/resources/case-studies" className="text-sm font-semibold text-[#7F56D9] hover:text-[#6941C6] transition-colors">
+              <Link href="/resources/case-studies" className="text-sm font-semibold text-[#0284C7] hover:text-[#0369A1] transition-colors">
                 Read Detailed Case Studies &rarr;
               </Link>
             </div>

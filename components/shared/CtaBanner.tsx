@@ -17,8 +17,8 @@ export default function CtaBanner({
 }: CtaBannerProps) {
   return (
     <section className="py-24 bg-[#F9FAFB] text-[#101828] relative overflow-hidden border-t border-[#EAECF0]">
-      {/* Subtle Purple Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#9E77ED]/12 blur-[140px] rounded-full pointer-events-none" />
+      {/* Subtle Cyan Ambient Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0284C7]/12 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div 
@@ -28,7 +28,7 @@ export default function CtaBanner({
           transition={{ duration: 0.7 }}
           className="max-w-4xl mx-auto space-y-6"
         >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold uppercase tracking-wider shadow-2xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider shadow-2xs">
             Zero-Disruption &bull; Rapid ROI &bull; Guaranteed Sprint
           </span>
 
@@ -43,7 +43,7 @@ export default function CtaBanner({
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
             >
               <span>Book 30-Min Strategy Call</span>
               <ArrowRight className="w-4 h-4" />

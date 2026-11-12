@@ -38,34 +38,34 @@ export default function HeroSection() {
             {/* Untitled UI Style Eyebrow Pill */}
             <Link
               href="#skills"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-white/20 text-xs font-semibold text-[#D6BBFB] shadow-md hover:bg-black/70 backdrop-blur-md transition-colors"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-white/20 text-xs font-semibold text-[#38BDF8] shadow-md hover:bg-black/70 backdrop-blur-md transition-colors"
             >
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9E77ED] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#9E77ED]" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#02B8FD] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#02B8FD]" />
               </span>
               <span className="font-body font-medium text-white">Core Skills: Power BI &bull; SQL &bull; Excel &bull; MIS &bull; RPA</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#D6BBFB]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#38BDF8]" />
             </Link>
 
             {/* Untitled UI Signature Display Heading */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
               Automate your reports.{' '}
-              <span className="block mt-1 bg-gradient-to-r from-[#B692F6] via-[#D6BBFB] to-[#ECE9FE] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(127,86,217,0.5)]">
+              <span className="block mt-1 bg-gradient-to-r from-[#02B8FD] via-[#38BDF8] to-white bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(2,132,199,0.5)]">
                 Scale your business intelligence.
               </span>
             </h1>
 
             {/* Refined Body Lead */}
             <p className="text-base sm:text-lg text-white max-w-xl mx-auto lg:mx-0 leading-relaxed font-body drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] font-medium">
-              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-bold underline decoration-[#9E77ED] underline-offset-4">Power BI dashboards</strong>, <strong className="text-white font-bold underline decoration-[#9E77ED] underline-offset-4">SQL data pipelines</strong>, and <strong className="text-white font-bold underline decoration-[#9E77ED] underline-offset-4">RPA bots</strong> built specifically for growing mid-market enterprises.
+              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">Power BI dashboards</strong>, <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">SQL data pipelines</strong>, and <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">RPA bots</strong> built specifically for growing mid-market enterprises.
             </p>
 
             {/* Dual CTA Buttons - Untitled UI Styling */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-lg shadow-[#7F56D9]/35 hover:shadow-xl hover:shadow-[#7F56D9]/50 active:scale-98 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-body font-semibold text-sm shadow-lg shadow-[#0284C7]/35 hover:shadow-xl hover:shadow-[#0284C7]/50 active:scale-98 transition-all"
               >
                 <span>Book 30-Min Strategy Call</span>
                 <ArrowRight className="w-4 h-4" />
@@ -105,8 +105,8 @@ export default function HeroSection() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {/* Ambient Purple Backdrop Shadow */}
-            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-[#7F56D9]/15 to-[#9E77ED]/10 blur-2xl opacity-70 pointer-events-none" />
+            {/* Ambient Cyan Backdrop Shadow */}
+            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-[#0284C7]/20 to-[#02B8FD]/15 blur-2xl opacity-70 pointer-events-none" />
 
             {/* 3D Tilted Mac Browser Window Frame */}
             <motion.div
@@ -116,7 +116,7 @@ export default function HeroSection() {
                 scale: isHovered ? 1.02 : 1,
               }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="relative rounded-2xl bg-white border border-[#D6BBFB] p-5 sm:p-6 shadow-2xl transition-all preserve-3d"
+              className="relative rounded-2xl bg-white border border-[#BAE6FD] p-5 sm:p-6 shadow-2xl transition-all preserve-3d"
             >
               {/* Browser Window Bar */}
               <div className="flex items-center justify-between pb-3.5 border-b border-[#F2F4F7]">
@@ -133,12 +133,12 @@ export default function HeroSection() {
               </div>
 
               {/* View Selector Tabs - Untitled UI Style */}
-              <div className="flex items-center gap-1.5 p-1 bg-[#F9FAFB] border border-[#D6BBFB] rounded-xl mt-4 mb-4 text-xs font-body font-semibold">
+              <div className="flex items-center gap-1.5 p-1 bg-[#F9FAFB] border border-[#BAE6FD] rounded-xl mt-4 mb-4 text-xs font-body font-semibold">
                 <button
                   type="button"
                   onClick={() => setActiveTab('executive')}
                   className={`flex-1 py-1.5 rounded-lg transition-all ${activeTab === 'executive'
-                    ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
+                    ? 'bg-white text-[#0284C7] shadow-xs font-bold'
                     : 'text-[#667085] hover:text-[#101828]'
                     }`}
                 >
@@ -148,7 +148,7 @@ export default function HeroSection() {
                   type="button"
                   onClick={() => setActiveTab('operations')}
                   className={`flex-1 py-1.5 rounded-lg transition-all ${activeTab === 'operations'
-                    ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
+                    ? 'bg-white text-[#0284C7] shadow-xs font-bold'
                     : 'text-[#667085] hover:text-[#101828]'
                     }`}
                 >
@@ -158,7 +158,7 @@ export default function HeroSection() {
                   type="button"
                   onClick={() => setActiveTab('cashflow')}
                   className={`flex-1 py-1.5 rounded-lg transition-all ${activeTab === 'cashflow'
-                    ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
+                    ? 'bg-white text-[#0284C7] shadow-xs font-bold'
                     : 'text-[#667085] hover:text-[#101828]'
                     }`}
                 >
@@ -178,14 +178,14 @@ export default function HeroSection() {
                     className="space-y-3"
                   >
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                         <span className="text-[11px] text-[#667085] block font-medium">Monthly Revenue</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">₹48.6 Cr</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
                           <TrendingUp className="w-3 h-3" /> +16.2% vs target
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                         <span className="text-[11px] text-[#667085] block font-medium">Gross Margin</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">27.4%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
@@ -195,18 +195,18 @@ export default function HeroSection() {
                     </div>
 
                     {/* Interactive Live Sparkline Graph */}
-                    <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                    <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                       <div className="flex items-center justify-between text-xs mb-2">
                         <span className="text-[#344054] font-semibold text-[11px]">DISPATCH RUN-RATE</span>
-                        <span className="text-[#7F56D9] font-mono text-[11px] font-semibold">DAILY 8:00 AM SYNC</span>
+                        <span className="text-[#0284C7] font-mono text-[11px] font-semibold">DAILY 8:00 AM SYNC</span>
                       </div>
                       <div className="h-16 flex items-end gap-2 pt-2">
-                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#7F56D9] rounded-t transition-colors h-[40%]" />
-                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#7F56D9] rounded-t transition-colors h-[55%]" />
-                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#7F56D9] rounded-t transition-colors h-[48%]" />
-                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#7F56D9] rounded-t transition-colors h-[72%]" />
-                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#7F56D9] rounded-t transition-colors h-[84%]" />
-                        <div className="flex-1 bg-[#7F56D9] rounded-t transition-colors h-[100%]" />
+                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#0284C7] rounded-t transition-colors h-[40%]" />
+                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#0284C7] rounded-t transition-colors h-[55%]" />
+                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#0284C7] rounded-t transition-colors h-[48%]" />
+                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#0284C7] rounded-t transition-colors h-[72%]" />
+                        <div className="flex-1 bg-[#D0D5DD] hover:bg-[#0284C7] rounded-t transition-colors h-[84%]" />
+                        <div className="flex-1 bg-[#0284C7] rounded-t transition-colors h-[100%]" />
                       </div>
                     </div>
                   </motion.div>
@@ -222,14 +222,14 @@ export default function HeroSection() {
                     className="space-y-3"
                   >
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                         <span className="text-[11px] text-[#667085] block font-medium">Plant OEE</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">86.2%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
                           Target: &gt;85% Met
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                         <span className="text-[11px] text-[#667085] block font-medium">Scrap Rate</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">1.6%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
@@ -253,14 +253,14 @@ export default function HeroSection() {
                     className="space-y-3"
                   >
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                         <span className="text-[11px] text-[#667085] block font-medium">Debtor DSO</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">41 Days</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
                           -11 Days faster
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD]">
                         <span className="text-[11px] text-[#667085] block font-medium">Bank Reconciled</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">100%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
@@ -268,7 +268,7 @@ export default function HeroSection() {
                         </span>
                       </div>
                     </div>
-                    <div className="p-3 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB] text-xs text-[#344054] flex items-center justify-between">
+                    <div className="p-3 rounded-xl bg-[#F9FAFB] border border-[#BAE6FD] text-xs text-[#344054] flex items-center justify-between">
                       <span className="text-[11px] text-[#667085]">90-DAY CASH FORECAST:</span>
                       <strong className="text-[#101828]">₹6.8 Cr BUFFER</strong>
                     </div>
@@ -300,7 +300,7 @@ export default function HeroSection() {
             animate={{ y: [0, 4, 0] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <ChevronDown className="w-4 h-4 text-[#D6BBFB]" />
+            <ChevronDown className="w-4 h-4 text-[#38BDF8]" />
           </motion.div>
         </a>
       </div>

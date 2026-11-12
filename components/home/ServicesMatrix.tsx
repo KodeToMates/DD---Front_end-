@@ -42,7 +42,7 @@ export default function ServicesMatrix() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9] px-3.5 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE]">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD]">
               CORE CAPABILITIES
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-4">
@@ -54,7 +54,7 @@ export default function ServicesMatrix() {
           </motion.div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-body font-semibold text-[#7F56D9] hover:text-[#6941C6] shrink-0 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-body font-semibold text-[#0284C7] hover:text-[#0369A1] shrink-0 transition-colors"
           >
             <span>Compare All Services</span>
             <ArrowRight className="w-4 h-4" />
@@ -77,23 +77,23 @@ export default function ServicesMatrix() {
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className={`group p-8 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-xl hover:border-[#9E77ED] transition-all flex flex-col justify-between relative overflow-hidden ${
-                  isFeatured ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-[#F9F5FF]/50 border-2 border-[#7F56D9]' : ''
+                className={`group p-8 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-xl hover:border-[#0284C7] transition-all flex flex-col justify-between relative overflow-hidden ${
+                  isFeatured ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-[#F0F9FF]/50 border-2 border-[#0284C7]' : ''
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs">
                       <Icon className="w-6 h-6" />
                     </div>
                     {isFeatured && (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] text-[#6941C6] border border-[#E9D7FE] text-xs font-mono font-bold">
-                        <Sparkles className="w-3.5 h-3.5 text-[#7F56D9]" /> FLAGSHIP OFFERING
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] text-[#0369A1] border border-[#BAE6FD] text-xs font-mono font-bold">
+                        <Sparkles className="w-3.5 h-3.5 text-[#0284C7]" /> FLAGSHIP OFFERING
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-2xl font-bold font-display text-[#101828] group-hover:text-[#7F56D9] transition-colors">
+                  <h3 className="text-2xl font-bold font-display text-[#101828] group-hover:text-[#0284C7] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-sm text-[#475467] font-body mt-3 leading-relaxed">
@@ -116,7 +116,7 @@ export default function ServicesMatrix() {
                   </span>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7F56D9] group-hover:translate-x-1 transition-transform"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0284C7] group-hover:translate-x-1 transition-transform"
                   >
                     <span>View Specifications</span>
                     <ArrowRight className="w-3.5 h-3.5" />

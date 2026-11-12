@@ -45,9 +45,9 @@ export default function MetricsBar() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-6 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-md hover:border-[#9E77ED] transition-all flex flex-col items-center sm:items-start text-center sm:text-left"
+                className="p-6 rounded-2xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-md hover:border-[#0284C7] transition-all flex flex-col items-center sm:items-start text-center sm:text-left"
               >
-                <div className="w-11 h-11 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center mb-4 shadow-2xs">
+                <div className="w-11 h-11 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center mb-4 shadow-2xs">
                   <Icon className="w-5 h-5" />
                 </div>
                 <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#101828] font-display">

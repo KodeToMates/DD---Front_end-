@@ -27,3 +27,4 @@ export const CONTACT_INFO = {
 } as const;
 
 export default CONTACT_INFO;
+

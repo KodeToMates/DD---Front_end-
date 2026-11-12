@@ -15,7 +15,7 @@ export default function CaseStudiesPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Verified Transformations
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -32,11 +32,11 @@ export default function CaseStudiesPage() {
           {caseStudiesData.map((study) => (
             <div
               key={study.id}
-              className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+              className="p-8 sm:p-12 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:border-[#0284C7] transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
             >
               <div className="lg:col-span-7 space-y-5">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#7F56D9]">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0284C7]">
                     {study.clientIndustry.toUpperCase()}
                   </span>
                   <span className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-[#F2F4F7] text-[#475467]">
@@ -58,8 +58,8 @@ export default function CaseStudiesPage() {
                 </div>
 
                 {/* Quote */}
-                <div className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] relative">
-                  <Quote className="w-5 h-5 text-[#7F56D9] mb-2 opacity-80" />
+                <div className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD] relative">
+                  <Quote className="w-5 h-5 text-[#0284C7] mb-2 opacity-80" />
                   <p className="text-xs sm:text-sm italic text-[#344054] leading-relaxed font-body">
                     &ldquo;{study.quote.text}&rdquo;
                   </p>
@@ -73,9 +73,9 @@ export default function CaseStudiesPage() {
               {/* Quantified Results Grid */}
               <div className="lg:col-span-5 grid grid-cols-2 gap-4">
                 {study.quantifiedResults.map((res, i) => (
-                  <div key={i} className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] flex flex-col justify-between">
+                  <div key={i} className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD] flex flex-col justify-between">
                     <div>
-                      <span className="text-2xl sm:text-3xl font-extrabold text-[#7F56D9] font-mono tracking-tight block">
+                      <span className="text-2xl sm:text-3xl font-extrabold text-[#0284C7] font-mono tracking-tight block">
                         {res.metric}
                       </span>
                       <span className="text-xs font-bold text-[#101828] block mt-0.5 font-display">

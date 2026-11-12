@@ -41,7 +41,7 @@ export default function OurApproachPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Engineering Methodology
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -58,10 +58,10 @@ export default function OurApproachPage() {
           {steps.map((st, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-colors grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
+              className="p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:border-[#0284C7] transition-colors grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
             >
               <div className="md:col-span-3">
-                <span className="text-4xl sm:text-5xl font-extrabold text-[#7F56D9] font-mono block">
+                <span className="text-4xl sm:text-5xl font-extrabold text-[#0284C7] font-mono block">
                   {st.step}
                 </span>
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#667085] mt-1 block">

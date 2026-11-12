@@ -92,13 +92,13 @@ export default function Interactive3DCarousel() {
   return (
     <section className="py-24 lg:py-32 bg-[#F9FAFB] text-[#101828] border-b border-[#EAECF0] relative overflow-hidden">
       {/* Background Subtle Gradient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-[#9E77ED]/8 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-[#0284C7]/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" /> 3D Interactive Showroom
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display">
@@ -114,14 +114,14 @@ export default function Interactive3DCarousel() {
             <button
               onClick={prevSlide}
               aria-label="Previous industry slide"
-              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#7F56D9] text-[#344054] hover:text-[#7F56D9] shadow-xs flex items-center justify-center transition-all active:scale-95"
+              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#0284C7] text-[#344054] hover:text-[#0284C7] shadow-xs flex items-center justify-center transition-all active:scale-95"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next industry slide"
-              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#7F56D9] text-[#344054] hover:text-[#7F56D9] shadow-xs flex items-center justify-center transition-all active:scale-95"
+              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#0284C7] text-[#344054] hover:text-[#0284C7] shadow-xs flex items-center justify-center transition-all active:scale-95"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -145,16 +145,16 @@ export default function Interactive3DCarousel() {
                       animate={{ opacity: 1, rotateY: 0, scale: 1 }}
                       exit={{ opacity: 0, rotateY: -15, scale: 0.95 }}
                       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                      className="rounded-3xl bg-white border border-[#D6BBFB] p-8 sm:p-10 shadow-xl relative overflow-hidden"
+                      className="rounded-3xl bg-white border border-[#BAE6FD] p-8 sm:p-10 shadow-xl relative overflow-hidden"
                     >
                       {/* Top Bar with Badge */}
                       <div className="flex items-center justify-between pb-6 border-b border-[#F2F4F7]">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 rounded-2xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center shadow-xs">
+                          <div className="w-12 h-12 rounded-2xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shadow-xs">
                             <Icon className="w-6 h-6" />
                           </div>
                           <div>
-                            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
+                            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
                               {current.tag}
                             </span>
                             <h3 className="text-xl sm:text-2xl font-bold font-display text-[#101828]">
@@ -184,7 +184,7 @@ export default function Interactive3DCarousel() {
                         {current.kpis.map((kpi, idx) => (
                           <div
                             key={idx}
-                            className="p-4 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] space-y-1"
+                            className="p-4 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD] space-y-1"
                           >
                             <span className="text-xs text-[#667085] font-body block">{kpi.label}</span>
                             <div className="text-2xl font-bold font-display text-[#101828] tracking-tight">
@@ -201,7 +201,7 @@ export default function Interactive3DCarousel() {
                       <div className="pt-6 border-t border-[#F2F4F7] flex flex-col sm:flex-row items-center justify-between gap-4">
                         <Link
                           href={current.link}
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-[#7F56D9] hover:text-[#6941C6] transition-colors"
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-[#0284C7] hover:text-[#0369A1] transition-colors"
                         >
                           <span>Explore Full {current.title.split('&')[0]} Architecture</span>
                           <ArrowRight className="w-4 h-4" />
@@ -209,7 +209,7 @@ export default function Interactive3DCarousel() {
 
                         <Link
                           href="/contact"
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white text-xs font-semibold shadow-xs transition-all"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs font-semibold shadow-xs transition-all"
                         >
                           <span>Request Demo Walkthrough</span>
                         </Link>
@@ -235,13 +235,13 @@ export default function Interactive3DCarousel() {
                     onClick={() => setCurrentIndex(idx)}
                     className={`w-full text-left p-4 rounded-2xl transition-all flex items-center justify-between border ${
                       isActive
-                        ? 'bg-white border-[#7F56D9] shadow-md scale-102 ring-2 ring-[#7F56D9]/15'
-                        : 'bg-white/60 hover:bg-white border-[#D6BBFB] hover:border-[#9E77ED] text-[#475467]'
+                        ? 'bg-white border-[#0284C7] shadow-md scale-102 ring-2 ring-[#0284C7]/15'
+                        : 'bg-white/60 hover:bg-white border-[#BAE6FD] hover:border-[#0284C7] text-[#475467]'
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors ${
-                        isActive ? 'bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE]' : 'bg-[#F2F4F7] text-[#667085]'
+                        isActive ? 'bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD]' : 'bg-[#F2F4F7] text-[#667085]'
                       }`}>
                         <Icon className="w-4 h-4" />
                       </div>
@@ -256,7 +256,7 @@ export default function Interactive3DCarousel() {
                     </div>
 
                     <ArrowRight className={`w-4 h-4 shrink-0 transition-transform ${
-                      isActive ? 'text-[#7F56D9] translate-x-1' : 'text-[#D0D5DD]'
+                      isActive ? 'text-[#0284C7] translate-x-1' : 'text-[#D0D5DD]'
                     }`} />
                   </button>
                 );
@@ -273,7 +273,7 @@ export default function Interactive3DCarousel() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2.5 rounded-full transition-all ${
                   idx === currentIndex
-                    ? 'w-8 bg-[#7F56D9]'
+                    ? 'w-8 bg-[#0284C7]'
                     : 'w-2.5 bg-[#D0D5DD] hover:bg-[#98A2B3]'
                 }`}
               />

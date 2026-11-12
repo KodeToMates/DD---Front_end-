@@ -30,7 +30,7 @@ export default function ProblemSolutionGrid() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9] px-3.5 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE]">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD]">
             THE OPERATIONAL SHIFT
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-4">
@@ -76,18 +76,18 @@ export default function ProblemSolutionGrid() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="p-8 sm:p-10 rounded-3xl bg-white border-2 border-[#7F56D9] shadow-xl relative overflow-hidden"
+            className="p-8 sm:p-10 rounded-3xl bg-white border-2 border-[#0284C7] shadow-xl relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 px-4 py-1.5 rounded-bl-2xl bg-[#7F56D9] text-white text-[11px] font-mono font-bold tracking-wider uppercase shadow-xs">
+            <div className="absolute top-0 right-0 px-4 py-1.5 rounded-bl-2xl bg-[#0284C7] text-white text-[11px] font-mono font-bold tracking-wider uppercase shadow-xs">
               DataLive Standard
             </div>
 
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center font-bold">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#7F56D9]">The Autonomous Future</span>
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#0284C7]">The Autonomous Future</span>
                 <h3 className="text-xl font-bold font-display text-[#101828]">The DataLive Advantage</h3>
               </div>
             </div>
@@ -101,9 +101,9 @@ export default function ProblemSolutionGrid() {
               ))}
             </ul>
 
-            <div className="mt-8 pt-6 border-t border-[#D6BBFB] flex items-center justify-between">
+            <div className="mt-8 pt-6 border-t border-[#BAE6FD] flex items-center justify-between">
               <span className="text-xs text-[#667085] font-body">Ready to break the cycle?</span>
-              <Link href="/contact" className="text-xs font-semibold text-[#7F56D9] hover:text-[#6941C6] flex items-center gap-1.5 transition-colors">
+              <Link href="/contact" className="text-xs font-semibold text-[#0284C7] hover:text-[#0369A1] flex items-center gap-1.5 transition-colors">
                 Book a Free Data Audit &rarr;
               </Link>
             </div>

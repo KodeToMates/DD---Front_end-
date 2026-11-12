@@ -11,7 +11,7 @@ const skillsCatalog = [
     icon: BarChart3,
     level: 'Expert / Enterprise Grade',
     skills: ['Advanced DAX Calculations', 'Star-Schema Semantic Modeling', 'On-Premises Data Gateway', 'Mobile Executive Views', 'Row-Level Security (RLS)'],
-    badgeColor: 'bg-[#F9F5FF] text-[#7F56D9] border-[#E9D7FE]',
+    badgeColor: 'bg-[#F0F9FF] text-[#0284C7] border-[#BAE6FD]',
   },
   {
     category: 'SQL & Database Engineering',
@@ -61,7 +61,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Technical Skills & Stack
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -83,11 +83,11 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-xl hover:border-[#9E77ED] transition-all flex flex-col justify-between"
+                className="p-8 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-xl hover:border-[#0284C7] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center shadow-2xs">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shadow-2xs">
                       <Icon className="w-6 h-6" />
                     </div>
                     <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
@@ -113,7 +113,7 @@ export default function SkillsSection() {
                   <span className="text-xs text-[#667085] font-body">Production Ready</span>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-[#7F56D9] hover:text-[#6941C6] transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-[#0284C7] hover:text-[#0369A1] transition-colors"
                   >
                     <span>Consult on this skill</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -83,12 +83,12 @@ export default function Header() {
   return (
     <>
       {/* Top Value Banner - Untitled UI Style */}
-      <div className="bg-[#F9F5FF] text-[#6941C6] text-xs py-2 px-4 border-b border-[#E9D7FE] text-center flex items-center justify-center gap-2">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-[#7F56D9] font-mono font-bold text-[10px] uppercase tracking-wider border border-[#E9D7FE] shadow-2xs">
-          <Sparkles className="w-3 h-3 text-[#7F56D9]" /> PROVEN IMPACT
+      <div className="bg-[#F0F9FF] text-[#0369A1] text-xs py-2 px-4 border-b border-[#BAE6FD] text-center flex items-center justify-center gap-2">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-[#0284C7] font-mono font-bold text-[10px] uppercase tracking-wider border border-[#BAE6FD] shadow-2xs">
+          <Sparkles className="w-3 h-3 text-[#0284C7]" /> PROVEN IMPACT
         </span>
         <span className="hidden sm:inline font-body text-slate-700 font-medium">Automating MIS & Power BI reporting for 50+ mid-market leaders.</span>
-        <Link href="/resources/case-studies" className="text-[#6941C6] hover:text-[#53389E] font-semibold underline underline-offset-2 ml-1">
+        <Link href="/resources/case-studies" className="text-[#0369A1] hover:text-[#075985] font-semibold underline underline-offset-2 ml-1">
           Explore Case Studies &rarr;
         </Link>
       </div>
@@ -117,9 +117,9 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold font-display tracking-tight text-[#101828] leading-none">
-                Data<span className="text-[#7F56D9]">Live</span>
+                Data<span className="text-[#0284C7]">Live</span>
               </span>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#7F56D9] font-bold mt-0.5">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#0284C7] font-bold mt-0.5">
                 INTELLIGENCE
               </span>
             </div>
@@ -138,7 +138,7 @@ export default function Header() {
                 className={cn(
                   'flex items-center gap-1 px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors font-body',
                   activeDropdown === 'services' || pathname.startsWith('/services')
-                    ? 'text-[#6941C6] bg-[#F9F5FF]'
+                    ? 'text-[#0369A1] bg-[#F0F9FF]'
                     : 'text-[#344054] hover:text-[#101828] hover:bg-[#F9FAFB]'
                 )}
               >
@@ -147,10 +147,10 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'services' && (
-                <div className="absolute top-full left-0 w-[620px] p-4 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] grid grid-cols-2 gap-2 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[620px] p-4 bg-white rounded-2xl shadow-xl border border-[#BAE6FD] grid grid-cols-2 gap-2 animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="col-span-2 pb-2 mb-1 border-b border-[#F2F4F7] flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Core Capabilities</span>
-                    <Link href="/services" className="text-xs font-semibold text-[#667085] hover:text-[#7F56D9]">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Core Capabilities</span>
+                    <Link href="/services" className="text-xs font-semibold text-[#667085] hover:text-[#0284C7]">
                       View All Services &rarr;
                     </Link>
                   </div>
@@ -162,16 +162,16 @@ export default function Header() {
                         href={item.href}
                         className="p-3 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#7F56D9] group-hover:text-white transition-colors">
+                        <div className="w-9 h-9 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                           <Icon className="w-4.5 h-4.5" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between mb-1">
-                            <span className="text-sm font-bold text-[#101828] group-hover:text-[#7F56D9] transition-colors font-display">
+                            <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors font-display">
                               {item.title}
                             </span>
                             {item.badge && (
-                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F9F5FF] text-[#6941C6] border border-[#E9D7FE]">
+                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F0F9FF] text-[#0369A1] border border-[#BAE6FD]">
                                 {item.badge}
                               </span>
                             )}
@@ -198,7 +198,7 @@ export default function Header() {
                 className={cn(
                   'flex items-center gap-1 px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors font-body',
                   activeDropdown === 'industries' || pathname.startsWith('/industries')
-                    ? 'text-[#6941C6] bg-[#F9F5FF]'
+                    ? 'text-[#0369A1] bg-[#F0F9FF]'
                     : 'text-[#344054] hover:text-[#101828] hover:bg-[#F9FAFB]'
                 )}
               >
@@ -207,10 +207,10 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'industries' && (
-                <div className="absolute top-full left-0 w-[480px] p-4 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] grid grid-cols-1 gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[480px] p-4 bg-white rounded-2xl shadow-xl border border-[#BAE6FD] grid grid-cols-1 gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="pb-2 mb-1 border-b border-[#F2F4F7] flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Tailored Sector Solutions</span>
-                    <Link href="/industries" className="text-xs font-semibold text-[#667085] hover:text-[#7F56D9]">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Tailored Sector Solutions</span>
+                    <Link href="/industries" className="text-xs font-semibold text-[#667085] hover:text-[#0284C7]">
                       Overview &rarr;
                     </Link>
                   </div>
@@ -222,11 +222,11 @@ export default function Header() {
                         href={item.href}
                         className="p-2.5 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#7F56D9] group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                           <Icon className="w-4 h-4" />
                         </div>
                         <div>
-                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#7F56D9] transition-colors block font-display">
+                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
                             {item.title}
                           </span>
                           <p className="text-xs text-[#475467] line-clamp-1 font-body">
@@ -251,7 +251,7 @@ export default function Header() {
                 className={cn(
                   'flex items-center gap-1 px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors font-body',
                   activeDropdown === 'about' || pathname.startsWith('/about')
-                    ? 'text-[#6941C6] bg-[#F9F5FF]'
+                    ? 'text-[#0369A1] bg-[#F0F9FF]'
                     : 'text-[#344054] hover:text-[#101828] hover:bg-[#F9FAFB]'
                 )}
               >
@@ -260,7 +260,7 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'about' && (
-                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#BAE6FD] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
                   {aboutNav.map((item) => {
                     const Icon = (item.iconName && navIconMap[item.iconName]) || Building2;
                     return (
@@ -269,11 +269,11 @@ export default function Header() {
                         href={item.href}
                         className="p-2.5 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#7F56D9] group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                           <Icon className="w-4 h-4" />
                         </div>
                         <div>
-                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#7F56D9] transition-colors block font-display">
+                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
                             {item.title}
                           </span>
                           <p className="text-xs text-[#475467] mt-0.5 font-body line-clamp-1">
@@ -298,7 +298,7 @@ export default function Header() {
                 className={cn(
                   'flex items-center gap-1 px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors font-body',
                   activeDropdown === 'resources' || pathname.startsWith('/resources')
-                    ? 'text-[#6941C6] bg-[#F9F5FF]'
+                    ? 'text-[#0369A1] bg-[#F0F9FF]'
                     : 'text-[#344054] hover:text-[#101828] hover:bg-[#F9FAFB]'
                 )}
               >
@@ -307,7 +307,7 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'resources' && (
-                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#BAE6FD] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
                   {resourcesNav.map((item) => {
                     const Icon = (item.iconName && navIconMap[item.iconName]) || BookOpen;
                     return (
@@ -316,11 +316,11 @@ export default function Header() {
                         href={item.href}
                         className="p-2.5 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#7F56D9] group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                           <Icon className="w-4 h-4" />
                         </div>
                         <div>
-                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#7F56D9] transition-colors block font-display">
+                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
                             {item.title}
                           </span>
                           <p className="text-xs text-[#475467] mt-0.5 font-body line-clamp-1">
@@ -340,7 +340,7 @@ export default function Header() {
               className={cn(
                 'px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors font-body',
                 pathname === '/contact'
-                  ? 'text-[#6941C6] bg-[#F9F5FF]'
+                  ? 'text-[#0369A1] bg-[#F0F9FF]'
                   : 'text-[#344054] hover:text-[#101828] hover:bg-[#F9FAFB]'
               )}
             >
@@ -348,11 +348,11 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Desktop Right CTA - Untitled UI signature purple button */}
+          {/* Desktop Right CTA - Untitled UI signature cyan button */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
             >
               <span>Book 30-Min Call</span>
               <ArrowRight className="w-4 h-4" />

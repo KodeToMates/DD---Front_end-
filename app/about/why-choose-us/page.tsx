@@ -47,7 +47,7 @@ export default function WhyChooseUsPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" /> The DataLive Difference
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -63,22 +63,22 @@ export default function WhyChooseUsPage() {
       <section className="py-20 bg-[#F9FAFB] border-b border-[#EAECF0]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-3xl shadow-xs border border-[#D6BBFB] overflow-hidden text-left text-sm font-body">
+            <table className="w-full bg-white rounded-3xl shadow-xs border border-[#BAE6FD] overflow-hidden text-left text-sm font-body">
               <thead>
-                <tr className="border-b border-[#D6BBFB] bg-[#F9FAFB] text-[#101828] font-bold font-display">
+                <tr className="border-b border-[#BAE6FD] bg-[#F9FAFB] text-[#101828] font-bold font-display">
                   <th className="p-5 sm:p-6">Feature / Capability</th>
                   <th className="p-5 sm:p-6 text-[#667085] font-medium font-body">Generic Freelancers</th>
                   <th className="p-5 sm:p-6 text-[#667085] font-medium font-body">Big IT Consultancies</th>
-                  <th className="p-5 sm:p-6 bg-[#F9F5FF] text-[#6941C6] border-l border-r border-[#D6BBFB]">DataLive Intelligence</th>
+                  <th className="p-5 sm:p-6 bg-[#F0F9FF] text-[#0369A1] border-l border-r border-[#BAE6FD]">DataLive Intelligence</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#D6BBFB]">
+              <tbody className="divide-y divide-[#BAE6FD]">
                 {comparisons.map((row, idx) => (
                   <tr key={idx} className="hover:bg-[#F9FAFB] transition-colors">
                     <td className="p-5 sm:p-6 font-bold text-[#101828] font-display">{row.feature}</td>
                     <td className="p-5 sm:p-6 text-[#475467]">{row.freelancers}</td>
                     <td className="p-5 sm:p-6 text-[#475467]">{row.bigConsultancy}</td>
-                    <td className="p-5 sm:p-6 bg-[#F9F5FF]/70 font-semibold text-[#7F56D9] border-l border-r border-[#E9D7FE]">
+                    <td className="p-5 sm:p-6 bg-[#F0F9FF]/70 font-semibold text-[#0284C7] border-l border-r border-[#BAE6FD]">
                       {row.datalive}
                     </td>
                   </tr>

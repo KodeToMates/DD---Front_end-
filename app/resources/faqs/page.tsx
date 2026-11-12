@@ -17,7 +17,7 @@ export default function FaqsPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Direct Answers
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -35,17 +35,17 @@ export default function FaqsPage() {
             const items = faqsData.filter((f) => f.category === cat);
             return (
               <div key={cat} className="space-y-4">
-                <h2 className="text-lg font-bold font-display uppercase tracking-wider text-[#7F56D9] pb-2 border-b border-[#EAECF0]">
+                <h2 className="text-lg font-bold font-display uppercase tracking-wider text-[#0284C7] pb-2 border-b border-[#EAECF0]">
                   {cat}
                 </h2>
                 <div className="space-y-4">
                   {items.map((item) => (
                     <div
                       key={item.id}
-                      className="p-6 rounded-2xl bg-white border border-[#D6BBFB] hover:border-[#9E77ED] shadow-xs transition-colors space-y-2"
+                      className="p-6 rounded-2xl bg-white border border-[#BAE6FD] hover:border-[#0284C7] shadow-xs transition-colors space-y-2"
                     >
                       <h3 className="text-base sm:text-lg font-bold font-display text-[#101828] flex items-start gap-2.5">
-                        <HelpCircle className="w-5 h-5 text-[#7F56D9] shrink-0 mt-0.5" />
+                        <HelpCircle className="w-5 h-5 text-[#0284C7] shrink-0 mt-0.5" />
                         {item.question}
                       </h3>
                       <p className="text-sm text-[#475467] leading-relaxed pl-7.5 font-body">

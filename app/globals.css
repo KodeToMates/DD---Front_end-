@@ -5,17 +5,17 @@
     --font-space: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-outfit: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-    /* Untitled UI Color Palette */
-    --color-brand-50: #F9F5FF;
-    --color-brand-100: #F4EBFF;
-    --color-brand-200: #E9D7FE;
-    --color-brand-300: #D6BBFB;
-    --color-brand-400: #B692F6;
-    --color-brand-500: #9E77ED;
-    --color-brand-600: #7F56D9;
-    --color-brand-700: #6941C6;
-    --color-brand-800: #53389E;
-    --color-brand-900: #42307D;
+    /* Brand Color Palette: Client Official Electric Cyan & Deep Navy */
+    --color-brand-50: #F0F9FF;
+    --color-brand-100: #E0F2FE;
+    --color-brand-200: #BAE6FD;
+    --color-brand-300: #7DD3FC;
+    --color-brand-400: #38BDF8;
+    --color-brand-500: #0EA5E9;
+    --color-brand-600: #0284C7;
+    --color-brand-700: #0369A1;
+    --color-brand-800: #075985;
+    --color-brand-900: #032B69;
 
     --color-gray-50: #F9FAFB;
     --color-gray-100: #F2F4F7;
@@ -74,19 +74,19 @@
   font-family: var(--font-outfit);
 }
 
-/* Untitled UI Style Utilities */
+/* Brand Gradient Utilities */
 .bg-brand-gradient {
-  background: linear-gradient(135deg, #7F56D9 0%, #6941C6 100%);
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
 }
 
 .text-brand-gradient {
-  background: linear-gradient(135deg, #7F56D9 0%, #9E77ED 50%, #6941C6 100%);
+  background: linear-gradient(135deg, #0284C7 0%, #00B4D8 50%, #0369A1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-hero-subtle-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(127, 86, 217, 0.12) 0%, rgba(244, 235, 255, 0.25) 45%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.12) 0%, rgba(224, 242, 254, 0.35) 45%, rgba(255, 255, 255, 0) 70%);
 }
 
 .bg-dot-grid-light {
@@ -94,16 +94,16 @@
   background-size: 28px 28px;
 }
 
-/* Untitled UI Card & Shadow Styles */
+/* Card & Shadow Styles */
 .untitled-card {
   background-color: #FFFFFF;
-  border: 1px solid #EAECF0;
+  border: 1px solid #BAE6FD;
   box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.05), 0px 1px 2px rgba(16, 24, 40, 0.02);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .untitled-card:hover {
-  border-color: #D6BBFB;
+  border-color: #0284C7;
   box-shadow: 0px 12px 24px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
   transform: translateY(-2px);
 }

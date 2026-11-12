@@ -24,7 +24,7 @@ export default function Footer() {
                 />
               </div>
               <span className="text-xl font-bold font-display tracking-tight text-[#101828]">
-                Data<span className="text-[#7F56D9]">Live</span> Intelligence
+                Data<span className="text-[#0284C7]">Live</span> Intelligence
               </span>
             </Link>
             <p className="text-sm text-[#475467] leading-relaxed max-w-sm font-body">
@@ -36,13 +36,13 @@ export default function Footer() {
             </div>
             <div className="pt-2 text-xs text-[#475467] space-y-2 font-body">
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#7F56D9]" />
+                <Mail className="w-4 h-4 text-[#0284C7]" />
                 <a href={CONTACT_INFO.emailHref} className="hover:text-[#101828] transition-colors">
                   {CONTACT_INFO.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#7F56D9]" />
+                <Phone className="w-4 h-4 text-[#0284C7]" />
                 <a href={CONTACT_INFO.phoneHref} className="hover:text-[#101828] transition-colors font-medium">
                   {CONTACT_INFO.phoneDisplay}
                 </a>
@@ -57,7 +57,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#7F56D9]" />
+                <MapPin className="w-4 h-4 text-[#0284C7]" />
                 <span>Global Delivery & India Regional Hubs</span>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Services Col */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#7F56D9] mb-4 font-mono">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-4 font-mono">
               Services
             </h4>
             <ul className="space-y-2.5 text-sm text-[#475467] font-body">
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link href={s.href} className="hover:text-[#101828] transition-colors flex items-center justify-between group">
                     <span>{s.title}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#7F56D9]" />
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0284C7]" />
                   </Link>
                 </li>
               ))}
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Industries Col */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#7F56D9] mb-4 font-mono">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-4 font-mono">
               Industries
             </h4>
             <ul className="space-y-2.5 text-sm text-[#475467] font-body">
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={i.href}>
                   <Link href={i.href} className="hover:text-[#101828] transition-colors flex items-center justify-between group">
                     <span>{i.title}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#7F56D9]" />
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0284C7]" />
                   </Link>
                 </li>
               ))}
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Company & Resources */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#7F56D9] mb-4 font-mono">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-4 font-mono">
               Company & Insights
             </h4>
             <ul className="space-y-2.5 text-sm text-[#475467] font-body">
@@ -118,7 +118,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/contact" className="hover:text-[#101828] transition-colors font-medium text-[#7F56D9]">
+                <Link href="/contact" className="hover:text-[#101828] transition-colors font-medium text-[#0284C7]">
                   Book Strategy Call &rarr;
                 </Link>
               </li>

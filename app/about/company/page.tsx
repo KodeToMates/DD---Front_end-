@@ -37,7 +37,7 @@ export default function CompanyPage() {
       <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Founding Mission
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
@@ -68,7 +68,7 @@ export default function CompanyPage() {
       <section className="py-20 bg-[#F9FAFB] border-b border-[#EAECF0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Our Code</span>
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Our Code</span>
             <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">The Principles That Guide Every Build</h2>
           </div>
 
@@ -76,8 +76,8 @@ export default function CompanyPage() {
             {values.map((v, idx) => {
               const Icon = v.icon;
               return (
-                <div key={idx} className="p-8 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-colors space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
+                <div key={idx} className="p-8 rounded-2xl bg-white border border-[#BAE6FD] shadow-xs hover:border-[#0284C7] transition-colors space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-xl font-bold text-[#101828] font-display">{v.title}</h3>

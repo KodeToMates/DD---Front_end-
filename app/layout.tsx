@@ -70,7 +70,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${outfit.variable}`}>
-      <body className="min-h-screen flex flex-col font-body bg-white text-[#101828] antialiased selection:bg-[#7F56D9] selection:text-white">
+      <body className="min-h-screen flex flex-col font-body bg-white text-[#101828] antialiased selection:bg-[#0284C7] selection:text-white">
         <SmoothScrollProvider>
           <Header />
           <main className="flex-1">{children}</main>

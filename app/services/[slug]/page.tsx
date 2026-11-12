@@ -47,11 +47,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/services" className="hover:text-[#101828]">Services</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#7F56D9] font-medium">{service.title}</span>
+            <span className="text-[#0284C7] font-medium">{service.title}</span>
           </div>
 
           <div className="max-w-3xl space-y-6">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-[#6941C6] text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider">
               {service.category === 'data-engineering' ? 'Data Engineering Architecture' : 'Automation & Reporting'}
             </span>
 
@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <div className="pt-2 flex flex-col sm:flex-row items-center gap-3.5">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-semibold text-sm shadow-xs transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm shadow-xs transition-all"
               >
                 <span>Book Free 30-Min Consultation</span>
                 <ArrowRight className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="py-20 bg-[#F9FAFB] border-b border-[#EAECF0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
               Scope of Delivery
             </span>
             <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">
@@ -103,10 +103,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             {service.deliverables.map((del, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-[#D6BBFB] hover:border-[#9E77ED] shadow-xs hover:shadow-md transition-all space-y-3"
+                className="p-8 rounded-2xl bg-white border border-[#BAE6FD] hover:border-[#0284C7] shadow-xs hover:shadow-md transition-all space-y-3"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center font-bold text-sm">
+                  <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center font-bold text-sm">
                     {idx + 1}
                   </div>
                   <h3 className="text-lg font-bold text-[#101828] font-display">{del.title}</h3>
@@ -124,7 +124,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="py-20 bg-white border-b border-[#EAECF0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
               Sprint Execution
             </span>
             <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">
@@ -139,10 +139,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             {service.pipelineSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] shadow-xs relative flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD] shadow-xs relative flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-3xl font-extrabold text-[#7F56D9] font-mono block mb-3">
+                  <span className="text-3xl font-extrabold text-[#0284C7] font-mono block mb-3">
                     {step.step}
                   </span>
                   <h4 className="text-base font-bold text-[#101828] font-display mb-2">
@@ -152,7 +152,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                     {step.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#D6BBFB] text-[11px] font-semibold text-[#7F56D9]">
+                <div className="mt-6 pt-4 border-t border-[#BAE6FD] text-[11px] font-semibold text-[#0284C7]">
                   Phase Guaranteed
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
           <div className="flex flex-wrap gap-2">
             {service.techStack.map((tech, idx) => (
-              <span key={idx} className="px-3.5 py-1.5 rounded-xl bg-white text-[#344054] text-xs font-semibold border border-[#D6BBFB] shadow-2xs">
+              <span key={idx} className="px-3.5 py-1.5 rounded-xl bg-white text-[#344054] text-xs font-semibold border border-[#BAE6FD] shadow-2xs">
                 {tech}
               </span>
             ))}
@@ -182,15 +182,15 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="py-20 bg-white border-b border-[#EAECF0]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Direct Answers</span>
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Direct Answers</span>
             <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">Frequently Asked Questions</h2>
           </div>
 
           <div className="space-y-4">
             {service.faqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB]">
+              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD]">
                 <h4 className="text-base font-bold text-[#101828] font-display mb-2 flex items-start gap-2.5">
-                  <HelpCircle className="w-5 h-5 text-[#7F56D9] shrink-0 mt-0.5" />
+                  <HelpCircle className="w-5 h-5 text-[#0284C7] shrink-0 mt-0.5" />
                   {faq.question}
                 </h4>
                 <p className="text-sm text-[#475467] leading-relaxed pl-7.5 font-body">
