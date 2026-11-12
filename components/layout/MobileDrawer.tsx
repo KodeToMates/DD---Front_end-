@@ -23,8 +23,11 @@ import {
   Award,
   BookOpen,
   HelpCircle,
+  Phone,
+  MessageSquare,
 } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
+import { CONTACT_INFO } from '@/data/contact';
 
 const navIconMap: Record<string, React.ElementType> = {
   // Industries
@@ -192,7 +195,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         </div>
 
         {/* Bottom CTA */}
-        <div className="pt-6 border-t border-[#EAECF0]">
+        <div className="pt-6 border-t border-[#EAECF0] space-y-2">
           <Link
             href="/contact"
             onClick={onClose}
@@ -201,6 +204,15 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             <span>Book 30-Min Strategy Call</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
+          <a
+            href={CONTACT_INFO.getWhatsAppUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-[#D0D5DD] hover:bg-[#F9FAFB] text-[#344054] font-body font-semibold text-xs transition-all"
+          >
+            <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
+            <span>WhatsApp: {CONTACT_INFO.phoneDisplay}</span>
+          </a>
         </div>
       </div>
     </div>

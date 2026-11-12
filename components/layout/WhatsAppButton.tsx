@@ -2,11 +2,10 @@
 
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
+import { CONTACT_INFO } from '@/data/contact';
 
 export default function WhatsAppButton() {
-  const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(
-    'Hello DataLive Intelligence team, I would like to explore automating our company MIS and Power BI reports.'
-  )}`;
+  const whatsappUrl = CONTACT_INFO.getWhatsAppUrl();
 
   return (
     <aside aria-label="WhatsApp Quick Connect" className="fixed bottom-6 right-6 z-50 flex items-center group">

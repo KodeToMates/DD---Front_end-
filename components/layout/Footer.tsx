@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BarChart3, Mail, MapPin, Phone, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
+import { CONTACT_INFO } from '@/data/contact';
 
 export default function Footer() {
   return (
@@ -36,13 +37,24 @@ export default function Footer() {
             <div className="pt-2 text-xs text-[#475467] space-y-2 font-body">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#7F56D9]" />
-                <a href="mailto:contact@dataliveintelligence.com" className="hover:text-[#101828] transition-colors">
-                  contact@dataliveintelligence.com
+                <a href={CONTACT_INFO.emailHref} className="hover:text-[#101828] transition-colors">
+                  {CONTACT_INFO.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#7F56D9]" />
-                <span>+91 98765 43210 / WhatsApp Support</span>
+                <a href={CONTACT_INFO.phoneHref} className="hover:text-[#101828] transition-colors font-medium">
+                  {CONTACT_INFO.phoneDisplay}
+                </a>
+                <span className="text-[#98A2B3]">&bull;</span>
+                <a
+                  href={CONTACT_INFO.getWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#027A48] hover:text-[#05603A] font-medium"
+                >
+                  WhatsApp
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#7F56D9]" />

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { servicesData } from '@/data/services';
 import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, Layers, ShieldCheck, Zap } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import { CONTACT_INFO } from '@/data/contact';
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -71,9 +72,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href={`https://wa.me/919876543210?text=${encodeURIComponent(
-                  `Hi DataLive, I would like to consult about ${service.title}.`
-                )}`}
+                href={CONTACT_INFO.getWhatsAppUrl(`Hi DataLive, I would like to consult about ${service.title}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-[#F9FAFB] border border-[#D0D5DD] text-[#344054] font-semibold text-sm transition-all"

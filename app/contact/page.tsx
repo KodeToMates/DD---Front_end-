@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Calendar, MessageSquare, Mail, Phone, MapPin, Clock, ShieldCheck, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { CONTACT_INFO } from '@/data/contact';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -142,9 +143,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <a
-                    href={`https://wa.me/919876543210?text=${encodeURIComponent(
-                      'Hi DataLive Intelligence, I would like to consult about automating our MIS and Power BI.'
-                    )}`}
+                    href={CONTACT_INFO.getWhatsAppUrl('Hi DataLive Intelligence, I would like to consult about automating our MIS and Power BI.')}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0 px-4 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-xs hover:bg-[#20ba59] transition-colors flex items-center gap-1.5"
@@ -157,12 +156,26 @@ export default function ContactPage() {
               {/* Direct Details Card */}
               <div className="p-6 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs space-y-3 text-xs text-[#475467] font-body">
                 <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 text-[#7F56D9]" />
+                  <span>
+                    <strong>Direct Phone / WhatsApp:</strong>{' '}
+                    <a href={CONTACT_INFO.phoneHref} className="hover:text-[#7F56D9] font-medium text-[#101828]">
+                      {CONTACT_INFO.phoneDisplay}
+                    </a>
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-[#7F56D9]" />
-                  <span><strong>Official Email:</strong> contact@dataliveintelligence.com</span>
+                  <span>
+                    <strong>Official Email:</strong>{' '}
+                    <a href={CONTACT_INFO.emailHref} className="hover:text-[#7F56D9]">
+                      {CONTACT_INFO.email}
+                    </a>
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-[#7F56D9]" />
-                  <span><strong>SLA Guarantee:</strong> Response within 4 business hours</span>
+                  <span><strong>SLA Guarantee:</strong> {CONTACT_INFO.slaGuarantee}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="w-4 h-4 text-[#12B76A]" />

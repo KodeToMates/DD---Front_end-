@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { CONTACT_INFO } from '@/data/contact';
 
 interface CtaBannerProps {
   title?: string;
@@ -48,9 +49,7 @@ export default function CtaBanner({
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href={`https://wa.me/919876543210?text=${encodeURIComponent(
-                'Hi DataLive team, I would like to book a 30-minute strategy call.'
-              )}`}
+              href={CONTACT_INFO.getWhatsAppUrl('Hi DataLive team, I would like to book a 30-minute strategy call.')}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-white hover:bg-[#F9FAFB] border border-[#D0D5DD] text-[#344054] font-body font-semibold text-sm shadow-xs transition-all"
