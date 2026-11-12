@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight, Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, TrendingUp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, TrendingUp, Play } from 'lucide-react';
 
 const carouselItems = [
   {
@@ -80,12 +80,33 @@ const carouselItems = [
 
 export default function Interactive3DCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto-switch slides every 4 seconds when auto-play is active
+  useEffect(() => {
+    if (!isAutoPlay || isHovered) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1));
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [isAutoPlay, isHovered]);
+
+  const handleMenuClick = (idx: number) => {
+    // Turn off auto switch as soon as user clicks any menu item
+    setIsAutoPlay(false);
+    setCurrentIndex(idx);
+  };
 
   const prevSlide = () => {
+    setIsAutoPlay(false);
     setCurrentIndex((prev) => (prev === 0 ? carouselItems.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
+    setIsAutoPlay(false);
     setCurrentIndex((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1));
   };
 
@@ -109,16 +130,38 @@ export default function Interactive3DCarousel() {
           {/* Carousel Controls */}
           <div className="flex items-center gap-3 shrink-0" data-aos="fade-left">
             <button
+              type="button"
+              onClick={() => setIsAutoPlay((prev) => !prev)}
+              aria-label={isAutoPlay ? 'Pause auto-switch' : 'Resume auto-switch'}
+              className={`px-3 py-2 rounded-xl text-xs font-mono font-semibold flex items-center gap-2 border transition-all ${
+                isAutoPlay
+                  ? 'bg-[#F0F9FF] border-[#BAE6FD] text-[#0284C7]'
+                  : 'bg-white border-[#D0D5DD] text-[#667085] hover:text-[#101828]'
+              }`}
+            >
+              {isAutoPlay ? (
+                <>
+                  <span className="w-2 h-2 rounded-full bg-[#02B8FD] animate-ping" />
+                  <span>Auto-Switch ON</span>
+                </>
+              ) : (
+                <>
+                  <Play className="w-3.5 h-3.5 fill-current text-[#0284C7]" />
+                  <span>Resume Auto</span>
+                </>
+              )}
+            </button>
+            <button
               onClick={prevSlide}
               aria-label="Previous industry slide"
-              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#0284C7] text-[#344054] hover:text-[#0284C7] shadow-xs flex items-center justify-center transition-all active:scale-95"
+              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#0284C7] text-[#344054] hover:text-[#0284C7] shadow-xs flex items-center justify-center transition-all active:scale-95 cursor-pointer"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next industry slide"
-              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#0284C7] text-[#344054] hover:text-[#0284C7] shadow-xs flex items-center justify-center transition-all active:scale-95"
+              className="w-12 h-12 rounded-xl bg-white border border-[#D0D5DD] hover:border-[#0284C7] text-[#344054] hover:text-[#0284C7] shadow-xs flex items-center justify-center transition-all active:scale-95 cursor-pointer"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -142,6 +185,8 @@ export default function Interactive3DCarousel() {
                       animate={{ opacity: 1, rotateY: 0, scale: 1 }}
                       exit={{ opacity: 0, rotateY: -15, scale: 0.95 }}
                       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
                       className="rounded-3xl bg-white border border-[#BAE6FD] p-8 sm:p-10 shadow-xl relative overflow-hidden"
                     >
                       {/* Top Bar with Badge */}
@@ -229,13 +274,24 @@ export default function Interactive3DCarousel() {
                 return (
                   <button
                     key={item.id}
-                    onClick={() => setCurrentIndex(idx)}
-                    className={`w-full text-left p-4 rounded-2xl transition-all flex items-center justify-between border ${
+                    onClick={() => handleMenuClick(idx)}
+                    className={`w-full text-left p-4 rounded-2xl transition-all flex items-center justify-between border relative overflow-hidden cursor-pointer ${
                       isActive
                         ? 'bg-white border-[#0284C7] shadow-md scale-102 ring-2 ring-[#0284C7]/15'
                         : 'bg-white/60 hover:bg-white border-[#BAE6FD] hover:border-[#0284C7] text-[#475467]'
                     }`}
                   >
+                    {/* Active Auto-Switch Progress Line */}
+                    {isActive && isAutoPlay && (
+                      <motion.div
+                        key={currentIndex}
+                        initial={{ width: '0%' }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: 4, ease: 'linear' }}
+                        className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-[#0284C7] to-[#02B8FD]"
+                      />
+                    )}
+
                     <div className="flex items-center gap-3">
                       <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors ${
                         isActive ? 'bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD]' : 'bg-[#F2F4F7] text-[#667085]'
@@ -266,9 +322,9 @@ export default function Interactive3DCarousel() {
             {carouselItems.map((_, idx) => (
               <button
                 key={idx}
-                onClick={() => setCurrentIndex(idx)}
+                onClick={() => handleMenuClick(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2.5 rounded-full transition-all ${
+                className={`h-2.5 rounded-full transition-all cursor-pointer ${
                   idx === currentIndex
                     ? 'w-8 bg-[#0284C7]'
                     : 'w-2.5 bg-[#D0D5DD] hover:bg-[#98A2B3]'
