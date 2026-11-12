@@ -139,7 +139,7 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'services' && (
-                <div className="absolute top-full left-0 w-[620px] p-4 bg-white rounded-2xl shadow-xl border border-[#EAECF0] grid grid-cols-2 gap-2 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[620px] p-4 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] grid grid-cols-2 gap-2 animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="col-span-2 pb-2 mb-1 border-b border-[#F2F4F7] flex items-center justify-between">
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Core Capabilities</span>
                     <Link href="/services" className="text-xs font-semibold text-[#667085] hover:text-[#7F56D9]">
@@ -199,7 +199,7 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'industries' && (
-                <div className="absolute top-full left-0 w-[480px] p-4 bg-white rounded-2xl shadow-xl border border-[#EAECF0] grid grid-cols-1 gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[480px] p-4 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] grid grid-cols-1 gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="pb-2 mb-1 border-b border-[#F2F4F7] flex items-center justify-between">
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">Tailored Sector Solutions</span>
                     <Link href="/industries" className="text-xs font-semibold text-[#667085] hover:text-[#7F56D9]">
@@ -252,7 +252,7 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'about' && (
-                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#EAECF0] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
                   {aboutNav.map((item) => {
                     const Icon = (item.iconName && navIconMap[item.iconName]) || Building2;
                     return (
@@ -299,7 +299,7 @@ export default function Header() {
               </button>
 
               {activeDropdown === 'resources' && (
-                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#EAECF0] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#D6BBFB] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
                   {resourcesNav.map((item) => {
                     const Icon = (item.iconName && navIconMap[item.iconName]) || BookOpen;
                     return (

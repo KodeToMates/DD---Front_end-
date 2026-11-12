@@ -43,7 +43,7 @@ export default function IndustriesPage() {
             return (
               <div
                 key={ind.id}
-                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#EAECF0] shadow-xs hover:shadow-lg transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-lg hover:border-[#9E77ED] transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
               >
                 <div className="lg:col-span-7 space-y-5">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#F9F5FF] border border-[#E9D7FE] text-[#7F56D9] text-xs font-mono font-bold uppercase tracking-wider">
@@ -79,14 +79,14 @@ export default function IndustriesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 bg-[#F9F5FF] border border-[#E9D7FE] rounded-2xl p-6 sm:p-8 space-y-4">
+                <div className="lg:col-span-5 bg-[#F9F5FF] border border-[#D6BBFB] rounded-2xl p-6 sm:p-8 space-y-4">
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6941C6] block">
                     Proven Transformation
                   </span>
                   <h4 className="text-base font-bold text-[#101828] font-display leading-snug">
                     {ind.caseStudyHighlight.clientType}
                   </h4>
-                  <div className="p-3.5 rounded-xl bg-white border border-[#E9D7FE] text-xs text-[#027A48] font-semibold font-mono shadow-2xs">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#D6BBFB] text-xs text-[#027A48] font-semibold font-mono shadow-2xs">
                     {ind.caseStudyHighlight.metrics}
                   </div>
                   <p className="text-xs text-[#475467] leading-relaxed font-body">

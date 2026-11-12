@@ -83,7 +83,7 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-white border border-[#EAECF0] shadow-xs hover:shadow-xl hover:border-[#D6BBFB] transition-all flex flex-col justify-between"
+                className="p-8 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-xl hover:border-[#9E77ED] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">

@@ -42,7 +42,7 @@ export default function FaqsPage() {
                   {items.map((item) => (
                     <div
                       key={item.id}
-                      className="p-6 rounded-2xl bg-white border border-[#EAECF0] shadow-xs space-y-2"
+                      className="p-6 rounded-2xl bg-white border border-[#D6BBFB] hover:border-[#9E77ED] shadow-xs transition-colors space-y-2"
                     >
                       <h3 className="text-base sm:text-lg font-bold font-display text-[#101828] flex items-start gap-2.5">
                         <HelpCircle className="w-5 h-5 text-[#7F56D9] shrink-0 mt-0.5" />

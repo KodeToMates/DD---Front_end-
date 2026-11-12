@@ -58,7 +58,7 @@ export default function OurApproachPage() {
           {steps.map((st, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAECF0] shadow-xs grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
+              className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-colors grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
             >
               <div className="md:col-span-3">
                 <span className="text-4xl sm:text-5xl font-extrabold text-[#7F56D9] font-mono block">

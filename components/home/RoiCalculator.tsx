@@ -43,7 +43,7 @@ export default function RoiCalculator() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-[#EAECF0] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+          className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-[#D6BBFB] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
         >
           {/* Sliders (7 Cols) */}
           <div className="lg:col-span-7 space-y-6">
@@ -116,7 +116,7 @@ export default function RoiCalculator() {
           </div>
 
           {/* Results Card (5 Cols) - Untitled UI Style */}
-          <div className="lg:col-span-5 bg-[#F9F5FF] rounded-2xl p-6 sm:p-7 border border-[#E9D7FE] text-center space-y-5 shadow-xs relative overflow-hidden">
+          <div className="lg:col-span-5 bg-[#F9F5FF] rounded-2xl p-6 sm:p-7 border border-[#D6BBFB] text-center space-y-5 shadow-xs relative overflow-hidden">
             <span className="text-xs font-mono uppercase tracking-widest text-[#6941C6] font-bold block">
               ESTIMATED ANNUAL RECOVERY
             </span>

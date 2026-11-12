@@ -101,7 +101,7 @@ export default function ProblemSolutionGrid() {
               ))}
             </ul>
 
-            <div className="mt-8 pt-6 border-t border-[#EAECF0] flex items-center justify-between">
+            <div className="mt-8 pt-6 border-t border-[#D6BBFB] flex items-center justify-between">
               <span className="text-xs text-[#667085] font-body">Ready to break the cycle?</span>
               <Link href="/contact" className="text-xs font-semibold text-[#7F56D9] hover:text-[#6941C6] flex items-center gap-1.5 transition-colors">
                 Book a Free Data Audit &rarr;

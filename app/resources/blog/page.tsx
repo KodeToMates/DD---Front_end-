@@ -63,7 +63,7 @@ export default function BlogPage() {
             {articles.map((art, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-white border border-[#EAECF0] shadow-xs hover:shadow-xl hover:border-[#D6BBFB] transition-all flex flex-col justify-between"
+                className="p-8 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-xl hover:border-[#9E77ED] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center gap-3 text-xs text-[#667085] mb-4 font-body">

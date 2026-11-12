@@ -32,7 +32,7 @@ export default function FeaturedCaseStudy() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="rounded-3xl bg-[#F9FAFB] border border-[#EAECF0] p-8 sm:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+          className="rounded-3xl bg-[#F9FAFB] border border-[#D6BBFB] p-8 sm:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
         >
           {/* Left Summary (7 Cols) */}
           <div className="lg:col-span-7 space-y-6">
@@ -49,7 +49,7 @@ export default function FeaturedCaseStudy() {
             </p>
 
             {/* Testimonial Quote */}
-            <div className="p-6 rounded-2xl bg-white border border-[#EAECF0] shadow-xs relative">
+            <div className="p-6 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs relative">
               <Quote className="w-6 h-6 text-[#7F56D9] mb-2 opacity-70" />
               <p className="text-xs sm:text-sm italic text-[#344054] leading-relaxed font-body">
                 &ldquo;{featured.quote.text}&rdquo;
@@ -76,7 +76,7 @@ export default function FeaturedCaseStudy() {
             {featured.quantifiedResults.map((res, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-2xl bg-white border border-[#EAECF0] shadow-xs flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-colors flex flex-col justify-between"
               >
                 <div>
                   <span className="text-2xl sm:text-4xl font-extrabold text-[#7F56D9] tracking-tight font-display">

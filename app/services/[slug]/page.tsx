@@ -104,7 +104,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             {service.deliverables.map((del, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-[#EAECF0] hover:border-[#D6BBFB] shadow-xs hover:shadow-md transition-all space-y-3"
+                className="p-8 rounded-2xl bg-white border border-[#D6BBFB] hover:border-[#9E77ED] shadow-xs hover:shadow-md transition-all space-y-3"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center font-bold text-sm">
@@ -140,7 +140,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             {service.pipelineSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#EAECF0] shadow-xs relative flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] shadow-xs relative flex flex-col justify-between"
               >
                 <div>
                   <span className="text-3xl font-extrabold text-[#7F56D9] font-mono block mb-3">
@@ -153,7 +153,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                     {step.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#EAECF0] text-[11px] font-semibold text-[#7F56D9]">
+                <div className="mt-6 pt-4 border-t border-[#D6BBFB] text-[11px] font-semibold text-[#7F56D9]">
                   Phase Guaranteed
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
           <div className="flex flex-wrap gap-2">
             {service.techStack.map((tech, idx) => (
-              <span key={idx} className="px-3.5 py-1.5 rounded-xl bg-white text-[#344054] text-xs font-semibold border border-[#EAECF0] shadow-2xs">
+              <span key={idx} className="px-3.5 py-1.5 rounded-xl bg-white text-[#344054] text-xs font-semibold border border-[#D6BBFB] shadow-2xs">
                 {tech}
               </span>
             ))}
@@ -189,7 +189,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
           <div className="space-y-4">
             {service.faqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#EAECF0]">
+              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB]">
                 <h4 className="text-base font-bold text-[#101828] font-display mb-2 flex items-start gap-2.5">
                   <HelpCircle className="w-5 h-5 text-[#7F56D9] shrink-0 mt-0.5" />
                   {faq.question}

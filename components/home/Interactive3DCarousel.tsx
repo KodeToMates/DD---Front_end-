@@ -145,7 +145,7 @@ export default function Interactive3DCarousel() {
                       animate={{ opacity: 1, rotateY: 0, scale: 1 }}
                       exit={{ opacity: 0, rotateY: -15, scale: 0.95 }}
                       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                      className="rounded-3xl bg-white border border-[#EAECF0] p-8 sm:p-10 shadow-xl relative overflow-hidden"
+                      className="rounded-3xl bg-white border border-[#D6BBFB] p-8 sm:p-10 shadow-xl relative overflow-hidden"
                     >
                       {/* Top Bar with Badge */}
                       <div className="flex items-center justify-between pb-6 border-b border-[#F2F4F7]">
@@ -184,7 +184,7 @@ export default function Interactive3DCarousel() {
                         {current.kpis.map((kpi, idx) => (
                           <div
                             key={idx}
-                            className="p-4 rounded-2xl bg-[#F9FAFB] border border-[#EAECF0] space-y-1"
+                            className="p-4 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] space-y-1"
                           >
                             <span className="text-xs text-[#667085] font-body block">{kpi.label}</span>
                             <div className="text-2xl font-bold font-display text-[#101828] tracking-tight">
@@ -236,7 +236,7 @@ export default function Interactive3DCarousel() {
                     className={`w-full text-left p-4 rounded-2xl transition-all flex items-center justify-between border ${
                       isActive
                         ? 'bg-white border-[#7F56D9] shadow-md scale-102 ring-2 ring-[#7F56D9]/15'
-                        : 'bg-white/60 hover:bg-white border-[#EAECF0] text-[#475467]'
+                        : 'bg-white/60 hover:bg-white border-[#D6BBFB] hover:border-[#9E77ED] text-[#475467]'
                     }`}
                   >
                     <div className="flex items-center gap-3">

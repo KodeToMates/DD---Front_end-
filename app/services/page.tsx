@@ -47,7 +47,7 @@ export default function ServicesPage() {
               <div
                 key={service.id}
                 id={service.slug}
-                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#EAECF0] shadow-xs hover:shadow-lg transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-lg hover:border-[#9E77ED] transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
               >
                 <div className="lg:col-span-7 space-y-5">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#F9F5FF] border border-[#E9D7FE] text-[#7F56D9] text-xs font-mono font-bold uppercase tracking-wider">
@@ -86,8 +86,8 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 bg-[#F9F5FF] border border-[#E9D7FE] rounded-2xl p-6 sm:p-8 space-y-5">
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E9D7FE]">
+                <div className="lg:col-span-5 bg-[#F9F5FF] border border-[#D6BBFB] rounded-2xl p-6 sm:p-8 space-y-5">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#D6BBFB]">
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6941C6]">Proven Benchmark</span>
                     <span className="text-xs font-semibold text-[#027A48] bg-[#ECFDF3] border border-[#A6F4C5] px-2.5 py-0.5 rounded-full">Audited Impact</span>
                   </div>
@@ -101,11 +101,11 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#E9D7FE]">
+                  <div className="pt-4 border-t border-[#D6BBFB]">
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#667085] block mb-2">Supported Stack:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {service.techStack.map((tech, idx) => (
-                        <span key={idx} className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-white border border-[#EAECF0] text-[#344054]">
+                        <span key={idx} className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-white border border-[#D6BBFB] text-[#344054]">
                           {tech}
                         </span>
                       ))}

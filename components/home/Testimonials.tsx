@@ -37,7 +37,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
-              className="p-8 rounded-3xl bg-[#F9FAFB] border border-[#EAECF0] shadow-xs hover:shadow-md hover:border-[#D6BBFB] transition-all flex flex-col justify-between"
+              className="p-8 rounded-3xl bg-[#F9FAFB] border border-[#D6BBFB] shadow-xs hover:shadow-md hover:border-[#9E77ED] transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center gap-1 mb-5 text-[#FDB022]">
@@ -51,7 +51,7 @@ export default function Testimonials() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#EAECF0]">
+              <div className="mt-8 pt-6 border-t border-[#D6BBFB]">
                 <strong className="text-base font-bold text-[#101828] block font-display">{rev.author}</strong>
                 <span className="text-xs text-[#667085] font-body">{rev.role}</span>
                 <span className="text-xs font-semibold text-[#7F56D9] block mt-1 font-body">{rev.company}</span>

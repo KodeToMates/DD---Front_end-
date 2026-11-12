@@ -83,7 +83,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Left Column: Direct Calendar Scheduler (6 Cols) */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAECF0] shadow-xs space-y-6">
+              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
                     <Calendar className="w-5 h-5" />
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 </p>
 
                 {/* Simulated Interactive Calendar Box */}
-                <div className="p-6 rounded-2xl bg-[#F9F5FF] border border-[#E9D7FE] space-y-4">
+                <div className="p-6 rounded-2xl bg-[#F9F5FF] border border-[#D6BBFB] space-y-4">
                   <div className="flex items-center justify-between pb-3 border-b border-[#E9D7FE] text-xs">
                     <span className="font-semibold text-[#475467]">Strategy Call Duration:</span>
                     <span className="font-mono text-[#7F56D9] font-bold">30 Minutes</span>
@@ -155,7 +155,7 @@ export default function ContactPage() {
               </div>
 
               {/* Direct Details Card */}
-              <div className="p-6 rounded-2xl bg-white border border-[#EAECF0] shadow-xs space-y-3 text-xs text-[#475467] font-body">
+              <div className="p-6 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs space-y-3 text-xs text-[#475467] font-body">
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-[#7F56D9]" />
                   <span><strong>Official Email:</strong> contact@dataliveintelligence.com</span>
@@ -173,7 +173,7 @@ export default function ContactPage() {
 
             {/* Right Column: Inquiry Form (6 Cols) */}
             <div className="lg:col-span-6">
-              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAECF0] shadow-xs space-y-6">
+              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
                     <Mail className="w-5 h-5" />

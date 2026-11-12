@@ -77,8 +77,8 @@ export default function ServicesMatrix() {
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className={`group p-8 rounded-3xl bg-white border border-[#EAECF0] shadow-xs hover:shadow-xl hover:border-[#D6BBFB] transition-all flex flex-col justify-between relative overflow-hidden ${
-                  isFeatured ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-[#F9F5FF]/50 border-[#D6BBFB]' : ''
+                className={`group p-8 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:shadow-xl hover:border-[#9E77ED] transition-all flex flex-col justify-between relative overflow-hidden ${
+                  isFeatured ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-[#F9F5FF]/50 border-2 border-[#7F56D9]' : ''
                 }`}
               >
                 <div>

@@ -87,7 +87,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {ind.challenges.map((c, idx) => (
-              <div key={idx} className="p-8 rounded-2xl bg-white border border-[#EAECF0] shadow-xs space-y-3">
+              <div key={idx} className="p-8 rounded-2xl bg-white border border-[#D6BBFB] hover:border-[#9E77ED] shadow-xs space-y-3">
                 <span className="text-xs font-mono font-bold text-[#7F56D9] px-2.5 py-1 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] inline-block">
                   Bottleneck #{idx + 1}
                 </span>
@@ -116,7 +116,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ind.trackedKpis.map((kpi, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#EAECF0] shadow-xs space-y-2">
+              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] shadow-xs space-y-2">
                 <span className="text-xs text-[#667085] font-semibold block uppercase tracking-wider font-body">
                   Frequency: {kpi.frequency}
                 </span>
@@ -133,7 +133,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       {/* Case Study Benchmark Highlight */}
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#EAECF0] shadow-sm space-y-6">
+          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-sm space-y-6">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#7F56D9]">
               Real-World Verified Benchmark
             </span>

@@ -116,7 +116,7 @@ export default function HeroSection() {
                 scale: isHovered ? 1.02 : 1,
               }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="relative rounded-2xl bg-white border border-[#EAECF0] p-5 sm:p-6 shadow-2xl transition-all preserve-3d"
+              className="relative rounded-2xl bg-white border border-[#D6BBFB] p-5 sm:p-6 shadow-2xl transition-all preserve-3d"
             >
               {/* Browser Window Bar */}
               <div className="flex items-center justify-between pb-3.5 border-b border-[#F2F4F7]">
@@ -133,7 +133,7 @@ export default function HeroSection() {
               </div>
 
               {/* View Selector Tabs - Untitled UI Style */}
-              <div className="flex items-center gap-1.5 p-1 bg-[#F9FAFB] border border-[#EAECF0] rounded-xl mt-4 mb-4 text-xs font-body font-semibold">
+              <div className="flex items-center gap-1.5 p-1 bg-[#F9FAFB] border border-[#D6BBFB] rounded-xl mt-4 mb-4 text-xs font-body font-semibold">
                 <button
                   type="button"
                   onClick={() => setActiveTab('executive')}
@@ -178,14 +178,14 @@ export default function HeroSection() {
                     className="space-y-3"
                   >
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                         <span className="text-[11px] text-[#667085] block font-medium">Monthly Revenue</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">₹48.6 Cr</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
                           <TrendingUp className="w-3 h-3" /> +16.2% vs target
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                         <span className="text-[11px] text-[#667085] block font-medium">Gross Margin</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">27.4%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
@@ -195,7 +195,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Interactive Live Sparkline Graph */}
-                    <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                    <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                       <div className="flex items-center justify-between text-xs mb-2">
                         <span className="text-[#344054] font-semibold text-[11px]">DISPATCH RUN-RATE</span>
                         <span className="text-[#7F56D9] font-mono text-[11px] font-semibold">DAILY 8:00 AM SYNC</span>
@@ -222,14 +222,14 @@ export default function HeroSection() {
                     className="space-y-3"
                   >
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                         <span className="text-[11px] text-[#667085] block font-medium">Plant OEE</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">86.2%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
                           Target: &gt;85% Met
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                         <span className="text-[11px] text-[#667085] block font-medium">Scrap Rate</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">1.6%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
@@ -253,14 +253,14 @@ export default function HeroSection() {
                     className="space-y-3"
                   >
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                         <span className="text-[11px] text-[#667085] block font-medium">Debtor DSO</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">41 Days</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
                           -11 Days faster
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#EAECF0]">
+                      <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB]">
                         <span className="text-[11px] text-[#667085] block font-medium">Bank Reconciled</span>
                         <span className="text-2xl font-bold font-display text-[#101828] tracking-tight">100%</span>
                         <span className="text-[11px] font-semibold text-[#027A48] flex items-center gap-1 mt-0.5">
@@ -268,7 +268,7 @@ export default function HeroSection() {
                         </span>
                       </div>
                     </div>
-                    <div className="p-3 rounded-xl bg-[#F9FAFB] border border-[#EAECF0] text-xs text-[#344054] flex items-center justify-between">
+                    <div className="p-3 rounded-xl bg-[#F9FAFB] border border-[#D6BBFB] text-xs text-[#344054] flex items-center justify-between">
                       <span className="text-[11px] text-[#667085]">90-DAY CASH FORECAST:</span>
                       <strong className="text-[#101828]">₹6.8 Cr BUFFER</strong>
                     </div>

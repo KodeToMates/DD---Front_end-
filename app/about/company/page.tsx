@@ -76,7 +76,7 @@ export default function CompanyPage() {
             {values.map((v, idx) => {
               const Icon = v.icon;
               return (
-                <div key={idx} className="p-8 rounded-2xl bg-white border border-[#EAECF0] shadow-xs space-y-3">
+                <div key={idx} className="p-8 rounded-2xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-colors space-y-3">
                   <div className="w-10 h-10 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
                     <Icon className="w-5 h-5" />
                   </div>

@@ -32,7 +32,7 @@ export default function CaseStudiesPage() {
           {caseStudiesData.map((study) => (
             <div
               key={study.id}
-              className="p-8 sm:p-12 rounded-3xl bg-white border border-[#EAECF0] shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+              className="p-8 sm:p-12 rounded-3xl bg-white border border-[#D6BBFB] shadow-xs hover:border-[#9E77ED] transition-all grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
             >
               <div className="lg:col-span-7 space-y-5">
                 <div className="flex flex-wrap items-center gap-2">
@@ -58,7 +58,7 @@ export default function CaseStudiesPage() {
                 </div>
 
                 {/* Quote */}
-                <div className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#EAECF0] relative">
+                <div className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] relative">
                   <Quote className="w-5 h-5 text-[#7F56D9] mb-2 opacity-80" />
                   <p className="text-xs sm:text-sm italic text-[#344054] leading-relaxed font-body">
                     &ldquo;{study.quote.text}&rdquo;
@@ -73,7 +73,7 @@ export default function CaseStudiesPage() {
               {/* Quantified Results Grid */}
               <div className="lg:col-span-5 grid grid-cols-2 gap-4">
                 {study.quantifiedResults.map((res, i) => (
-                  <div key={i} className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#EAECF0] flex flex-col justify-between">
+                  <div key={i} className="p-5 rounded-2xl bg-[#F9FAFB] border border-[#D6BBFB] flex flex-col justify-between">
                     <div>
                       <span className="text-2xl sm:text-3xl font-extrabold text-[#7F56D9] font-mono tracking-tight block">
                         {res.metric}

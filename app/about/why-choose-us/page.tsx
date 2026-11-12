@@ -63,16 +63,16 @@ export default function WhyChooseUsPage() {
       <section className="py-20 bg-[#F9FAFB] border-b border-[#EAECF0]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-3xl shadow-xs border border-[#EAECF0] overflow-hidden text-left text-sm font-body">
+            <table className="w-full bg-white rounded-3xl shadow-xs border border-[#D6BBFB] overflow-hidden text-left text-sm font-body">
               <thead>
-                <tr className="border-b border-[#EAECF0] bg-[#F9FAFB] text-[#101828] font-bold font-display">
+                <tr className="border-b border-[#D6BBFB] bg-[#F9FAFB] text-[#101828] font-bold font-display">
                   <th className="p-5 sm:p-6">Feature / Capability</th>
                   <th className="p-5 sm:p-6 text-[#667085] font-medium font-body">Generic Freelancers</th>
                   <th className="p-5 sm:p-6 text-[#667085] font-medium font-body">Big IT Consultancies</th>
-                  <th className="p-5 sm:p-6 bg-[#F9F5FF] text-[#6941C6] border-l border-r border-[#E9D7FE]">DataLive Intelligence</th>
+                  <th className="p-5 sm:p-6 bg-[#F9F5FF] text-[#6941C6] border-l border-r border-[#D6BBFB]">DataLive Intelligence</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#EAECF0]">
+              <tbody className="divide-y divide-[#D6BBFB]">
                 {comparisons.map((row, idx) => (
                   <tr key={idx} className="hover:bg-[#F9FAFB] transition-colors">
                     <td className="p-5 sm:p-6 font-bold text-[#101828] font-display">{row.feature}</td>
