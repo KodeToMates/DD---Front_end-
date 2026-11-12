@@ -35,11 +35,8 @@ export default function ServicesMatrix() {
     <section className="py-24 lg:py-32 bg-[#F9FAFB] text-[#101828] border-b border-[#EAECF0] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div 
+            data-aos="fade-up"
             className="max-w-2xl"
           >
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD]">
@@ -51,7 +48,7 @@ export default function ServicesMatrix() {
             <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">
               From raw ERP databases to automated executive WhatsApp scorecards, explore our specialized services designed to scale your operational velocity.
             </p>
-          </motion.div>
+          </div>
           <Link
             href="/services"
             className="inline-flex items-center gap-2 text-sm font-body font-semibold text-[#0284C7] hover:text-[#0369A1] shrink-0 transition-colors"
@@ -62,11 +59,7 @@ export default function ServicesMatrix() {
         </div>
 
         {/* Untitled UI Style Bento Grid */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+        <div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {servicesData.map((service, index) => {
@@ -74,9 +67,10 @@ export default function ServicesMatrix() {
             const isFeatured = index === 0;
 
             return (
-              <motion.div
+              <div
                 key={service.id}
-                variants={itemVariants}
+                data-aos="fade-up"
+                data-aos-delay={(index % 3) * 100}
                 className={`group p-8 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-xl hover:border-[#0284C7] transition-all flex flex-col justify-between relative overflow-hidden ${
                   isFeatured ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white to-[#F0F9FF]/50 border-2 border-[#0284C7]' : ''
                 }`}
@@ -122,10 +116,10 @@ export default function ServicesMatrix() {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

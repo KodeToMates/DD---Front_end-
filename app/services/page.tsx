@@ -47,6 +47,7 @@ export default function ServicesPage() {
               <div
                 key={service.id}
                 id={service.slug}
+                data-aos="fade-up"
                 className="p-8 sm:p-12 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-lg hover:border-[#0284C7] transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
               >
                 <div className="lg:col-span-7 space-y-5">

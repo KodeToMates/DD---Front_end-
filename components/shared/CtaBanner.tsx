@@ -21,11 +21,9 @@ export default function CtaBanner({
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0284C7]/12 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <div 
+          data-aos="zoom-in"
+          data-aos-duration="700"
           className="max-w-4xl mx-auto space-y-6"
         >
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider shadow-2xs">
@@ -70,7 +68,7 @@ export default function CtaBanner({
               <CheckCircle2 className="w-4 h-4 text-[#12B76A]" /> 100% Practical Insights, No Sales Fluff
             </span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

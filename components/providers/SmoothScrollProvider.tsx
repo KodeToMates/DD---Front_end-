@@ -3,12 +3,24 @@
 import React, { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
+import AOS from 'aos';
 
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    // Initialize AOS with smooth scroll transitions
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: false, // Re-animate on scroll
+      offset: 60,
+      delay: 50,
+      mirror: true, // Elements animate back out when scrolling past them
+      anchorPlacement: 'top-bottom',
+    });
+
     // Initialize Lenis smooth scroll
     const lenis = new Lenis({
       duration: 1.2,
@@ -26,6 +38,11 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       (window as unknown as { lenis?: Lenis }).lenis = lenis;
     }
 
+    // Refresh AOS on scroll to ensure perfect sync
+    lenis.on('scroll', () => {
+      AOS.refresh();
+    });
+
     let rafId: number;
 
     function raf(time: number) {
@@ -35,7 +52,13 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
 
     rafId = requestAnimationFrame(raf);
 
+    // Refresh once on load
+    const timer = setTimeout(() => {
+      AOS.refreshHard();
+    }, 200);
+
     return () => {
+      clearTimeout(timer);
       cancelAnimationFrame(rafId);
       lenis.destroy();
       lenisRef.current = null;
@@ -45,7 +68,7 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     };
   }, []);
 
-  // Reset scroll to top on route change unless hash is present
+  // Reset scroll to top on route change & refresh AOS
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (window.location.hash) return;
@@ -54,6 +77,12 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       lenisRef.current.scrollTo(0, { immediate: true });
     }
     window.scrollTo(0, 0);
+
+    const timer = setTimeout(() => {
+      AOS.refreshHard();
+    }, 150);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return <>{children}</>;

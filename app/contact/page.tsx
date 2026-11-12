@@ -83,7 +83,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Left Column: Direct Calendar Scheduler (6 Cols) */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-6" data-aos="fade-right">
               <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center">
@@ -185,7 +185,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Inquiry Form (6 Cols) */}
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6" data-aos="fade-left">
               <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center">

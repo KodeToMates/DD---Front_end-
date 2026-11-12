@@ -97,7 +97,7 @@ export default function Interactive3DCarousel() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl" data-aos="fade-up">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" /> 3D Interactive Showroom
             </span>
@@ -110,7 +110,7 @@ export default function Interactive3DCarousel() {
           </div>
 
           {/* Carousel Controls */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-3 shrink-0" data-aos="fade-left">
             <button
               onClick={prevSlide}
               aria-label="Previous industry slide"
@@ -133,7 +133,7 @@ export default function Interactive3DCarousel() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Active Card (Large Centerpiece with 3D Depth) */}
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-8" data-aos="zoom-in-up" data-aos-duration="700">
               <AnimatePresence mode="wait">
                 {(() => {
                   const current = carouselItems[currentIndex];
@@ -221,7 +221,7 @@ export default function Interactive3DCarousel() {
             </div>
 
             {/* Right Column: Carousel Selector Nav List */}
-            <div className="lg:col-span-4 space-y-3">
+            <div className="lg:col-span-4 space-y-3" data-aos="fade-left" data-aos-delay="150">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#667085] block mb-2">
                 All Available Architectures ({carouselItems.length}):
               </span>

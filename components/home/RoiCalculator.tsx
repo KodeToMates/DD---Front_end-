@@ -20,11 +20,8 @@ export default function RoiCalculator() {
   return (
     <section className="py-24 lg:py-32 bg-white text-[#101828] border-b border-[#EAECF0] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
+          data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
@@ -36,13 +33,11 @@ export default function RoiCalculator() {
           <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">
             Adjust the sliders below to estimate the annual hours and executive payroll your company can reclaim by automating MIS and Power BI workflows.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <div 
+          data-aos="zoom-in-up"
+          data-aos-duration="700"
           className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-[#BAE6FD] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
         >
           {/* Sliders (7 Cols) */}
@@ -151,7 +146,7 @@ export default function RoiCalculator() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

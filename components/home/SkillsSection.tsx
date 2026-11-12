@@ -54,11 +54,8 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-24 lg:py-32 bg-white text-[#101828] border-b border-[#EAECF0] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
+          data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
@@ -70,19 +67,17 @@ export default function SkillsSection() {
           <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">
             You do not need to hire expensive in-house data architects. Our deep technical mastery covers the entire modern analytics and automation lifecycle.
           </p>
-        </motion.div>
+        </div>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsCatalog.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
                 className="p-8 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs hover:shadow-xl hover:border-[#0284C7] transition-all flex flex-col justify-between"
               >
                 <div>
@@ -119,7 +114,7 @@ export default function SkillsSection() {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

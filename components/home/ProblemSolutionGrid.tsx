@@ -23,11 +23,8 @@ export default function ProblemSolutionGrid() {
   return (
     <section className="py-24 lg:py-32 bg-white text-[#101828] border-b border-[#EAECF0] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
+          data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD]">
@@ -39,15 +36,13 @@ export default function ProblemSolutionGrid() {
           <p className="text-base text-[#475467] mt-4 leading-relaxed font-body">
             Excel is a great calculator, but a dangerous enterprise database. Here is how DataLive Intelligence replaces spreadsheet paralysis with automated, real-time command centers.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {/* The Old Way: Spreadsheet Trap */}
-          <motion.div 
-            initial={{ opacity: 0, x: -25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+          <div 
+            data-aos="fade-right"
+            data-aos-duration="700"
             className="p-8 sm:p-10 rounded-3xl bg-[#FEF3F2] border border-[#FECDCA] relative overflow-hidden shadow-xs"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -68,14 +63,12 @@ export default function ProblemSolutionGrid() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* The New Way: DataLive Advantage */}
-          <motion.div 
-            initial={{ opacity: 0, x: 25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+          <div 
+            data-aos="fade-left"
+            data-aos-duration="700"
             className="p-8 sm:p-10 rounded-3xl bg-white border-2 border-[#0284C7] shadow-xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 px-4 py-1.5 rounded-bl-2xl bg-[#0284C7] text-white text-[11px] font-mono font-bold tracking-wider uppercase shadow-xs">
@@ -107,7 +100,7 @@ export default function ProblemSolutionGrid() {
                 Book a Free Data Audit &rarr;
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
