@@ -1,0 +1,93 @@
+import { CaseStudy } from '@/lib/types';
+
+export const caseStudiesData: CaseStudy[] = [
+  {
+    id: 'pune-auto-components',
+    slug: 'pune-auto-components-mis-power-bi',
+    title: 'How a ₹120Cr Auto Component Manufacturer Saved 40 Hours/Week and Reduced Scrap by 14%',
+    clientIndustry: 'manufacturing',
+    serviceUsed: 'power-bi',
+    clientProfile: 'Tier-1 Automotive Component Manufacturer with 3 factories in Pune and 650+ shop-floor workers.',
+    challenge: 'Plant supervisors spent 2.5 hours at the end of every shift compiling manual handwritten machine logs into 8 separate Excel sheets. Management only reviewed production numbers 4 days later, making it impossible to catch machine downtime spikes or scrap deviations until production had already suffered.',
+    solution: 'DataLive Intelligence built an automated data pipeline capturing machine PLC cycle signals and weighing-scale outputs into a central SQL Server warehouse. We engineered real-time shop-floor Power BI display boards and an executive mobile view for the Managing Director.',
+    quantifiedResults: [
+      { metric: '40 Hrs', value: 'Saved / Week', label: 'Manual spreadsheet compilation eliminated' },
+      { metric: '14%', value: 'Scrap Reduction', label: 'Faster intervention on tooling wear' },
+      { metric: '8:00 AM', value: 'Daily MIS', label: 'Automated morning WhatsApp flash report' },
+      { metric: '₹28 Lakhs', value: 'Annual Savings', label: 'Direct material & labor cost recovered' },
+    ],
+    quote: {
+      text: 'For the first time in 15 years of running this business, I look at yesterday’s exact plant throughput, scrap numbers, and dispatch variance on my phone before my morning coffee. DataLive transformed our operations.',
+      author: 'Rajesh Kulkarni',
+      role: 'Managing Director',
+      company: 'Precision Automotive Systems Pvt Ltd',
+    },
+  },
+  {
+    id: 'mumbai-nbfc-reconciliation',
+    slug: 'mumbai-nbfc-automated-bank-reconciliation',
+    title: 'Automating 10,000+ Monthly Loan Repayment Reconciliations for a High-Growth NBFC',
+    clientIndustry: 'finance',
+    serviceUsed: 'rpa-development',
+    clientProfile: 'Regional NBFC specializing in SME commercial vehicle financing across Maharashtra and Gujarat.',
+    challenge: 'Borrowers paid EMIs across 14 bank accounts via UPI, NACH, and direct transfers. A team of 5 junior accountants spent 12 full days every month matching transaction narrations and UTR numbers against the loan book in Excel. Unreconciled accounts led to false payment-default notices to good clients.',
+    solution: 'We engineered an intelligent RPA bot that automatically logs into net banking portals every morning, downloads statement feeds, and executes fuzzy matching algorithms against borrower loan IDs. Reconciled entries are posted directly to Tally Prime, while exceptions are flagged with 1-click review.',
+    quantifiedResults: [
+      { metric: '98.5%', value: 'Auto-Matched', label: 'Transactions reconciled without human touch' },
+      { metric: '36 Hours', value: 'Month Closing', label: 'Down from 12 days to under 2 days' },
+      { metric: 'Zero', value: 'False Notices', label: 'Client grievance complaints eliminated' },
+      { metric: '4 FTEs', value: 'Reallocated', label: 'Staff shifted to high-value credit underwriting' },
+    ],
+    quote: {
+      text: 'What used to take our accounting team nearly half the month is now finished automatically by 9:30 AM every day. The ROI was clear within the first 30 days.',
+      author: 'Sunita Mehra',
+      role: 'Chief Financial Officer',
+      company: 'Apex Capital Finance',
+    },
+  },
+  {
+    id: 'hyderabad-retail-chain',
+    slug: 'hyderabad-lifestyle-retail-inventory-analytics',
+    title: 'Slashing Dead Stock by 28% Across a 35-Store Lifestyle & Apparel Retail Chain',
+    clientIndustry: 'retail',
+    serviceUsed: 'business-intelligence',
+    clientProfile: 'Fast-fashion and apparel chain with 35 physical retail stores across South India and an active e-commerce store.',
+    challenge: 'Each store operated independent POS machines with localized inventories. Central procurement had no visibility into store-level stock aging until end-of-season audits, resulting in ₹1.2 Cr of unsold dead stock that had to be liquidated at 60% discounts.',
+    solution: 'DataLive Intelligence created a centralized cloud SQL data warehouse that synchronizes sales and inventory data from all 35 stores nightly. We deployed an automated Power BI inventory dashboard with predictive reordering algorithms and automated transfer recommendations.',
+    quantifiedResults: [
+      { metric: '28%', value: 'Dead Stock Drop', label: 'Inter-store transfers of slow-moving SKUs' },
+      { metric: '+16%', value: 'Full-Price Sell-Thru', label: 'Higher margin realization before discounts' },
+      { metric: 'Daily 9 PM', value: 'Store Scorecard', label: 'Instant target vs actual tracking on WhatsApp' },
+      { metric: '₹44 Lakhs', value: 'Working Capital', label: 'Cash unlocked in first 6 months' },
+    ],
+    quote: {
+      text: 'We stopped guessing what each store needed. DataLive gave our store managers and merchandising team exact visibility into what is selling and what needs to move.',
+      author: 'Vikram Reddy',
+      role: 'Head of Retail Operations',
+      company: 'VogueTrend Lifestyle Stores',
+    },
+  },
+  {
+    id: 'delhi-3pl-logistics',
+    slug: 'delhi-3pl-freight-turnaround-fleet-intelligence',
+    title: 'Recovering ₹32 Lakhs in Unverified Fuel & FASTag Costs for a Pan-India 3PL Carrier',
+    clientIndustry: 'logistics',
+    serviceUsed: 'sql-database',
+    clientProfile: 'Fleet operator managing 220 long-haul container trucks operating between major industrial corridors.',
+    challenge: 'Driver fuel vouchers, FASTag toll charges, GPS mileage logs, and billing invoices existed in four separate systems. Reconciling trip expenses against client billable ton-kilometers took over 6 weeks, causing massive cash flow delays and unverified fuel pilferage.',
+    solution: 'We engineered an automated data integration engine using Python and SQL Server that merges GPS coordinate logs with FASTag timestamps and fuel pump transaction API feeds. Discrepancies exceeding 5% fuel consumption are automatically flagged for fleet managers.',
+    quantifiedResults: [
+      { metric: '₹32 Lakhs', value: 'Cost Recovered', label: 'Annual leakage from fuel discrepancies closed' },
+      { metric: '96.2%', value: 'OTIF Delivery', label: 'On-time delivery performance achieved' },
+      { metric: '3 Days', value: 'Trip Invoicing', label: 'Billing cycle cut from 45 days to 72 hours' },
+      { metric: '220 Trucks', value: 'Live Tracked', label: 'Single-screen fleet utilization control' },
+    ],
+    quote: {
+      text: 'Every transporter knows the pain of unverified diesel and toll bills. DataLive Intelligence gave us mathematical precision over our operating costs.',
+      author: 'Harpreet Singh',
+      role: 'Director of Fleet Operations',
+      company: 'Continental Express Freightways',
+    },
+  },
+];
+
