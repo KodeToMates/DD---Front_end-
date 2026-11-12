@@ -255,10 +255,7 @@ export default function HeroSection() {
                   <div className="w-3.5 h-3.5 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
                   <span className="text-xs sm:text-sm text-[#475467] font-mono font-medium ml-2">datalive-executive-bi.pbi</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECFDF3] border border-[#A6F4C5] text-[#027A48] text-xs font-mono font-bold">
-                  <span className="w-2 h-2 rounded-full bg-[#12B76A] animate-ping" />
-                  <span>SYNCED 08:00 AM</span>
-                </div>
+
               </div>
 
               {/* View Selector Tabs - Untitled UI Style */}
@@ -343,11 +340,10 @@ export default function HeroSection() {
                         ].map((bar, i) => (
                           <div key={i} className="flex-1 flex flex-col items-center h-full justify-end gap-2">
                             <div
-                              className={`w-full rounded-t-lg transition-all duration-300 ${
-                                bar.active
-                                  ? 'bg-gradient-to-t from-[#0284C7] to-[#02B8FD] shadow-[0_0_12px_rgba(2,184,253,0.5)]'
-                                  : 'bg-[#D0D5DD] hover:bg-[#0284C7]/70'
-                              }`}
+                              className={`w-full rounded-t-lg transition-all duration-300 ${bar.active
+                                ? 'bg-gradient-to-t from-[#0284C7] to-[#02B8FD] shadow-[0_0_12px_rgba(2,184,253,0.5)]'
+                                : 'bg-[#D0D5DD] hover:bg-[#0284C7]/70'
+                                }`}
                               style={{ height: bar.h }}
                             />
                             <span className="text-[10px] sm:text-[11px] font-mono text-[#667085]">{bar.day}</span>

@@ -64,20 +64,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-white text-[#101828] py-16 lg:py-24 border-b border-[#EAECF0] relative overflow-hidden">
-        <div className="absolute inset-0 bg-hero-subtle-glow pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0369A1] text-xs font-semibold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" /> Connect With A Principal Architect
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display mt-2">
-            Schedule Your Free 30-Minute Data Strategy Call
-          </h1>
-          <p className="text-base sm:text-lg text-[#475467] mt-4 leading-relaxed font-body">
-            Review your current spreadsheet bottlenecks, evaluate your software stack, and leave with an actionable 3-step automation blueprint. Zero obligations.
-          </p>
-        </div>
-      </section>
 
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

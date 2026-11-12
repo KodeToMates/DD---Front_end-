@@ -14,13 +14,13 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <MetricsBar />
+      {/* <MetricsBar /> */}
       <SkillsSection />
       <ProblemSolutionGrid />
       <Interactive3DCarousel />
       <RoiCalculator />
       <ServicesMatrix />
-      <FeaturedCaseStudy />
+      {/* <FeaturedCaseStudy /> */}
       <Testimonials />
       <CtaBanner />
     </>
