@@ -127,8 +127,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#667085] gap-4 font-body">
-          <p>&copy; {new Date().getFullYear()} DataLive Intelligence. All rights reserved.</p>
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-[#667085] gap-4 font-body">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+            <p>&copy; {new Date().getFullYear()} DataLive Intelligence. All rights reserved.</p>
+            <span className="hidden sm:inline text-[#D0D5DD]">&bull;</span>
+            <p>
+              Designed &amp; Developed by{' '}
+              <a
+                href="https://www.kodetomates.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#101828] hover:text-[#E4521B] transition-colors inline-flex items-center gap-1 group"
+              >
+                <span>Kode<span className="text-[#E4521B]">To</span>Mates</span>
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-6">
             <span>ISO / SOC-2 Compliant Cloud Architecture</span>
             <Link href="/contact" className="hover:text-[#101828]">Privacy Policy</Link>
