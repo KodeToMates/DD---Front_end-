@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-[#080B14] text-white">
-      {/* Hero Background Image - Pure & Unaltered */}
+      {/* Hero Background Image with Contrast Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/images/home-hero-final.jpg"
@@ -22,6 +22,9 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover object-center lg:object-[center_right]"
         />
+        {/* Directional Soft Dark Overlay - darkens the left window glare so text is 100% readable while keeping the right monitor vivid */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/30 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080B14] via-transparent to-black/40 z-10 pointer-events-none" />
       </div>
 
       {/* Main Hero Content Container */}
@@ -49,16 +52,16 @@ export default function HeroSection() {
             </Link>
 
             {/* Untitled UI Signature Display Heading */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white drop-shadow-md">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
               Automate your reports.{' '}
-              <span className="block mt-1 bg-gradient-to-r from-[#9E77ED] via-[#B692F6] to-[#D6BBFB] bg-clip-text text-transparent">
+              <span className="block mt-1 bg-gradient-to-r from-[#B692F6] via-[#D6BBFB] to-[#ECE9FE] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(127,86,217,0.5)]">
                 Scale your business intelligence.
               </span>
             </h1>
 
             {/* Refined Body Lead */}
-            <p className="text-base sm:text-lg text-white/90 max-w-xl mx-auto lg:mx-0 leading-relaxed font-body drop-shadow-sm font-medium">
-              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-bold underline decoration-[#9E77ED]/50 underline-offset-4">Power BI dashboards</strong>, <strong className="text-white font-bold underline decoration-[#9E77ED]/50 underline-offset-4">SQL data pipelines</strong>, and <strong className="text-white font-bold underline decoration-[#9E77ED]/50 underline-offset-4">RPA bots</strong> built specifically for growing mid-market enterprises.
+            <p className="text-base sm:text-lg text-white max-w-xl mx-auto lg:mx-0 leading-relaxed font-body drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] font-medium">
+              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-bold underline decoration-[#9E77ED] underline-offset-4">Power BI dashboards</strong>, <strong className="text-white font-bold underline decoration-[#9E77ED] underline-offset-4">SQL data pipelines</strong>, and <strong className="text-white font-bold underline decoration-[#9E77ED] underline-offset-4">RPA bots</strong> built specifically for growing mid-market enterprises.
             </p>
 
             {/* Dual CTA Buttons - Untitled UI Styling */}
@@ -80,7 +83,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-white/90 font-body drop-shadow-sm">
+            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-white font-body drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
                 <span>Zero ERP Disruption</span>
