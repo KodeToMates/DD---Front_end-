@@ -21,8 +21,8 @@ const heroSlides: HeroSlide[] = [
     image: '/Home/hero-1.jpg',
     alt: 'Enterprise real-time data command center with holographic analytics',
     badge: 'Core Skills: Power BI • SQL • Excel • MIS • RPA',
-    headingStart: 'Automate your reports.',
-    headingAccent: 'Scale your business intelligence.',
+    headingStart: 'Automate Reports.',
+    headingAccent: 'Scale Enterprise BI.',
     body: (
       <>
         Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">Power BI dashboards</strong>, <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">SQL data pipelines</strong>, and <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">RPA bots</strong> built specifically for growing mid-market enterprises.
@@ -34,8 +34,8 @@ const heroSlides: HeroSlide[] = [
     image: '/Home/hero-2.jpg',
     alt: 'Enterprise executive analyzing real-time financial reporting and business performance',
     badge: 'Automated Pipelines: SAP • Tally • SQL • Real-Time ETL',
-    headingStart: 'Eliminate manual reporting.',
-    headingAccent: 'Empower leadership decisions.',
+    headingStart: 'Zero Manual Work.',
+    headingAccent: 'Empower Decisions.',
     body: (
       <>
         Custom RPA bots and ODBC connectors extract directly from ERPs, CRM, and legacy systems. Save <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">20+ hours each week</strong> with zero human copy-paste errors and single-source-of-truth accuracy.
@@ -47,8 +47,8 @@ const heroSlides: HeroSlide[] = [
     image: '/Home/hero-3.jpg',
     alt: 'Senior business intelligence specialist analyzing multi-dimensional operational metrics',
     badge: 'Financial Clarity: 90-Day Runway • Plant OEE • WhatsApp MIS',
-    headingStart: 'Gain total visibility.',
-    headingAccent: 'Predict outcomes in real time.',
+    headingStart: 'Total Visibility.',
+    headingAccent: 'Predict In Real Time.',
     body: (
       <>
         Instant <strong className="text-white font-bold underline decoration-[#0284C7] underline-offset-4">90-day cash forecast</strong>, plant OEE tracking, and automated debtor reconciliations delivered directly to executive WhatsApp and inbox every morning by 8:00 AM.
@@ -139,9 +139,11 @@ export default function HeroSection() {
                   {/* Untitled UI Style Eyebrow Pill */}
 
 
-                  {/* Untitled UI Signature Display Heading */}
-                  <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
-                    {heroSlides[currentSlide].headingStart}{' '}
+                  {/* Untitled UI Signature Display Heading - Exactly 2 Clean Lines */}
+                  <h1 className="text-3xl sm:text-5xl lg:text-[44px] xl:text-[54px] font-display font-bold tracking-[-0.03em] leading-[1.12] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+                    <span className="block">
+                      {heroSlides[currentSlide].headingStart}
+                    </span>
                     <span className="block mt-1 bg-gradient-to-r from-[#02B8FD] via-[#38BDF8] to-white bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(2,132,199,0.5)]">
                       {heroSlides[currentSlide].headingAccent}
                     </span>
