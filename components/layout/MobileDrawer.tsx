@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   X,
@@ -74,9 +75,20 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         <div>
           {/* Header */}
           <div className="flex items-center justify-between pb-4 border-b border-[#EAECF0]">
-            <span className="text-lg font-bold font-display tracking-tight text-[#101828]">
-              Data<span className="text-[#7F56D9]">Live</span>
-            </span>
+            <Link href="/" onClick={onClose} className="flex items-center gap-2">
+              <div className="relative w-7 h-7 shrink-0">
+                <Image
+                  src="/final_logo_favicon_pack/final-logo-transparent-master.png"
+                  alt="DataLive Intelligence Logo"
+                  width={28}
+                  height={28}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="text-lg font-bold font-display tracking-tight text-[#101828]">
+                Data<span className="text-[#7F56D9]">Live</span>
+              </span>
+            </Link>
             <button
               onClick={onClose}
               className="p-2 rounded-lg text-[#667085] hover:text-[#101828] hover:bg-[#F9FAFB]"

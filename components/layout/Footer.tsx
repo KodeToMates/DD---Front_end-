@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BarChart3, Mail, MapPin, Phone, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
 
@@ -11,9 +12,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#EAECF0]">
           {/* Brand & Value Col */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#7F56D9] to-[#9E77ED] flex items-center justify-center text-white shadow-xs">
-                <BarChart3 className="w-5 h-5 text-white" />
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="relative w-10 h-10 shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center">
+                <Image
+                  src="/final_logo_favicon_pack/final-logo-transparent-master.png"
+                  alt="DataLive Intelligence Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold font-display tracking-tight text-[#101828]">
                 Data<span className="text-[#7F56D9]">Live</span> Intelligence

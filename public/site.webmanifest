@@ -1,0 +1,21 @@
+{
+  "name": "DataLive Intelligence",
+  "short_name": "DataLive",
+  "description": "Power BI, SQL & MIS Reporting Automation for Growing Mid-Market Enterprises",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#7F56D9",
+  "icons": [
+    {
+      "src": "/final_logo_favicon_pack/logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/final_logo_favicon_pack/logo-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

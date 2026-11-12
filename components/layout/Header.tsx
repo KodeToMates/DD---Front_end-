@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   ChevronDown,
@@ -104,8 +105,15 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#7F56D9] to-[#9E77ED] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
-              <BarChart3 className="w-5 h-5 text-white" />
+            <div className="relative w-10 h-10 shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center">
+              <Image
+                src="/final_logo_favicon_pack/final-logo-transparent-master.png"
+                alt="DataLive Intelligence Logo"
+                width={40}
+                height={40}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold font-display tracking-tight text-[#101828] leading-none">

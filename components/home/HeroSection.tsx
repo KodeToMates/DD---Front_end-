@@ -15,7 +15,7 @@ export default function HeroSection() {
       {/* Hero Background Image - Pure & Unaltered */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src="/Home/home-hero.jpg"
+          src="/images/home-hero-final.jpg"
           alt="Enterprise data analyst monitoring live business intelligence dashboards"
           fill
           priority
@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* Left Column: Typographic Hierarchy (7 Cols) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

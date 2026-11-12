@@ -21,6 +21,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dataliveintelligence.com'),
   title: 'DataLive Intelligence | Power BI, SQL & MIS Reporting Automation',
   description:
     'DataLive Intelligence engineers custom Power BI dashboards, robust SQL pipelines, automated MIS reporting, and RPA bots for growing mid-market enterprises.',
@@ -34,6 +35,16 @@ export const metadata: Metadata = {
     'Tally Power BI Integration',
   ],
   authors: [{ name: 'DataLive Intelligence' }],
+  icons: {
+    icon: [
+      { url: '/final_logo_favicon_pack/logo-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/final_logo_favicon_pack/logo-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [
+      { url: '/final_logo_favicon_pack/logo-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'DataLive Intelligence | Real-Time Business Intelligence',
     description:
@@ -41,6 +52,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     siteName: 'DataLive Intelligence',
+    images: [
+      {
+        url: '/final_logo_favicon_pack/logo-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'DataLive Intelligence Logo',
+      },
+    ],
   },
 };
 
