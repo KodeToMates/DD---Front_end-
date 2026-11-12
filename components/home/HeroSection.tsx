@@ -11,8 +11,8 @@ export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-[#080B14] text-white">
-      {/* Hero Background Image with Sleek Dark/Black Overlay */}
+    <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-white text-[#101828]">
+      {/* Hero Background Image - Pure & Unaltered */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/Home/home-hero.jpg"
@@ -20,16 +20,8 @@ export default function HeroSection() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center lg:object-[center_right] scale-105 transition-transform duration-1000 opacity-90"
+          className="object-cover object-center lg:object-[center_right]"
         />
-        {/* Deep Black / Charcoal Vignette Overlays */}
-        <div className="absolute inset-0 bg-black/65" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080B14]/95 via-[#080B14]/85 to-[#080B14]/50 lg:via-[#080B14]/75 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#080B14]/90 via-transparent to-[#080B14]" />
-        
-        {/* Subtle Ambient Violet/Purple Glow Orbs */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[450px] bg-[#7F56D9]/25 blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/4 -right-24 w-[450px] h-[450px] bg-[#9E77ED]/20 blur-[130px] rounded-full pointer-events-none" />
       </div>
 
       {/* Main Hero Content Container */}
@@ -46,58 +38,58 @@ export default function HeroSection() {
             {/* Untitled UI Style Eyebrow Pill */}
             <Link
               href="#skills"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-[#D6BBFB] shadow-2xs hover:bg-white/15 hover:border-white/30 backdrop-blur-md transition-colors"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-xs font-semibold text-[#6941C6] shadow-2xs hover:bg-[#F4EBFF] hover:border-[#D6BBFB] transition-colors"
             >
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9E77ED] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#9E77ED]" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7F56D9] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#7F56D9]" />
               </span>
               <span className="font-body font-medium">Core Skills: Power BI &bull; SQL &bull; Excel &bull; MIS &bull; RPA</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#D6BBFB]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#7F56D9]" />
             </Link>
 
             {/* Untitled UI Signature Display Heading */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-[#101828]">
               Automate your reports.{' '}
-              <span className="block mt-1 bg-gradient-to-r from-white via-[#E9D7FE] to-[#D6BBFB] bg-clip-text text-transparent">Scale your business intelligence.</span>
+              <span className="block mt-1 text-brand-gradient">Scale your business intelligence.</span>
             </h1>
 
             {/* Refined Body Lead */}
-            <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-body">
-              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-semibold">Power BI dashboards</strong>, <strong className="text-white font-semibold">SQL data pipelines</strong>, and <strong className="text-white font-semibold">RPA bots</strong> built specifically for growing mid-market enterprises.
+            <p className="text-base sm:text-lg text-[#475467] max-w-xl mx-auto lg:mx-0 leading-relaxed font-body">
+              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong>Power BI dashboards</strong>, <strong>SQL data pipelines</strong>, and <strong>RPA bots</strong> built specifically for growing mid-market enterprises.
             </p>
 
             {/* Dual CTA Buttons - Untitled UI Styling */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-lg shadow-[#7F56D9]/30 hover:shadow-xl hover:shadow-[#7F56D9]/40 active:scale-98 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
               >
                 <span>Book 30-Min Strategy Call</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/services"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-body font-semibold text-sm shadow-xs hover:border-white/30 backdrop-blur-md transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-[#F9FAFB] border border-[#D0D5DD] text-[#344054] font-body font-semibold text-sm shadow-xs hover:border-[#98A2B3] transition-all"
               >
-                <Play className="w-4 h-4 text-white fill-current" />
+                <Play className="w-4 h-4 text-[#667085] fill-current" />
                 <span>Explore Solutions</span>
               </Link>
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-400 font-body">
+            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-[#667085] font-body">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                <span className="text-slate-300">Zero ERP Disruption</span>
+                <span>Zero ERP Disruption</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                <span className="text-slate-300">&lt;21 Days Deployment</span>
+                <span>&lt;21 Days Deployment</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                <span className="text-slate-300">NDA & Data Privacy Guaranteed</span>
+                <span>NDA & Data Privacy Guaranteed</span>
               </div>
             </div>
           </motion.div>
@@ -298,7 +290,7 @@ export default function HeroSection() {
       <div className="relative z-20 pb-4 text-center">
         <a
           href="#metrics"
-          className="inline-flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors"
+          className="inline-flex flex-col items-center gap-1 text-[#667085] hover:text-[#101828] transition-colors"
           aria-label="Scroll to explore"
         >
           <span className="text-[10px] font-mono tracking-widest uppercase">SCROLL TO EXPLORE</span>
@@ -306,7 +298,7 @@ export default function HeroSection() {
             animate={{ y: [0, 4, 0] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <ChevronDown className="w-4 h-4 text-[#D6BBFB]" />
+            <ChevronDown className="w-4 h-4 text-[#7F56D9]" />
           </motion.div>
         </a>
       </div>
