@@ -11,8 +11,8 @@ export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-white text-[#101828]">
-      {/* Hero Background Image with Untitled UI Clean Radiant Overlay */}
+    <section className="relative h-screen min-h-[750px] max-h-[1150px] w-full overflow-hidden flex flex-col justify-between bg-[#080B14] text-white">
+      {/* Hero Background Image with Sleek Dark/Black Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/Home/home-hero.jpg"
@@ -20,44 +20,22 @@ export default function HeroSection() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center lg:object-[center_right] scale-105 transition-transform duration-1000"
+          className="object-cover object-center lg:object-[center_right] scale-105 transition-transform duration-1000 opacity-90"
         />
-        {/* Pristine readability gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/65 lg:via-white/85 lg:to-white/45" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-transparent to-white" />
-        <div className="absolute inset-0 bg-hero-subtle-glow opacity-50 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-dot-grid-light opacity-20" />
+        {/* Deep Black / Charcoal Vignette Overlays */}
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080B14]/95 via-[#080B14]/85 to-[#080B14]/50 lg:via-[#080B14]/75 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#080B14]/90 via-transparent to-[#080B14]" />
         
-        {/* Subtle Ambient Glow Orbs */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[450px] bg-[#9E77ED]/15 blur-[130px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/4 -right-24 w-[400px] h-[400px] bg-[#7F56D9]/10 blur-[120px] rounded-full pointer-events-none" />
-      </div>
-
-      {/* Floating 3D Telemetry Badges (Untitled UI White Pill Style) */}
-      <div className="hidden xl:block absolute top-28 left-8 z-20 pointer-events-none">
-        <div className="bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl flex items-center gap-2.5 text-xs text-[#344054] shadow-md border border-[#EAECF0] animate-float-gentle">
-          <span className="w-2 h-2 rounded-full bg-[#12B76A] animate-ping" />
-          <span className="font-mono text-[11px] text-[#475467]">TALLY &bull; SAP &bull; SQL GATEWAY</span>
-          <span className="text-[10px] font-bold text-[#027A48] bg-[#ECFDF3] border border-[#A6F4C5] px-1.5 py-0.5 rounded-full">LIVE SYNC</span>
-        </div>
-      </div>
-
-      <div className="hidden xl:block absolute bottom-36 left-10 z-20 pointer-events-none">
-        <div className="bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl flex items-center gap-3 text-xs text-[#344054] shadow-md border border-[#EAECF0] animate-float-gentle-reverse">
-          <div className="w-8 h-8 rounded-xl bg-[#F9F5FF] text-[#7F56D9] border border-[#E9D7FE] flex items-center justify-center">
-            <Cpu className="w-4 h-4" />
-          </div>
-          <div>
-            <span className="text-[10px] uppercase font-bold tracking-wider text-[#667085] block">Digital Worker Bot</span>
-            <span className="font-mono text-xs font-semibold text-[#101828]">08:00 AM WhatsApp Dispatch</span>
-          </div>
-        </div>
+        {/* Subtle Ambient Violet/Purple Glow Orbs */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[450px] bg-[#7F56D9]/25 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 -right-24 w-[450px] h-[450px] bg-[#9E77ED]/20 blur-[130px] rounded-full pointer-events-none" />
       </div>
 
       {/* Main Hero Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 sm:pt-16 my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           {/* Left Column: Typographic Hierarchy (7 Cols) */}
           <motion.div 
             initial={{ opacity: 0, y: 25 }}
@@ -68,64 +46,64 @@ export default function HeroSection() {
             {/* Untitled UI Style Eyebrow Pill */}
             <Link
               href="#skills"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F9F5FF] border border-[#E9D7FE] text-xs font-semibold text-[#6941C6] shadow-2xs hover:bg-[#F4EBFF] hover:border-[#D6BBFB] transition-colors"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-[#D6BBFB] shadow-2xs hover:bg-white/15 hover:border-white/30 backdrop-blur-md transition-colors"
             >
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7F56D9] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#7F56D9]" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9E77ED] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#9E77ED]" />
               </span>
               <span className="font-body font-medium">Core Skills: Power BI &bull; SQL &bull; Excel &bull; MIS &bull; RPA</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#7F56D9]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#D6BBFB]" />
             </Link>
 
             {/* Untitled UI Signature Display Heading */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-[#101828]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-[-0.03em] leading-[1.08] text-white">
               Automate your reports.{' '}
-              <span className="block mt-1 text-brand-gradient">Scale your business intelligence.</span>
+              <span className="block mt-1 bg-gradient-to-r from-white via-[#E9D7FE] to-[#D6BBFB] bg-clip-text text-transparent">Scale your business intelligence.</span>
             </h1>
 
             {/* Refined Body Lead */}
-            <p className="text-base sm:text-lg text-[#475467] max-w-xl mx-auto lg:mx-0 leading-relaxed font-body">
-              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong>Power BI dashboards</strong>, <strong>SQL data pipelines</strong>, and <strong>RPA bots</strong> built specifically for growing mid-market enterprises.
+            <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-body">
+              Powerful, self-serve data architectures and automated reporting. We engineer high-performance <strong className="text-white font-semibold">Power BI dashboards</strong>, <strong className="text-white font-semibold">SQL data pipelines</strong>, and <strong className="text-white font-semibold">RPA bots</strong> built specifically for growing mid-market enterprises.
             </p>
 
             {/* Dual CTA Buttons - Untitled UI Styling */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#7F56D9] hover:bg-[#6941C6] text-white font-body font-semibold text-sm shadow-lg shadow-[#7F56D9]/30 hover:shadow-xl hover:shadow-[#7F56D9]/40 active:scale-98 transition-all"
               >
                 <span>Book 30-Min Strategy Call</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/services"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-[#F9FAFB] border border-[#D0D5DD] text-[#344054] font-body font-semibold text-sm shadow-xs hover:border-[#98A2B3] transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-body font-semibold text-sm shadow-xs hover:border-white/30 backdrop-blur-md transition-all"
               >
-                <Play className="w-4 h-4 text-[#667085] fill-current" />
+                <Play className="w-4 h-4 text-white fill-current" />
                 <span>Explore Solutions</span>
               </Link>
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-[#667085] font-body">
+            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-400 font-body">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                <span>Zero ERP Disruption</span>
+                <span className="text-slate-300">Zero ERP Disruption</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                <span>&lt;21 Days Deployment</span>
+                <span className="text-slate-300">&lt;21 Days Deployment</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                <span>NDA & Data Privacy Guaranteed</span>
+                <span className="text-slate-300">NDA & Data Privacy Guaranteed</span>
               </div>
             </div>
           </motion.div>
 
           {/* Right Column: 3D Perspective Browser Frame (Untitled UI Showcase Style) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -137,8 +115,8 @@ export default function HeroSection() {
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-[#7F56D9]/15 to-[#9E77ED]/10 blur-2xl opacity-70 pointer-events-none" />
 
             {/* 3D Tilted Mac Browser Window Frame */}
-            <motion.div 
-              animate={{ 
+            <motion.div
+              animate={{
                 rotateX: isHovered ? 0 : 6,
                 rotateY: isHovered ? 0 : -4,
                 scale: isHovered ? 1.02 : 1,
@@ -165,33 +143,30 @@ export default function HeroSection() {
                 <button
                   type="button"
                   onClick={() => setActiveTab('executive')}
-                  className={`flex-1 py-1.5 rounded-lg transition-all ${
-                    activeTab === 'executive'
-                      ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
-                      : 'text-[#667085] hover:text-[#101828]'
-                  }`}
+                  className={`flex-1 py-1.5 rounded-lg transition-all ${activeTab === 'executive'
+                    ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
+                    : 'text-[#667085] hover:text-[#101828]'
+                    }`}
                 >
                   Executive
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('operations')}
-                  className={`flex-1 py-1.5 rounded-lg transition-all ${
-                    activeTab === 'operations'
-                      ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
-                      : 'text-[#667085] hover:text-[#101828]'
-                  }`}
+                  className={`flex-1 py-1.5 rounded-lg transition-all ${activeTab === 'operations'
+                    ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
+                    : 'text-[#667085] hover:text-[#101828]'
+                    }`}
                 >
                   Plant Ops
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('cashflow')}
-                  className={`flex-1 py-1.5 rounded-lg transition-all ${
-                    activeTab === 'cashflow'
-                      ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
-                      : 'text-[#667085] hover:text-[#101828]'
-                  }`}
+                  className={`flex-1 py-1.5 rounded-lg transition-all ${activeTab === 'cashflow'
+                    ? 'bg-white text-[#7F56D9] shadow-xs font-bold'
+                    : 'text-[#667085] hover:text-[#101828]'
+                    }`}
                 >
                   Cash Runway
                 </button>
@@ -321,17 +296,17 @@ export default function HeroSection() {
 
       {/* 100vh Bottom Scroll Indicator */}
       <div className="relative z-20 pb-4 text-center">
-        <a 
+        <a
           href="#metrics"
-          className="inline-flex flex-col items-center gap-1 text-[#667085] hover:text-[#101828] transition-colors"
+          className="inline-flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors"
           aria-label="Scroll to explore"
         >
           <span className="text-[10px] font-mono tracking-widest uppercase">SCROLL TO EXPLORE</span>
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 4, 0] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <ChevronDown className="w-4 h-4 text-[#7F56D9]" />
+            <ChevronDown className="w-4 h-4 text-[#D6BBFB]" />
           </motion.div>
         </a>
       </div>
