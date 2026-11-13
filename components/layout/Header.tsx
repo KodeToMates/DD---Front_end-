@@ -104,29 +104,34 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-10 h-10 shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center">
+          <Link href="/" className="flex items-center group py-0.5" aria-label="DataLive Intelligence Home">
+            <div className="relative h-11 sm:h-12 w-auto shrink-0 group-hover:scale-[1.02] transition-transform flex items-center">
               <Image
-                src="/final_logo_favicon_pack/final-logo-transparent-master.png"
-                alt="DataLive Intelligence Logo"
-                width={40}
-                height={40}
-                className="w-full h-full object-contain"
+                src="/final_logo_favicon_pack/logo-full-horizontal.png"
+                alt="DataLive Intelligence - Smart Technology. Better Business."
+                width={150}
+                height={51}
+                className="h-11 sm:h-12 w-auto object-contain"
                 priority
               />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold font-display tracking-tight text-[#101828] leading-none">
-                Data<span className="text-[#0284C7]">Live</span>
-              </span>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#0284C7] font-bold mt-0.5">
-                INTELLIGENCE
-              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
+            {/* Home Link */}
+            <Link
+              href="/"
+              className={cn(
+                'px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors font-body',
+                pathname === '/'
+                  ? 'text-[#0369A1] bg-[#F0F9FF]'
+                  : 'text-[#344054] hover:text-[#101828] hover:bg-[#F9FAFB]'
+              )}
+            >
+              Home
+            </Link>
+
             {/* Services Dropdown */}
             <div
               className="relative"

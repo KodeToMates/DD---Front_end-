@@ -3,9 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import {
   ArrowRight,
   X,
+  Home,
   Factory,
   Landmark,
   HeartPulse,
@@ -28,6 +30,7 @@ import {
 } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
 import { CONTACT_INFO } from '@/data/contact';
+import { cn } from '@/lib/utils';
 
 const navIconMap: Record<string, React.ElementType> = {
   // Industries
@@ -63,6 +66,8 @@ interface MobileDrawerProps {
 }
 
 export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
+  const pathname = usePathname();
+
   if (!isOpen) return null;
 
   return (
@@ -78,19 +83,17 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         <div>
           {/* Header */}
           <div className="flex items-center justify-between pb-4 border-b border-[#EAECF0]">
-            <Link href="/" onClick={onClose} className="flex items-center gap-2">
-              <div className="relative w-7 h-7 shrink-0">
+            <Link href="/" onClick={onClose} className="flex items-center" aria-label="DataLive Intelligence Home">
+              <div className="relative h-9 w-auto shrink-0 flex items-center">
                 <Image
-                  src="/final_logo_favicon_pack/final-logo-transparent-master.png"
+                  src="/final_logo_favicon_pack/logo-full-horizontal.png"
                   alt="DataLive Intelligence Logo"
-                  width={28}
-                  height={28}
-                  className="w-full h-full object-contain"
+                  width={120}
+                  height={41}
+                  className="h-9 w-auto object-contain"
+                  priority
                 />
               </div>
-              <span className="text-lg font-bold font-display tracking-tight text-[#101828]">
-                Data<span className="text-[#0284C7]">Live</span>
-              </span>
             </Link>
             <button
               onClick={onClose}
@@ -103,6 +106,24 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
           {/* Navigation Links */}
           <div className="py-4 space-y-6">
+            <div>
+              <Link
+                href="/"
+                onClick={onClose}
+                className={cn(
+                  'flex items-center gap-2.5 py-2 px-2.5 rounded-lg text-sm font-semibold font-body transition-colors',
+                  pathname === '/'
+                    ? 'text-[#0284C7] bg-[#F0F9FF]'
+                    : 'text-[#344054] hover:text-[#0284C7] hover:bg-[#F9FAFB]'
+                )}
+              >
+                <div className="w-6 h-6 rounded-md bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0">
+                  <Home className="w-3.5 h-3.5" />
+                </div>
+                <span>Home</span>
+              </Link>
+            </div>
+
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Services</span>
               <div className="mt-2 space-y-1">

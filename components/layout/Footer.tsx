@@ -13,19 +13,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#EAECF0]">
           {/* Brand & Value Col */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="relative w-10 h-10 shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center">
+            <Link href="/" className="flex items-center group py-0.5" aria-label="DataLive Intelligence Home">
+              <div className="relative h-12 w-auto shrink-0 group-hover:scale-[1.02] transition-transform flex items-center">
                 <Image
-                  src="/final_logo_favicon_pack/final-logo-transparent-master.png"
-                  alt="DataLive Intelligence Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-contain"
+                  src="/final_logo_favicon_pack/logo-full-horizontal.png"
+                  alt="DataLive Intelligence - Smart Technology. Better Business."
+                  width={155}
+                  height={53}
+                  className="h-12 w-auto object-contain"
                 />
               </div>
-              <span className="text-xl font-bold font-display tracking-tight text-[#101828]">
-                Data<span className="text-[#0284C7]">Live</span> Intelligence
-              </span>
             </Link>
             <p className="text-sm text-[#475467] leading-relaxed max-w-sm font-body">
               Turning complex business data into instant action. We engineer custom Power BI dashboards, automated MIS reporting systems, and RPA bots for ambitious mid-market enterprises.
