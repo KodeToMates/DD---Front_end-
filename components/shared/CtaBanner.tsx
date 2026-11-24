@@ -2,70 +2,130 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { NeuroNoise } from '@paper-design/shaders-react';
+import { ArrowUpRight, MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { CONTACT_INFO } from '@/data/contact';
 
-interface CtaBannerProps {
-  title?: string;
+export interface CtaBannerProps {
+  /** Eyebrow badge text (omitted per user design rule) */
+  badge?: string;
+  /** Main title; if string with highlightText, highlightText will be wrapped in radiant gradient */
+  title?: React.ReactNode | string;
+  /** Specific keyword string in title to give radiant gradient text */
+  highlightText?: string;
+  /** Subheading / explanatory copy */
   subhead?: string;
+  /** Primary button text (default: 'Book 30-Min Strategy Call') */
+  primaryBtnText?: string;
+  /** Primary button link destination (default: '/contact') */
+  primaryBtnHref?: string;
+  /** Secondary button text (default: 'WhatsApp Direct Chat') */
+  secondaryBtnText?: string;
+  /** Secondary button link destination (default: dynamic WhatsApp link) */
+  secondaryBtnHref?: string;
+  /** Custom pre-filled WhatsApp message */
+  whatsAppMessage?: string;
+  /** Whether to render trust reassurance badges (NDA, Security, Timelines) */
+  showTrustBadges?: boolean;
+  /** Whether to render social proof strip with avatars and stars */
+  showSocialProof?: boolean;
+  /** Custom wrapper CSS class */
+  className?: string;
+  /** Anchor ID */
+  id?: string;
 }
 
 export default function CtaBanner({
-  title = 'Ready to eliminate spreadsheet chaos & see your business live?',
+  title = 'Ready to Eliminate Spreadsheet Chaos & See Your Business Live?',
+  highlightText,
   subhead = 'Book a zero-cost 30-minute discovery call with our Principal BI Architect. We review your current bottleneck and outline a concrete 3-step automation roadmap.',
+  primaryBtnText = 'Book 30-Min Strategy Call',
+  primaryBtnHref = '/contact',
+  secondaryBtnText = 'WhatsApp Direct Chat',
+  secondaryBtnHref,
+  whatsAppMessage = 'Hi DataLive Intelligence team, I would like to book a 30-minute strategy call to review our reporting workflow.',
+  className = '',
+  id = 'cta-banner',
 }: CtaBannerProps) {
-  return (
-    <section className="py-24 bg-[#F9FAFB] text-[#101828] relative overflow-hidden border-t border-[#EAECF0]">
-      {/* Subtle Cyan Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0284C7]/12 blur-[140px] rounded-full pointer-events-none" />
+  const whatsappUrl = secondaryBtnHref || CONTACT_INFO.getWhatsAppUrl(whatsAppMessage);
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div 
-          data-aos="zoom-in"
-          data-aos-duration="700"
-          className="max-w-4xl mx-auto space-y-6"
-        >
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#101828] font-display leading-[1.12]">
-            {title}
+  // Render title with optional highlighted gradient phrase
+  const renderTitle = () => {
+    if (React.isValidElement(title)) return title;
+    if (typeof title === 'string' && highlightText && title.includes(highlightText)) {
+      const parts = title.split(highlightText);
+      return (
+        <>
+          {parts[0]}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-white">
+            {highlightText}
+          </span>
+          {parts[1]}
+        </>
+      );
+    }
+    return title;
+  };
+
+  return (
+    <section id={id} className={`px-0 py-16 sm:py-24 sm:px-6 bg-white border-t border-[#EAECF0] ${className}`}>
+      <div className="relative mx-auto max-w-5xl overflow-hidden border-y border-white/10 bg-[#09090b] p-8 sm:p-14 shadow-2xl sm:rounded-2xl sm:border">
+        {/* Dynamic Dark NeuroNoise Shader Background */}
+        <NeuroNoise
+          brightness={0}
+          className="mask-l-from-30 sm:mask-l-from-10 absolute inset-0 pointer-events-none"
+          colorBack="#000000"
+          colorFront="#ffffff"
+          colorMid="rgba(255, 255, 255, 0.85)"
+          contrast={1}
+          height={720}
+          scale={0.55}
+          speed={1}
+          width={1280}
+        />
+
+        {/* Content Container (Badge and trusted stars removed) */}
+        <div className="relative isolate text-left">
+          <h2 className="text-balance font-bold font-display text-3xl sm:text-4xl lg:text-[2.75rem] text-white tracking-tight md:leading-tight">
+            {renderTitle()}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#475467] leading-relaxed max-w-2xl mx-auto font-body">
-            {subhead}
-          </p>
+          {subhead && (
+            <p className="mt-4 text-balance text-[#98A2B3] font-body text-base sm:text-lg md:mt-3 lg:text-xl/normal max-w-3xl leading-relaxed">
+              {subhead}
+            </p>
+          )}
 
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-body font-semibold text-sm shadow-xs hover:shadow-md active:scale-98 transition-all"
+          {/* Action Buttons matching dark screenshot */}
+          <div className="mt-8 sm:mt-10 flex flex-col gap-3.5 sm:flex-row">
+            <Button
+              size="lg"
+              asChild
+              className="bg-white hover:bg-slate-100 text-black rounded-lg font-semibold h-11 px-6 shadow-sm inline-flex items-center gap-1.5 transition-all hover:scale-[1.01]"
             >
-              <span>Book 30-Min Strategy Call</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a
-              href={CONTACT_INFO.getWhatsAppUrl('Hi DataLive team, I would like to book a 30-minute strategy call.')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-white hover:bg-[#F9FAFB] border border-[#D0D5DD] text-[#344054] font-body font-semibold text-sm shadow-xs transition-all"
-            >
-              <MessageSquare className="w-4 h-4 text-[#25D366]" />
-              <span>WhatsApp Direct Chat</span>
-            </a>
-          </div>
+              <Link href={primaryBtnHref} className="inline-flex items-center gap-1.5">
+                <span>{primaryBtnText}</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </Button>
 
-          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-[#667085] font-body">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#12B76A]" /> Direct Principal Architect Consultation
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#12B76A]" /> Non-Disclosure Agreement (NDA) Protected
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#12B76A]" /> 100% Practical Insights, No Sales Fluff
-            </span>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-white/20 bg-transparent text-white hover:bg-white/10 rounded-lg font-semibold h-11 px-6 transition-all"
+            >
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                <MessageSquare className="w-4 h-4 text-[#25D366]" />
+                <span>{secondaryBtnText}</span>
+              </a>
+            </Button>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+export { CtaBanner as CreativeCta };

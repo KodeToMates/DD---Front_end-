@@ -138,3 +138,79 @@
 .animate-float-gentle-reverse {
   animation: float-gentle-reverse 5s ease-in-out infinite;
 }
+
+/* Infinite Marquee Animation for Tech Stack Carousel */
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-infinite-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-infinite 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-infinite-reverse 35s linear infinite;
+  will-change: transform;
+}
+
+.pause-on-hover:hover,
+.animate-marquee-infinite:hover,
+.animate-marquee-infinite-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Shadcn & CTA-06 Noise Mask Utilities */
+:root {
+  --background: #ffffff;
+  --foreground: #101828;
+  --primary: #0284C7;
+  --primary-foreground: #ffffff;
+  --secondary: #F0F9FF;
+  --secondary-foreground: #0369A1;
+  --muted: #F2F4F7;
+  --muted-foreground: #475467;
+  --accent: #E0F2FE;
+  --accent-foreground: #0284C7;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #BAE6FD;
+  --input: #D0D5DD;
+  --ring: #0284C7;
+}
+
+.shadow-muted {
+  box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03);
+}
+
+.mask-l-from-30,
+.mask-l-from-30\% {
+  mask-image: linear-gradient(to right, transparent 0%, black 30%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+
+.mask-l-from-10,
+.mask-l-from-10\% {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%);
+}
+
+

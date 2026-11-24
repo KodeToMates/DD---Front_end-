@@ -1,0 +1,191 @@
+[
+  {
+    "id": "faq-gen-1",
+    "category": "General",
+    "question": "What makes DataLive Intelligence different from typical software consultancies?",
+    "answer": "Traditional IT consultancies sell multi-month theoretical consulting or try to push expensive enterprise software suites. We are pragmatic data engineers who build hands-on, high-ROI solutions—focusing exclusively on Power BI, SQL databases, automated MIS, and RPA bots. We work directly with your existing spreadsheets, Tally, or ERP systems without disrupting daily operations.",
+    "tags": ["differentiation", "consultancy", "pragmatic", "roi", "tally", "spreadsheets"],
+    "featured": true,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-pbi-tally",
+    "category": "Power BI & Tech",
+    "question": "Can you integrate Power BI directly with our customized Tally Prime or legacy ERP?",
+    "answer": "Yes! Over 80% of our mid-market clients run on customized Tally Prime, SAP Business One, Marg ERP, or proprietary SQL databases. We utilize direct ODBC gateways, automated XML streams, and SQL staging servers to extract data cleanly with zero manual Excel exports or copy-pasting.",
+    "tags": ["tally", "power bi", "odbc", "sap", "erp", "integration"],
+    "featured": true,
+    "serviceSlug": "power-bi"
+  },
+  {
+    "id": "faq-security-1",
+    "category": "Data Security",
+    "question": "How is our confidential financial and client data protected?",
+    "answer": "We adhere to enterprise security standards. Your data never touches unauthorized third-party servers. All reporting environments run within your own Microsoft Azure tenant or on-premises servers with 256-bit AES encryption. We sign strict non-disclosure agreements (NDAs) before inspecting any company data.",
+    "tags": ["security", "nda", "encryption", "azure", "compliance", "privacy"],
+    "featured": true,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-timeline-1",
+    "category": "Pricing & Timelines",
+    "question": "How fast can our company go live with an automated Power BI dashboard or MIS report?",
+    "answer": "Our standard sprint cycle delivers the first production dashboard or automated MIS report within 14 to 21 business days. We operate in rapid phased milestones so you see real business value and ROI before paying for subsequent phases.",
+    "tags": ["timeline", "sprint", "go-live", "14-days", "milestone"],
+    "featured": true,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-pricing-1",
+    "category": "Pricing & Timelines",
+    "question": "What are your engagement and pricing models?",
+    "answer": "We provide two transparent options: 1) Fixed-Price Milestone Projects (best for initial dashboard builds, database migrations, or specific RPA bot deployments) and 2) Monthly Retainer / Dedicated Data Architect SLA (best for ongoing report automation, ad-hoc analysis, and 24/7 gateway maintenance).",
+    "tags": ["pricing", "cost", "retainer", "fixed-price", "engagement"],
+    "featured": true,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-skills-1",
+    "category": "General",
+    "question": "Do our internal team members need technical skills to use these dashboards?",
+    "answer": "None at all. We design executive-friendly user interfaces where decision-makers simply click intuitive filters (Date range, Branch, Product Category) or view automated PDF summaries on WhatsApp. We also provide full onboarding training and recorded video SOPs for your team.",
+    "tags": ["training", "sop", "easy", "executive", "whatsapp"],
+    "featured": true,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-call-1",
+    "category": "General",
+    "question": "What happens during the Free 30-Minute Strategy Call?",
+    "answer": "You will speak directly with a Principal BI Architect—not a pushy salesperson. We review your current spreadsheet bottlenecks, evaluate your software stack, and outline a concrete 3-step automation roadmap with estimated timelines and cost savings.",
+    "tags": ["strategy call", "consultation", "audit", "free"],
+    "featured": false,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-pbi-licensing",
+    "category": "Power BI & Tech",
+    "question": "Do we need expensive enterprise Microsoft licenses to get started?",
+    "answer": "No. Most mid-market companies start effectively with standard Power BI Pro licenses (~$10/user/month). We design the deployment architecture to minimize licensing overhead while maximizing distribution across your leadership team.",
+    "tags": ["power bi", "licenses", "pro", "cost", "microsoft"],
+    "featured": false,
+    "serviceSlug": "power-bi"
+  },
+  {
+    "id": "faq-pbi-security",
+    "category": "Data Security",
+    "question": "How secure is our financial data when hosted on Power BI Service?",
+    "answer": "Your data is encrypted in transit (TLS 1.3) and at rest within Microsoft Azure’s enterprise cloud. We implement strict Row-Level Security (RLS) and multi-factor authentication (MFA) so branch managers only see their branch figures while promoters see consolidated financials.",
+    "tags": ["power bi", "rls", "row-level security", "encryption", "azure"],
+    "featured": false,
+    "serviceSlug": "power-bi"
+  },
+  {
+    "id": "faq-sql-migration",
+    "category": "SQL & Databases",
+    "question": "We currently store data across 10 different Excel files. Can you migrate that to SQL?",
+    "answer": "Absolutely. We build automated data ingestion scripts that validate, clean, deduplicate, and migrate historical spreadsheet records into a robust relational database schema (PostgreSQL, SQL Server, or MySQL) with relational integrity.",
+    "tags": ["sql", "excel migration", "database", "cleaning", "deduplication"],
+    "featured": false,
+    "serviceSlug": "sql-database"
+  },
+  {
+    "id": "faq-sql-performance",
+    "category": "SQL & Databases",
+    "question": "How do you handle queries that currently take 10 minutes to run in our ERP?",
+    "answer": "We analyze query execution plans, identify missing non-clustered indexes, partition large transaction tables, and build pre-aggregated reporting views to reduce execution times from minutes to sub-seconds.",
+    "tags": ["sql", "query optimization", "indexes", "performance", "speed"],
+    "featured": false,
+    "serviceSlug": "sql-database"
+  },
+  {
+    "id": "faq-excel-compat",
+    "category": "Excel Automation",
+    "question": "Will these automated workbooks work across different computers and Excel versions?",
+    "answer": "Yes. We build backward-compatible Power Query and VBA modules designed to run consistently across Microsoft 365, Excel 2019, and Excel 2021 environments without version conflicts.",
+    "tags": ["excel", "vba", "power query", "compatibility", "office 365"],
+    "featured": false,
+    "serviceSlug": "excel-automation"
+  },
+  {
+    "id": "faq-excel-crash",
+    "category": "Excel Automation",
+    "question": "Our current macros crash often. Why will yours be different?",
+    "answer": "Most internal macros are created using the basic macro recorder, which hardcodes brittle cell coordinates. We write clean, structured code with explicit dynamic ranges, comprehensive error handling, and automated data validation.",
+    "tags": ["excel", "macros", "vba", "crashes", "stability"],
+    "featured": false,
+    "serviceSlug": "excel-automation"
+  },
+  {
+    "id": "faq-mis-whatsapp",
+    "category": "MIS & Automation",
+    "question": "Can the daily flash report be sent directly to our WhatsApp group?",
+    "answer": "Yes! We configure secure webhooks using WhatsApp Business API to deliver concise text summaries and PDF attachments directly to management groups every morning at your designated cutoff time (e.g., 07:45 AM).",
+    "tags": ["mis", "whatsapp", "automated report", "flash report", "pdf"],
+    "featured": true,
+    "serviceSlug": "mis-reporting"
+  },
+  {
+    "id": "faq-mis-delayed",
+    "category": "MIS & Automation",
+    "question": "What if yesterday’s data is not entered into the system on time?",
+    "answer": "Our reporting engine includes built-in data completeness checks. If a branch or factory plant fails to enter vouchers by cutoff time, an automated alert reminder is triggered directly to the responsible manager.",
+    "tags": ["mis", "completeness", "validation", "branch alert", "cutoff"],
+    "featured": false,
+    "serviceSlug": "mis-reporting"
+  },
+  {
+    "id": "faq-rpa-licensing",
+    "category": "RPA & AI Bots",
+    "question": "Do we need to buy expensive RPA platform licenses like UiPath?",
+    "answer": "Not necessarily! For most mid-market requirements, we build tailored, license-free Python digital workers or leverage Microsoft Power Automate Desktop, saving you thousands of dollars in recurring software fees.",
+    "tags": ["rpa", "bots", "python", "power automate", "licensing"],
+    "featured": false,
+    "serviceSlug": "rpa-development"
+  },
+  {
+    "id": "faq-rpa-ocr",
+    "category": "RPA & AI Bots",
+    "question": "What happens if a vendor changes their invoice layout?",
+    "answer": "Our OCR bots employ intelligent key-value matching and machine learning models that locate invoice numbers, dates, GSTINs, and totals even if the layout or table formatting shifts.",
+    "tags": ["ocr", "invoices", "rpa", "vendor format", "gstin"],
+    "featured": false,
+    "serviceSlug": "rpa-development"
+  },
+  {
+    "id": "faq-strat-timeline",
+    "category": "General",
+    "question": "How long does a full BI Strategy engagement take?",
+    "answer": "Our initial Data Audit & Strategy Roadmap is delivered in just 2 to 3 weeks, including the full KPI dictionary, architectural blueprint, and prioritized implementation plan.",
+    "tags": ["bi strategy", "roadmap", "audit", "timeline"],
+    "featured": false,
+    "serviceSlug": "business-intelligence"
+  },
+  {
+    "id": "faq-strat-team",
+    "category": "General",
+    "question": "Can you work alongside our existing internal IT and accounting team?",
+    "answer": "Yes! We act as specialized data architects who elevate and train your internal staff rather than replacing them, leaving your team with self-sufficient capabilities and clean documentation.",
+    "tags": ["collaboration", "internal it", "accounting", "training"],
+    "featured": false,
+    "serviceSlug": "business-intelligence"
+  },
+  {
+    "id": "faq-cloud-onprem",
+    "category": "Data Security",
+    "question": "Do you support on-premises deployments or only Microsoft Cloud / Azure?",
+    "answer": "We support both fully! If your company policy mandates on-premises data isolation, we deploy on your local SQL servers and configure Power BI Report Server or Gateway bridges that never expose raw operational data outside your firewall.",
+    "tags": ["on-premises", "cloud", "azure", "firewall", "security"],
+    "featured": false,
+    "serviceSlug": null
+  },
+  {
+    "id": "faq-sla-support",
+    "category": "Pricing & Timelines",
+    "question": "What kind of ongoing support and SLA do you provide after deployment?",
+    "answer": "Every project includes a 30-day post-launch warranty period with daily monitoring. Afterwards, our clients typically transition to our Monthly Dedicated Architect SLA, which guarantees priority response times (under 4 hours), automated gateway health checks, and ongoing report optimizations.",
+    "tags": ["sla", "support", "warranty", "maintenance", "ongoing"],
+    "featured": true,
+    "serviceSlug": null
+  }
+]

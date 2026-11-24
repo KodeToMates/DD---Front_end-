@@ -1,17 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { industriesData } from '@/data/industries';
-import { Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
-
-const iconMap: Record<string, React.ElementType> = {
-  Factory,
-  Landmark,
-  HeartPulse,
-  Activity: HeartPulse,
-  Truck,
-  ShoppingBag,
-};
+import { getIndustryRealIcon } from '@/components/shared/BrandLogos';
 
 export const metadata = {
   title: 'Industry Solutions | DataLive Intelligence',
@@ -39,7 +31,6 @@ export default function IndustriesPage() {
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           {industriesData.map((ind) => {
-            const Icon = iconMap[ind.iconName] || Factory;
             return (
               <div
                 key={ind.id}
@@ -48,7 +39,7 @@ export default function IndustriesPage() {
               >
                 <div className="lg:col-span-7 space-y-5">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#F0F9FF] border border-[#BAE6FD] text-[#0284C7] text-xs font-mono font-bold uppercase tracking-wider">
-                    <Icon className="w-4 h-4" /> {ind.title}
+                    {getIndustryRealIcon(ind.slug, 'w-4 h-4')} {ind.title}
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#101828] tracking-tight">
                     {ind.heroHeadline}

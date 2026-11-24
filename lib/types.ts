@@ -46,9 +46,12 @@ export interface CaseStudy {
 
 export interface FaqItem {
   id: string;
-  category: 'General' | 'Power BI & Tech' | 'Data Security' | 'Pricing & Engagement' | 'Timelines';
+  category: string;
   question: string;
   answer: string;
+  tags?: string[];
+  featured?: boolean;
+  serviceSlug?: string | null;
 }
 
 export interface NavItem {

@@ -3,14 +3,48 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight, Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, TrendingUp, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, TrendingUp, Play } from 'lucide-react';
+import {
+  ManufacturingIndustryIcon,
+  FinanceIndustryIcon,
+  HealthcareIndustryIcon,
+  LogisticsIndustryIcon,
+  RetailIndustryIcon,
+  PowerBiLogo,
+  SqlServerLogo,
+  ExcelLogo,
+  TableauLogo,
+  PythonLogo,
+  SnowflakeLogo,
+  TallyLogo,
+  SapLogo,
+  PostgreSqlLogo,
+} from '@/components/shared/BrandLogos';
 
-const carouselItems = [
+interface CarouselItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  icon: React.ReactNode;
+  iconBg: string;
+  tools: { name: string; logo: React.ReactNode }[];
+  kpis: { label: string; value: string; change: string }[];
+  impact: string;
+  link: string;
+  tag: string;
+}
+
+const carouselItems: CarouselItem[] = [
   {
     id: 'manufacturing',
     title: 'Manufacturing & Industrial',
     subtitle: 'Plant Floor OEE & Real-Time Scrap Control',
-    icon: Factory,
+    icon: <ManufacturingIndustryIcon className="w-6 h-6" />,
+    iconBg: 'bg-[#FFF7ED] border-[#FFEDD5]',
+    tools: [
+      { name: 'Power BI', logo: <PowerBiLogo className="w-4 h-4" /> },
+      { name: 'SAP ERP', logo: <SapLogo className="w-4 h-4" /> },
+    ],
     kpis: [
       { label: 'Plant OEE', value: '86.4%', change: '+12% Target Met' },
       { label: 'Scrap Rate', value: '1.6%', change: '-14% Reduced' },
@@ -24,7 +58,12 @@ const carouselItems = [
     id: 'finance',
     title: 'Finance & Banking / NBFC',
     subtitle: 'Automated 10,000+ Multi-Bank Loan Reconciliation',
-    icon: Landmark,
+    icon: <FinanceIndustryIcon className="w-6 h-6" />,
+    iconBg: 'bg-[#F0FDF4] border-[#DCFCE7]',
+    tools: [
+      { name: 'Tally Prime', logo: <TallyLogo className="w-4 h-4" /> },
+      { name: 'SQL Server', logo: <SqlServerLogo className="w-4 h-4" /> },
+    ],
     kpis: [
       { label: 'Auto-Matched', value: '98.5%', change: 'Zero human touch' },
       { label: 'Month Closing', value: '36 Hrs', change: 'Down from 12 days' },
@@ -38,7 +77,12 @@ const carouselItems = [
     id: 'healthcare',
     title: 'Healthcare & Hospital Chains',
     subtitle: 'Bed Occupancy & TPA Insurance Claim Velocity',
-    icon: HeartPulse,
+    icon: <HealthcareIndustryIcon className="w-6 h-6" />,
+    iconBg: 'bg-[#FFF1F2] border-[#FFE4E6]',
+    tools: [
+      { name: 'Tableau', logo: <TableauLogo className="w-4 h-4" /> },
+      { name: 'PostgreSQL', logo: <PostgreSqlLogo className="w-4 h-4" /> },
+    ],
     kpis: [
       { label: 'Bed Occupancy', value: '84.2%', change: 'Live hourly track' },
       { label: 'TPA Settlement', value: '< 14 Days', change: '22% Faster cash' },
@@ -52,7 +96,12 @@ const carouselItems = [
     id: 'logistics',
     title: 'Logistics & Supply Chain',
     subtitle: 'Fleet Turnaround Time & FASTag Fuel Audit',
-    icon: Truck,
+    icon: <LogisticsIndustryIcon className="w-6 h-6" />,
+    iconBg: 'bg-[#F0F9FF] border-[#BAE6FD]',
+    tools: [
+      { name: 'Python', logo: <PythonLogo className="w-4 h-4" /> },
+      { name: 'Snowflake', logo: <SnowflakeLogo className="w-4 h-4" /> },
+    ],
     kpis: [
       { label: 'Cost Recovered', value: '₹32 Lakhs', change: 'Diesel leakage closed' },
       { label: 'OTIF Delivery', value: '96.2%', change: 'On-time guarantee' },
@@ -66,7 +115,12 @@ const carouselItems = [
     id: 'retail',
     title: 'Retail & Multi-Store Commerce',
     subtitle: '35-Store Inventory Aging & Store Sales MIS',
-    icon: ShoppingBag,
+    icon: <RetailIndustryIcon className="w-6 h-6" />,
+    iconBg: 'bg-[#FAF5FF] border-[#F3E8FF]',
+    tools: [
+      { name: 'Microsoft Excel', logo: <ExcelLogo className="w-4 h-4" /> },
+      { name: 'SQL Server', logo: <SqlServerLogo className="w-4 h-4" /> },
+    ],
     kpis: [
       { label: 'Dead Stock Drop', value: '-28%', change: 'Inter-store sync' },
       { label: 'Full Sell-Thru', value: '+16%', change: 'Full price margin' },
@@ -177,7 +231,6 @@ export default function Interactive3DCarousel() {
               <AnimatePresence mode="wait">
                 {(() => {
                   const current = carouselItems[currentIndex];
-                  const Icon = current.icon;
                   return (
                     <motion.div
                       key={current.id}
@@ -192,8 +245,8 @@ export default function Interactive3DCarousel() {
                       {/* Top Bar with Badge */}
                       <div className="flex items-center justify-between pb-6 border-b border-[#F2F4F7]">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 rounded-2xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shadow-xs">
-                            <Icon className="w-6 h-6" />
+                          <div className={`w-12 h-12 rounded-2xl ${current.iconBg} border flex items-center justify-center shadow-xs`}>
+                            {current.icon}
                           </div>
                           <div>
                             <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">
@@ -219,6 +272,22 @@ export default function Interactive3DCarousel() {
                         <p className="text-sm text-[#475467] leading-relaxed font-body">
                           {current.impact}
                         </p>
+
+                        {/* Real-Color Integrated Tech Tools */}
+                        <div className="flex flex-wrap items-center gap-2 pt-2">
+                          <span className="text-xs font-mono font-semibold text-[#667085] uppercase tracking-wider mr-1">
+                            Architecture Powered By:
+                          </span>
+                          {current.tools.map((tool, tIdx) => (
+                            <span
+                              key={tIdx}
+                              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-[#F9FAFB] border border-[#EAECF0] hover:border-[#BAE6FD] text-xs font-semibold text-[#344054] shadow-2xs transition-colors"
+                            >
+                              {tool.logo}
+                              <span>{tool.name}</span>
+                            </span>
+                          ))}
+                        </div>
                       </div>
 
                       {/* Quantified Metrics Grid */}
@@ -269,7 +338,6 @@ export default function Interactive3DCarousel() {
               </span>
 
               {carouselItems.map((item, idx) => {
-                const Icon = item.icon;
                 const isActive = idx === currentIndex;
                 return (
                   <button
@@ -293,10 +361,10 @@ export default function Interactive3DCarousel() {
                     )}
 
                     <div className="flex items-center gap-3">
-                      <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors ${
-                        isActive ? 'bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD]' : 'bg-[#F2F4F7] text-[#667085]'
+                      <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors border ${
+                        isActive ? item.iconBg : 'bg-[#F2F4F7] border-[#EAECF0]'
                       }`}>
-                        <Icon className="w-4 h-4" />
+                        {item.icon}
                       </div>
                       <div>
                         <span className="text-sm font-bold text-[#101828] font-display block">

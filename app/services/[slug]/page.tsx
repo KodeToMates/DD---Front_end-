@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { servicesData } from '@/data/services';
 import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, Layers, ShieldCheck, Zap } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import FaqSection from '@/components/shared/FaqSection';
 import { CONTACT_INFO } from '@/data/contact';
+import { getTechToolLogo } from '@/components/shared/BrandLogos';
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -170,40 +172,29 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
           <div className="flex flex-wrap gap-2">
             {service.techStack.map((tech, idx) => (
-              <span key={idx} className="px-3.5 py-1.5 rounded-xl bg-white text-[#344054] text-xs font-semibold border border-[#BAE6FD] shadow-2xs">
-                {tech}
+              <span key={idx} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white text-[#344054] text-xs font-semibold border border-[#BAE6FD] shadow-2xs">
+                {getTechToolLogo(tech, 'w-4 h-4')}
+                <span>{tech}</span>
               </span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Service-Specific FAQs */}
-      <section className="py-20 bg-white border-b border-[#EAECF0]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Direct Answers</span>
-            <h2 className="text-3xl font-bold text-[#101828] font-display mt-2">Frequently Asked Questions</h2>
-          </div>
-
-          <div className="space-y-4">
-            {service.faqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-[#F9FAFB] border border-[#BAE6FD]">
-                <h4 className="text-base font-bold text-[#101828] font-display mb-2 flex items-start gap-2.5">
-                  <HelpCircle className="w-5 h-5 text-[#0284C7] shrink-0 mt-0.5" />
-                  {faq.question}
-                </h4>
-                <p className="text-sm text-[#475467] leading-relaxed pl-7.5 font-body">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Service-Specific FAQs powered by JSON */}
+      <FaqSection
+        serviceSlug={service.slug}
+        badge="Direct Technical Answers"
+        title={`Frequently Asked Questions: ${service.title}`}
+        subtitle={`Real-world answers on security, architecture, deployment velocity, and cost for our ${service.title} service.`}
+        showSearch={false}
+        showCategories={false}
+        variant="light"
+      />
 
       <CtaBanner
         title={`Ready to Automate Your ${service.title}?`}
+        highlightText={service.title}
         subhead="Book your free 30-minute discovery session with our Principal Architect to review your existing data sources and get an implementation quote."
       />
     </>

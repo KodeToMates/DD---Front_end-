@@ -3,23 +3,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Factory, Landmark, HeartPulse, Activity, Truck, ShoppingBag, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { industriesData } from '@/data/industries';
-
-const iconMap: Record<string, React.ElementType> = {
-  Factory,
-  Landmark,
-  HeartPulse,
-  Activity: HeartPulse,
-  Truck,
-  ShoppingBag,
-};
+import { getIndustryRealIcon } from '@/components/shared/BrandLogos';
 
 export default function IndustryTabs() {
   const [activeSlug, setActiveSlug] = useState<string>(industriesData[0].slug);
 
   const activeIndustry = industriesData.find((i) => i.slug === activeSlug) || industriesData[0];
-  const ActiveIcon = iconMap[activeIndustry.iconName] || Factory;
 
   return (
     <section className="py-24 lg:py-32 bg-[#0B0F19] text-white border-b border-white/10 relative overflow-hidden">
@@ -45,7 +36,6 @@ export default function IndustryTabs() {
         {/* Tab Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
           {industriesData.map((ind) => {
-            const Icon = iconMap[ind.iconName] || Factory;
             const isSelected = ind.slug === activeSlug;
             return (
               <button
@@ -58,7 +48,7 @@ export default function IndustryTabs() {
                     : 'bg-white/[0.04] text-slate-300 hover:bg-white/[0.08] border border-white/10'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isSelected ? 'text-white' : 'text-[#FF914D]'}`} />
+                {getIndustryRealIcon(ind.slug, 'w-4 h-4')}
                 <span>{ind.title.split('&')[0]}</span>
               </button>
             );
@@ -78,7 +68,7 @@ export default function IndustryTabs() {
             {/* Left Details (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4521B]/20 text-[#FF914D] text-xs font-mono font-bold uppercase tracking-wide">
-                <ActiveIcon className="w-3.5 h-3.5" /> {activeIndustry.title}
+                {getIndustryRealIcon(activeIndustry.slug, 'w-4 h-4')} {activeIndustry.title}
               </div>
 
               <h3 className="text-2xl sm:text-4xl font-bold font-display text-white leading-tight">

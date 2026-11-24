@@ -2,17 +2,17 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { BarChart3, Database, FileSpreadsheet, FileText, Bot, LineChart, ArrowRight, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { servicesData } from '@/data/services';
+import { getServiceLogo, getTechToolLogo } from '@/components/shared/BrandLogos';
 
-const iconMap: Record<string, React.ElementType> = {
-  BarChart3,
-  Database,
-  FileSpreadsheet,
-  FileText,
-  Bot,
-  LineChart,
+const serviceBgMap: Record<string, string> = {
+  'power-bi': 'bg-[#FEFCE8] border-[#FEF08A]',
+  'sql-database': 'bg-[#FEF2F2] border-[#FECACA]',
+  'excel-solutions': 'bg-[#ECFDF3] border-[#A6F4C5]',
+  'automated-mis': 'bg-[#F0F9FF] border-[#BAE6FD]',
+  'rpa-automation': 'bg-[#EFF8FF] border-[#B2DDFF]',
+  'cloud-bi': 'bg-[#F0F9FF] border-[#BAE6FD]',
 };
 
 export default function ServicesMatrix() {
@@ -60,7 +60,6 @@ export default function ServicesMatrix() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {servicesData.map((service, index) => {
-            const Icon = iconMap[service.iconName] || BarChart3;
             const isFeatured = index === 0;
 
             return (
@@ -74,8 +73,8 @@ export default function ServicesMatrix() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs">
-                      <Icon className="w-6 h-6" />
+                    <div className={`w-12 h-12 rounded-2xl ${serviceBgMap[service.slug] || 'bg-[#F0F9FF] border-[#BAE6FD]'} border flex items-center justify-center group-hover:scale-105 transition-transform shadow-2xs`}>
+                      {getServiceLogo(service.slug, 'w-7 h-7')}
                     </div>
                     {isFeatured && (
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F9FF] text-[#0369A1] border border-[#BAE6FD] text-xs font-mono font-bold">
@@ -102,9 +101,21 @@ export default function ServicesMatrix() {
                 </div>
 
                 <div className="mt-8 pt-5 border-t border-[#F2F4F7] flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-[#667085]">
-                    {service.techStack[0]} &bull; {service.techStack[1]}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    {getTechToolLogo(service.techStack[0], 'w-4 h-4')}
+                    <span className="text-xs font-semibold text-[#344054] font-body">
+                      {service.techStack[0]}
+                    </span>
+                    {service.techStack[1] && (
+                      <>
+                        <span className="text-[#D0D5DD]">&bull;</span>
+                        {getTechToolLogo(service.techStack[1], 'w-4 h-4')}
+                        <span className="text-xs font-semibold text-[#344054] font-body hidden sm:inline">
+                          {service.techStack[1]}
+                        </span>
+                      </>
+                    )}
+                  </div>
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0284C7] group-hover:translate-x-1 transition-transform"

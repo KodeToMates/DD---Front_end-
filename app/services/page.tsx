@@ -1,17 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { servicesData } from '@/data/services';
-import { ArrowRight, CheckCircle2, BarChart3, Database, FileSpreadsheet, FileText, Bot, LineChart, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
-
-const iconMap: Record<string, React.ElementType> = {
-  BarChart3,
-  Database,
-  FileSpreadsheet,
-  FileText,
-  Bot,
-  LineChart,
-};
+import { getServiceLogo, getTechToolLogo } from '@/components/shared/BrandLogos';
 
 export const metadata = {
   title: 'Enterprise Services & Capabilities | DataLive Intelligence',
@@ -41,8 +33,6 @@ export default function ServicesPage() {
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           {servicesData.map((service) => {
-            const Icon = iconMap[service.iconName] || BarChart3;
-
             return (
               <div
                 key={service.id}
@@ -52,7 +42,7 @@ export default function ServicesPage() {
               >
                 <div className="lg:col-span-7 space-y-5">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#F0F9FF] border border-[#BAE6FD] text-[#0284C7] text-xs font-mono font-bold uppercase tracking-wider">
-                    <Icon className="w-4 h-4" /> {service.category === 'data-engineering' ? 'Data Engineering' : 'Automation & Reporting'}
+                    {getServiceLogo(service.slug, 'w-4 h-4')} {service.category === 'data-engineering' ? 'Data Engineering' : 'Automation & Reporting'}
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#101828] tracking-tight">
                     {service.title}
@@ -106,8 +96,9 @@ export default function ServicesPage() {
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#667085] block mb-2">Supported Stack:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {service.techStack.map((tech, idx) => (
-                        <span key={idx} className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-white border border-[#BAE6FD] text-[#344054]">
-                          {tech}
+                        <span key={idx} className="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md bg-white border border-[#BAE6FD] text-[#344054]">
+                          {getTechToolLogo(tech, 'w-3.5 h-3.5')}
+                          <span>{tech}</span>
                         </span>
                       ))}
                     </div>
