@@ -7,7 +7,17 @@ export interface Service {
   heroSubhead: string;
   iconName: string;
   category: 'data-engineering' | 'reporting-automation';
-  deliverables: { title: string; description: string }[];
+  deliverables: {
+    title: string;
+    description: string;
+    tag?: string;
+    points?: string[];
+    metric?: string;
+    image?: string;
+    badge?: string;
+    impact?: string;
+    techChips?: string[];
+  }[];
   pipelineSteps: { step: string; title: string; description: string }[];
   techStack: string[];
   metricsBanner: { metric: string; label: string };

@@ -213,4 +213,42 @@
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%);
 }
 
+/* ============================================================
+   CUSTOM ENTERPRISE CYAN BROWSER SCROLLBAR
+   ============================================================ */
+/* Modern standard (Firefox, Chrome 121+) */
+html {
+  scrollbar-color: #0284C7 #F8FAFC;
+  scrollbar-width: thin;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari, Brave, Opera) */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38BDF8 0%, #0284C7 100%);
+  border-radius: 9999px;
+  border: 2px solid #F8FAFC;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0284C7 0%, #0369A1 100%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #075985;
+}
+
+::-webkit-scrollbar-corner {
+  background: #F8FAFC;
+}
+
 

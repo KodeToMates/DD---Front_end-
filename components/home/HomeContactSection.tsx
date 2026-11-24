@@ -77,7 +77,8 @@ export default function HomeContactSection() {
       {/* Full Section Background Image - Pure Image Only, No Dark Layer */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <Image
-          src="/images/data-mesh.jpg"
+
+          src="/images/Home/let-connect-v1.jpg"
           alt="DataLive Enterprise Architecture Background"
           fill
           priority
@@ -89,10 +90,7 @@ export default function HomeContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#38BDF8] text-xs font-semibold uppercase tracking-wider font-body mb-3 backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#12B76A] animate-ping" />
-            Zero-Cost Discovery & RFP
-          </div>
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white tracking-tight">
             Ready to Eliminate Spreadsheet Chaos? Let&apos;s Connect.
           </h2>
@@ -103,7 +101,7 @@ export default function HomeContactSection() {
 
         {/* Two-Column Grid: Form (Left) & Visual Card with Background Image (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          
+
           {/* Left Column: Interactive Contact Form (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col" data-aos="fade-right">
             <div className="h-full p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-2xl flex flex-col justify-between text-[#101828]">
@@ -291,10 +289,7 @@ export default function HomeContactSection() {
 
               {/* Top Content (z-20) */}
               <div className="relative z-20 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[#38BDF8] text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#12B76A] animate-ping" />
-                  Direct Architect Access
-                </div>
+
 
                 <h3 className="text-2xl sm:text-3xl font-bold font-display text-white leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
                   Stop Guessing. <br />

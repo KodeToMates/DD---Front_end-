@@ -1,11 +1,19 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BarChart3, Mail, MapPin, Phone, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, Phone, ArrowUpRight, ShieldCheck, ArrowUp } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
 import { CONTACT_INFO } from '@/data/contact';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <footer className="bg-white text-[#101828] pt-16 pb-12 border-t border-[#EAECF0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,10 +148,21 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
             <span>ISO / SOC-2 Compliant Cloud Architecture</span>
-            <Link href="/contact" className="hover:text-[#101828]">Privacy Policy</Link>
-            <Link href="/contact" className="hover:text-[#101828]">Terms of Engagement</Link>
+            <Link href="/contact" className="hover:text-[#101828] transition-colors">Privacy Policy</Link>
+            <Link href="/contact" className="hover:text-[#101828] transition-colors">Terms of Engagement</Link>
+
+            {/* Scroll to Top Button */}
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#D0D5DD] bg-white text-[#344054] hover:bg-[#F0F9FF] hover:text-[#0284C7] hover:border-[#BAE6FD] text-xs font-semibold shadow-2xs transition-all cursor-pointer group active:scale-95"
+              aria-label="Scroll to top of page"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3.5 h-3.5 text-[#0284C7] group-hover:-translate-y-0.5 transition-transform" />
+            </button>
           </div>
         </div>
       </div>

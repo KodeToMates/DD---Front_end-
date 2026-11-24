@@ -187,11 +187,10 @@ export default function Interactive3DCarousel() {
               type="button"
               onClick={() => setIsAutoPlay((prev) => !prev)}
               aria-label={isAutoPlay ? 'Pause auto-switch' : 'Resume auto-switch'}
-              className={`px-3 py-2 rounded-xl text-xs font-mono font-semibold flex items-center gap-2 border transition-all ${
-                isAutoPlay
+              className={`px-3 py-2 rounded-xl text-xs font-mono font-semibold flex items-center gap-2 border transition-all ${isAutoPlay
                   ? 'bg-[#F0F9FF] border-[#BAE6FD] text-[#0284C7]'
                   : 'bg-white border-[#D0D5DD] text-[#667085] hover:text-[#101828]'
-              }`}
+                }`}
             >
               {isAutoPlay ? (
                 <>
@@ -225,7 +224,7 @@ export default function Interactive3DCarousel() {
         {/* 3D Perspective Carousel Stage */}
         <div className="relative perspective-1200 py-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Active Card (Large Centerpiece with 3D Depth) */}
             <div className="lg:col-span-8" data-aos="zoom-in-up" data-aos-duration="700">
               <AnimatePresence mode="wait">
@@ -258,10 +257,7 @@ export default function Interactive3DCarousel() {
                           </div>
                         </div>
 
-                        <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ECFDF3] border border-[#A6F4C5] text-[#027A48] text-xs font-mono font-bold">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#12B76A] animate-ping" />
-                          Verified Result
-                        </span>
+
                       </div>
 
                       {/* Subtitle & Impact */}
@@ -343,11 +339,10 @@ export default function Interactive3DCarousel() {
                   <button
                     key={item.id}
                     onClick={() => handleMenuClick(idx)}
-                    className={`w-full text-left p-4 rounded-2xl transition-all flex items-center justify-between border relative overflow-hidden cursor-pointer ${
-                      isActive
+                    className={`w-full text-left p-4 rounded-2xl transition-all flex items-center justify-between border relative overflow-hidden cursor-pointer ${isActive
                         ? 'bg-white border-[#0284C7] shadow-md scale-102 ring-2 ring-[#0284C7]/15'
                         : 'bg-white/60 hover:bg-white border-[#BAE6FD] hover:border-[#0284C7] text-[#475467]'
-                    }`}
+                      }`}
                   >
                     {/* Active Auto-Switch Progress Line */}
                     {isActive && isAutoPlay && (
@@ -361,9 +356,8 @@ export default function Interactive3DCarousel() {
                     )}
 
                     <div className="flex items-center gap-3">
-                      <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors border ${
-                        isActive ? item.iconBg : 'bg-[#F2F4F7] border-[#EAECF0]'
-                      }`}>
+                      <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors border ${isActive ? item.iconBg : 'bg-[#F2F4F7] border-[#EAECF0]'
+                        }`}>
                         {item.icon}
                       </div>
                       <div>
@@ -376,9 +370,8 @@ export default function Interactive3DCarousel() {
                       </div>
                     </div>
 
-                    <ArrowRight className={`w-4 h-4 shrink-0 transition-transform ${
-                      isActive ? 'text-[#0284C7] translate-x-1' : 'text-[#D0D5DD]'
-                    }`} />
+                    <ArrowRight className={`w-4 h-4 shrink-0 transition-transform ${isActive ? 'text-[#0284C7] translate-x-1' : 'text-[#D0D5DD]'
+                      }`} />
                   </button>
                 );
               })}
@@ -392,11 +385,10 @@ export default function Interactive3DCarousel() {
                 key={idx}
                 onClick={() => handleMenuClick(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2.5 rounded-full transition-all cursor-pointer ${
-                  idx === currentIndex
+                className={`h-2.5 rounded-full transition-all cursor-pointer ${idx === currentIndex
                     ? 'w-8 bg-[#0284C7]'
                     : 'w-2.5 bg-[#D0D5DD] hover:bg-[#98A2B3]'
-                }`}
+                  }`}
               />
             ))}
           </div>

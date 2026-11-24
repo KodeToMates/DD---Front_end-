@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { ArrowRight, CheckCircle2, TrendingUp, Clock, ChevronDown, Play, Sparkles, Layers, ShieldCheck } from 'lucide-react';
 
 interface HeroSlide {
@@ -58,10 +58,79 @@ const heroSlides: HeroSlide[] = [
   },
 ];
 
+// Staggered word blur-in and highlight underline variants (matching crowd hero animation)
+const headingContainerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.04,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      staggerChildren: 0.04,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const wordVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 28,
+    filter: 'blur(10px)',
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: {
+      duration: 0.85,
+      ease: [0.2, 0.7, 0.2, 1] as const,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -16,
+    filter: 'blur(8px)',
+    transition: {
+      duration: 0.35,
+      ease: 'easeIn',
+    },
+  },
+};
+
+const highlightUnderlineVariants: Variants = {
+  hidden: { scaleX: 0, opacity: 0 },
+  visible: {
+    scaleX: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.85,
+      delay: 0.32,
+      ease: [0.5, 0, 0.2, 1] as const,
+    },
+  },
+  exit: {
+    scaleX: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.25,
+      ease: 'easeIn',
+    },
+  },
+};
+
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState<'executive' | 'operations' | 'cashflow'>('executive');
   const [isHovered, setIsHovered] = useState(false);
+
+  // Temporary toggle: set to true to restore the right-side datalive-executive-bi.pbi dashboard showcase card
+  const SHOW_DASHBOARD_SHOWCASE = false;
 
   // Auto-advance slides and text every 3 seconds automatically
   useEffect(() => {
@@ -121,12 +190,12 @@ export default function HeroSection() {
 
       {/* Main Hero Content Container */}
       <div className="relative z-20 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10 sm:pt-14 my-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+        <div className={`grid grid-cols-1 ${SHOW_DASHBOARD_SHOWCASE ? 'lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12' : 'max-w-4xl mx-auto'} items-center`}>
 
-          {/* Left Column: Typographic Hierarchy (6 Cols) */}
-          <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
+          {/* Hero Typographic Content (Centered when showcase card is disabled) */}
+          <div className={`${SHOW_DASHBOARD_SHOWCASE ? 'lg:col-span-6 text-center lg:text-left' : 'w-full text-center'} space-y-6 flex flex-col items-center justify-center`}>
             {/* Animated Slide Content (Eyebrow, Heading, Body) */}
-            <div className="min-h-[290px] sm:min-h-[310px] lg:min-h-[330px] flex flex-col justify-center">
+            <div className="min-h-[260px] sm:min-h-[280px] lg:min-h-[300px] flex flex-col justify-center w-full">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
@@ -139,18 +208,49 @@ export default function HeroSection() {
                   {/* Untitled UI Style Eyebrow Pill */}
 
 
-                  {/* Untitled UI Signature Display Heading - Exactly 2 Clean Lines */}
-                  <h1 className="text-3xl sm:text-5xl lg:text-[44px] xl:text-[54px] font-display font-bold tracking-[-0.03em] leading-[1.12] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+                  {/* Animated Word-by-Word Stagger & Blur Heading */}
+                  <motion.h1
+                    variants={headingContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="text-3xl sm:text-5xl lg:text-[44px] xl:text-[54px] font-display font-bold tracking-[-0.03em] leading-[1.12] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]"
+                  >
                     <span className="block">
-                      {heroSlides[currentSlide].headingStart}
+                      {heroSlides[currentSlide].headingStart.split(' ').map((word, wIdx) => (
+                        <motion.span
+                          key={wIdx}
+                          variants={wordVariants}
+                          className="inline-block mr-[0.28em] last:mr-0 text-white"
+                        >
+                          {word}
+                        </motion.span>
+                      ))}
                     </span>
-                    <span className="block mt-1 bg-gradient-to-r from-[#02B8FD] via-[#38BDF8] to-white bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(2,132,199,0.5)]">
-                      {heroSlides[currentSlide].headingAccent}
+                    <span className="block mt-1 relative">
+                      <span className="relative inline-block">
+                        <motion.span
+                          variants={highlightUnderlineVariants}
+                          style={{ transformOrigin: '0 50%' }}
+                          className="absolute -inset-x-2 bottom-1 h-2 sm:h-2.5 rounded-full bg-gradient-to-r from-[#0284C7]/40 via-[#02B8FD]/50 to-[#38BDF8]/40 -z-10 shadow-[0_0_16px_rgba(2,184,253,0.35)] pointer-events-none"
+                        />
+                        <span className="relative z-10 text-[#02B8FD] drop-shadow-[0_2px_16px_rgba(2,184,253,0.55)]">
+                          {heroSlides[currentSlide].headingAccent.split(' ').map((word, wIdx) => (
+                            <motion.span
+                              key={wIdx}
+                              variants={wordVariants}
+                              className="inline-block mr-[0.28em] last:mr-0 text-[#02B8FD]"
+                            >
+                              {word}
+                            </motion.span>
+                          ))}
+                        </span>
+                      </span>
                     </span>
-                  </h1>
+                  </motion.h1>
 
                   {/* Refined Body Lead */}
-                  <p className="text-base sm:text-lg text-white max-w-xl mx-auto lg:mx-0 leading-relaxed font-body drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] font-medium">
+                  <p className={`text-base sm:text-lg text-white ${SHOW_DASHBOARD_SHOWCASE ? 'max-w-xl mx-auto lg:mx-0' : 'max-w-2xl mx-auto'} leading-relaxed font-body drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] font-medium`}>
                     {heroSlides[currentSlide].body}
                   </p>
                 </motion.div>
@@ -158,7 +258,7 @@ export default function HeroSection() {
             </div>
 
             {/* Slide Indicator Progress Bars (Smooth 3s Filling) */}
-            <div className="flex items-center gap-2.5 pt-1 justify-center lg:justify-start">
+            <div className={`flex items-center gap-2.5 pt-1 ${SHOW_DASHBOARD_SHOWCASE ? 'justify-center lg:justify-start' : 'justify-center'}`}>
               {heroSlides.map((slide, idx) => (
                 <button
                   key={idx}
@@ -191,7 +291,7 @@ export default function HeroSection() {
             </div>
 
             {/* Dual CTA Buttons - Untitled UI Styling */}
-            <div className="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <div className={`pt-1 flex flex-col sm:flex-row items-center ${SHOW_DASHBOARD_SHOWCASE ? 'justify-center lg:justify-start' : 'justify-center'} gap-3.5 w-full`}>
               <Link
                 href="/contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-body font-semibold text-sm shadow-lg shadow-[#0284C7]/35 hover:shadow-xl hover:shadow-[#0284C7]/50 active:scale-98 transition-all"
@@ -209,7 +309,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-white font-body drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] font-medium">
+            <div className={`pt-2 flex flex-wrap items-center ${SHOW_DASHBOARD_SHOWCASE ? 'justify-center lg:justify-start' : 'justify-center'} gap-5 text-xs text-white font-body drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] font-medium`}>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
                 <span>Zero ERP Disruption</span>
@@ -225,8 +325,9 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: 3D Perspective Browser Frame (Enlarged Showcase) */}
-          <motion.div
+          {/* Right Column: 3D Perspective Browser Frame (Enlarged Showcase) - Temporarily Disabled */}
+          {SHOW_DASHBOARD_SHOWCASE && (
+            <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -428,6 +529,7 @@ export default function HeroSection() {
               </div>
             </motion.div>
           </motion.div>
+          )}
         </div>
       </div>
 

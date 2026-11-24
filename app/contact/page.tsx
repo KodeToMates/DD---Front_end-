@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Calendar, MessageSquare, Mail, Phone, MapPin, Clock, ShieldCheck, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/layout/WhatsAppButton';
 import { CONTACT_INFO } from '@/data/contact';
 
 export default function ContactPage() {
@@ -68,74 +70,60 @@ export default function ContactPage() {
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            {/* Left Column: Direct Calendar Scheduler (6 Cols) */}
-            <div className="lg:col-span-6 space-y-6" data-aos="fade-right">
-              <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#BAE6FD] shadow-xs space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center">
-                    <Calendar className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Direct Slot Reservation</span>
-                    <h2 className="text-xl sm:text-2xl font-bold font-display text-[#101828]">Book via Online Calendar</h2>
-                  </div>
+            {/* Left Column: Visual Showcase & Direct Details (6 Cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between space-y-6" data-aos="fade-right">
+              {/* Visual Showcase Card with Codebase Image */}
+              <div className="relative rounded-3xl overflow-hidden border border-[#BAE6FD] bg-[#080B14] shadow-md group min-h-[380px] sm:min-h-[460px] flex-1 flex flex-col justify-between p-7 sm:p-9 text-white">
+                <Image
+                  src="/images/dashboard-preview.jpg"
+                  alt="DataLive Enterprise BI & Automation"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 pointer-events-none"
+                />
+                {/* Contrast gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080B14]/95 via-[#080B14]/50 to-transparent pointer-events-none" />
+
+                {/* Top Badge */}
+                <div className="relative z-10 flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#0284C7] font-semibold text-xs shadow-md border border-white/60">
+                    <Sparkles className="w-3.5 h-3.5 text-[#0284C7]" />
+                    <span>Live Architecture Consultation</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-emerald-400 font-mono text-xs font-semibold border border-emerald-500/30">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Available Today
+                  </span>
                 </div>
 
-                <p className="text-sm text-[#475467] leading-relaxed font-body">
-                  Pick a time directly on our Principal Data Architect&apos;s calendar for a live Zoom or Google Meet session.
-                </p>
+                {/* Bottom Overlay Content */}
+                <div className="relative z-10 space-y-4 pt-6">
+                  <h3 className="text-2xl sm:text-3xl font-bold font-display text-white leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                    Stop Guessing. <br />
+                    See Your Business Live.
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-200 font-body leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] font-medium">
+                    Connect your ERP, SQL databases, and Excel archives into automated executive command centers. Turnkey deployment delivered in under 21 days with 100% IP ownership.
+                  </p>
 
-                {/* Simulated Interactive Calendar Box */}
-                <div className="p-6 rounded-2xl bg-[#F0F9FF] border border-[#BAE6FD] space-y-4">
-                  <div className="flex items-center justify-between pb-3 border-b border-[#BAE6FD] text-xs">
-                    <span className="font-semibold text-[#475467]">Strategy Call Duration:</span>
-                    <span className="font-mono text-[#0284C7] font-bold">30 Minutes</span>
+                  <div className="pt-2 flex flex-wrap items-center gap-3">
+                    <a
+                      href={CONTACT_INFO.getWhatsAppUrl('Hi DataLive Intelligence, I would like to consult about automating our MIS and Power BI.')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold shadow-lg transition-all hover:scale-[1.02]"
+                    >
+                      <WhatsAppIcon className="w-4 h-4" />
+                      <span>Instant WhatsApp Inquiry</span>
+                    </a>
+                    <a
+                      href={`mailto:${CONTACT_INFO.email}`}
+                      className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white text-xs sm:text-sm font-semibold transition-all"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>{CONTACT_INFO.email}</span>
+                    </a>
                   </div>
-
-                  <div className="space-y-2 text-xs text-[#475467]">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                      <span>Review current Excel sheets & Tally/ERP bottlenecks</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                      <span>Live demonstration of relevant industry dashboards</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#12B76A]" />
-                      <span>High-level architecture proposal & milestone pricing</span>
-                    </div>
-                  </div>
-
-                  <a
-                    href="https://calendly.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white text-sm font-semibold shadow-xs hover:shadow-md transition-all"
-                  >
-                    <span>Open Live Calendar & Pick Slot</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-
-                {/* WhatsApp Quick Connect Banner */}
-                <div className="p-5 rounded-2xl bg-[#ECFDF3] border border-[#A6F4C5] flex items-center justify-between gap-4">
-                  <div className="space-y-1">
-                    <span className="text-xs font-bold text-[#027A48] uppercase tracking-wider block font-body">
-                      Need An Immediate Answer?
-                    </span>
-                    <p className="text-xs text-[#05603A]">
-                      Message our Principal Architect on WhatsApp directly.
-                    </p>
-                  </div>
-                  <a
-                    href={CONTACT_INFO.getWhatsAppUrl('Hi DataLive Intelligence, I would like to consult about automating our MIS and Power BI.')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 px-4 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-xs hover:bg-[#20ba59] transition-colors flex items-center gap-1.5"
-                  >
-                    <MessageSquare className="w-4 h-4" /> WhatsApp Chat
-                  </a>
                 </div>
               </div>
 
