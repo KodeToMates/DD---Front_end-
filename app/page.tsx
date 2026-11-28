@@ -7,6 +7,7 @@ import ProblemSolutionGrid from '@/components/home/ProblemSolutionGrid';
 import Interactive3DCarousel from '@/components/home/Interactive3DCarousel';
 import RoiCalculator from '@/components/home/RoiCalculator';
 import ServicesMatrix from '@/components/home/ServicesMatrix';
+import KodeToMatesPartnerSection from '@/components/home/KodeToMatesPartnerSection';
 import FeaturedCaseStudy from '@/components/home/FeaturedCaseStudy';
 import Testimonials from '@/components/home/Testimonials';
 import FaqSection from '@/components/shared/FaqSection';
@@ -29,6 +30,7 @@ export default function HomePage() {
       />
       {/* <RoiCalculator /> */}
       <ServicesMatrix />
+      <KodeToMatesPartnerSection />
       {/* <FeaturedCaseStudy /> */}
       {/* <Testimonials /> */}
       <FaqSection
