@@ -150,8 +150,8 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
             <span>ISO / SOC-2 Compliant Cloud Architecture</span>
-            <Link href="/contact" className="hover:text-[#101828] transition-colors">Privacy Policy</Link>
-            <Link href="/contact" className="hover:text-[#101828] transition-colors">Terms of Engagement</Link>
+            <Link href="/privacy" className="hover:text-[#101828] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#101828] transition-colors">Terms of Engagement</Link>
 
             {/* Scroll to Top Button */}
             <button
