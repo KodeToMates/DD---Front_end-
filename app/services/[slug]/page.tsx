@@ -462,7 +462,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <FaqSection
         serviceSlug={service.slug}
         title={`Frequently Asked Questions: ${service.title}`}
-        subtitle={`Real-world answers on security, architecture, deployment velocity, and cost for our ${service.title} service.`}
+        subtitle={`Direct answers on source system connectors, deployment options, licensing considerations, and support for our ${service.title} service.`}
         showSearch={false}
         showCategories={false}
         variant="light"

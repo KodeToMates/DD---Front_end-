@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Compass, RefreshCw, Sparkles } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import FaqSection from '@/components/shared/FaqSection';
 
 export const metadata = {
   title: 'Our Approach | DataLive Intelligence',
@@ -95,6 +96,16 @@ export default function OurApproachPage() {
           ))}
         </div>
       </section>
+
+      <FaqSection
+        pageScope="about-approach"
+        title="Delivery Methodology & Onboarding FAQs"
+        subtitle="Clear answers on sprint timelines, required team involvement, consultation prep, and project handover."
+        showSearch={false}
+        showCategories={false}
+        className="bg-white border-t border-[#EAECF0]"
+        variant="light"
+      />
 
       <CtaBanner />
     </>

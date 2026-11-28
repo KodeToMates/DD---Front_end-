@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Calendar, MessageSquare, Mail, Phone, MapPin, Clock, ShieldCheck, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/layout/WhatsAppButton';
 import { CONTACT_INFO } from '@/data/contact';
+import FaqSection from '@/components/shared/FaqSection';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -87,13 +88,7 @@ export default function ContactPage() {
 
                 {/* Top Badge */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#0284C7] font-semibold text-xs shadow-md border border-white/60">
-                    <Sparkles className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Live Architecture Consultation</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-emerald-400 font-mono text-xs font-semibold border border-emerald-500/30">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Available Today
-                  </span>
+
                 </div>
 
                 {/* Bottom Overlay Content */}
@@ -308,6 +303,16 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection
+        pageScope="contact"
+        title="Before You Reach Out: Consultation FAQs"
+        subtitle="What to share on our initial call, when system access is requested, and how project scoping and pricing work."
+        showSearch={false}
+        showCategories={false}
+        className="bg-white border-t border-[#EAECF0]"
+        variant="light"
+      />
     </>
   );
 }

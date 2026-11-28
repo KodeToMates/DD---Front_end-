@@ -17,8 +17,9 @@ import { FaqItem } from '@/lib/types';
 import {
   allFaqs as defaultFaqs,
   getFaqsForService,
+  getFaqsForIndustry,
+  getFaqsForPage,
   getFeaturedFaqs,
-  getFaqCategories
 } from '@/lib/faqs';
 import { CONTACT_INFO } from '@/data/contact';
 
@@ -27,6 +28,10 @@ export interface FaqSectionProps {
   items?: FaqItem[];
   /** Filter to a specific service slug (pulls from faqs.json) */
   serviceSlug?: string;
+  /** Filter to a specific industry slug (pulls from faqs.json) */
+  industrySlug?: string;
+  /** Filter to a specific page scope key in faqs.json */
+  pageScope?: string;
   /** Filter to a single category by default */
   category?: string;
   /** Whether to show only featured questions */
@@ -58,12 +63,14 @@ export interface FaqSectionProps {
 export default function FaqSection({
   items,
   serviceSlug,
+  industrySlug,
+  pageScope,
   category: initialCategory = 'All',
   featuredOnly = false,
   limit,
   badge,
   title = 'Frequently Asked Questions',
-  subtitle = 'Everything you need to know about our data architecture, timelines, security protocols, and integration methods.',
+  subtitle = 'Everything you need to know about our data architecture, workflows, security protocols, and engagement process.',
   showSearch = true,
   searchPlaceholder = 'Search questions, tools, pricing, or security...',
   showCategories = true,
@@ -76,9 +83,11 @@ export default function FaqSection({
   const baseItems: FaqItem[] = useMemo(() => {
     if (items && items.length > 0) return items;
     if (serviceSlug) return getFaqsForService(serviceSlug);
+    if (industrySlug) return getFaqsForIndustry(industrySlug);
+    if (pageScope) return getFaqsForPage(pageScope, limit);
     if (featuredOnly) return getFeaturedFaqs(limit);
     return defaultFaqs;
-  }, [items, serviceSlug, featuredOnly, limit]);
+  }, [items, serviceSlug, industrySlug, pageScope, featuredOnly, limit]);
 
   const [activeCategory, setActiveCategory] = useState<string>(initialCategory);
   const [searchQuery, setSearchQuery] = useState<string>('');

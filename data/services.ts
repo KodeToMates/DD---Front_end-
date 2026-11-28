@@ -137,16 +137,20 @@ export const servicesData: Service[] = [
     techStack: ['Microsoft Power BI', 'DAX Studio', 'Power Query M', 'SQL Server', 'Tally Prime ODBC', 'Azure Data Factory'],
     faqs: [
       {
-        question: 'Can Power BI pull data directly from our customized Tally Prime setup?',
-        answer: 'Yes. We utilize direct ODBC gateways, automated XML exports, or SQL staging mirrors to fetch real-time vouchers, ledger balances, and inventory movements with zero manual copy-pasting.',
+        question: 'Which ERP and accounting tools do you integrate with Power BI?',
+        answer: 'Integration depends on your source ERP or accounting system and the available connectors or export mechanisms. We assess your setup during discovery to choose the cleanest, most dependable connection approach.',
       },
       {
-        question: 'Do we need expensive enterprise Microsoft licenses to get started?',
-        answer: 'No. Most mid-market companies start effectively with Power BI Pro licenses (~$10/user/month). We design the deployment to minimize licensing overhead while maximizing distribution across your leadership team.',
+        question: 'What Power BI licensing guidance do you provide?',
+        answer: 'We help you evaluate licensing considerations based on how many creators build reports, how many team members view dashboards, and your deployment architecture. Microsoft Power BI licensing is subject to Microsoft’s current plans and pricing.',
       },
       {
-        question: 'How secure is our financial data when hosted on Power BI Service?',
-        answer: 'Your data is encrypted in transit (TLS 1.3) and at rest within Microsoft Azure’s enterprise cloud. We implement strict Row-Level Security (RLS) and multi-factor authentication (MFA).',
+        question: 'How often can dashboards refresh, and can customized Tally TDL fields be accessed?',
+        answer: 'Refresh frequency and access to customized Tally TDL fields depend on your source database setup, available connector, and Power BI service configuration. These requirements are validated specifically for each project.',
+      },
+      {
+        question: 'How do mobile access and department-wise data visibility work?',
+        answer: 'Power BI reports can be formatted cleanly for mobile viewing, with role-based access controls and Row-Level Security (RLS) configured where supported so regional or department leaders only view authorized data.',
       },
     ],
   },
@@ -254,12 +258,16 @@ export const servicesData: Service[] = [
     techStack: ['Microsoft SQL Server', 'PostgreSQL', 'MySQL', 'Azure SQL Database', 'Python', 'SSIS'],
     faqs: [
       {
-        question: 'We currently store data across 10 different Excel files. Can you migrate that to SQL?',
-        answer: 'Absolutely. We build automated data ingestion scripts that validate, clean, deduplicate, and migrate historical spreadsheet records into a robust relational database schema.',
+        question: 'Which database engines and hosting environments do you support?',
+        answer: 'We support Microsoft SQL Server, MySQL, and PostgreSQL, with flexible deployment options across cloud, on-premises, and hybrid environments depending on your organization’s infrastructure requirements.',
       },
       {
-        question: 'How do you handle queries that currently take 10 minutes to run in our ERP?',
-        answer: 'We analyze query execution plans, identify missing non-clustered indexes, partition large transaction tables, and build pre-aggregated reporting views to reduce execution times to seconds.',
+        question: 'Can you combine data from multiple Excel files, Tally, and CRM tools?',
+        answer: 'Yes. Data from multiple sources—including scattered Excel workbooks, Tally records, and CRM platforms—can be consolidated into a central SQL database, subject to data availability, format consistency, and approved access.',
+      },
+      {
+        question: 'Will analytical reporting queries slow down our live operational systems?',
+        answer: 'Our database solutions are designed to minimize impact on live production systems by utilizing read-only connections, scheduled off-peak syncs, or dedicated staged reporting layers wherever possible.',
       },
     ],
   },
@@ -367,12 +375,16 @@ export const servicesData: Service[] = [
     techStack: ['Microsoft Excel 365', 'Power Query (M-Code)', 'VBA / Visual Basic for Applications', 'Office Scripts', 'Power Pivot'],
     faqs: [
       {
-        question: 'Will these automated workbooks work across different computers and Excel versions?',
-        answer: 'Yes. We build backward-compatible Power Query and VBA modules designed to run consistently across Microsoft 365, Excel 2019, and Excel 2021 environments.',
+        question: 'Do automated workbooks work on Windows, Mac, and older Excel versions?',
+        answer: 'Compatibility depends on your Excel version and the specific automation features required (such as VBA macros or Power Query). We verify and test workbooks against your target Excel environment before final delivery.',
       },
       {
-        question: 'Our current macros crash often. Why will yours be different?',
-        answer: 'Most internal macros are created using the basic macro recorder, which hardcodes brittle cell coordinates. We write clean, structured code with explicit dynamic ranges, error handling, and data validation.',
+        question: 'How do you protect complex formulas and automation logic from accidental edits?',
+        answer: 'Critical formula cells and backend calculation sheets can be locked and protected, paired with clearly designated user input areas and step-by-step usage instructions.',
+      },
+      {
+        question: 'When should a company use Excel Automation versus Power BI or SQL?',
+        answer: 'Excel Automation is ideal for structured departmental workflows and financial packs; SQL excels at centralized multi-source data storage and transformation; Power BI is best for interactive executive dashboards and visual cross-branch analysis.',
       },
     ],
   },
@@ -480,12 +492,16 @@ export const servicesData: Service[] = [
     techStack: ['Python Reporting Engines', 'SQL Server', 'Power BI Paginated Reports', 'WhatsApp Business API', 'SendGrid / SMTP'],
     faqs: [
       {
-        question: 'Can the daily flash report be sent directly to our WhatsApp group?',
-        answer: 'Yes! We configure secure webhooks using WhatsApp Business API to deliver concise text summaries and PDF attachments directly to management groups every morning.',
+        question: 'How are automated Email and WhatsApp MIS reports delivered?',
+        answer: 'Automated MIS reports can be configured for scheduled Email distribution as well as other agreed communication channels such as WhatsApp, giving decision-makers timely visibility into daily or periodic numbers.',
       },
       {
-        question: 'What if yesterday’s data is not entered into the system on time?',
-        answer: 'Our reporting engine includes built-in data completeness checks. If a branch fails to enter vouchers by cutoff time, an automated reminder is triggered to the branch manager.',
+        question: 'Are WhatsApp API or SMS charges included, or billed separately?',
+        answer: 'WhatsApp Business API and SMS messaging charges are billed separately to the client, based directly on the messaging service provider’s pricing and actual message usage.',
+      },
+      {
+        question: 'What happens if staff entries are not updated before the report cutoff time?',
+        answer: 'Automated reports reflect the latest available source data at the time of generation. Where included in the agreed workflow, missing or delayed branch entries can also be flagged for follow-up.',
       },
     ],
   },
@@ -590,15 +606,19 @@ export const servicesData: Service[] = [
         description: 'Deploying the bot with audit logs, screen recordings on failure, and automatic notification alerts on completion.',
       },
     ],
-    techStack: ['Python Playwright & Selenium', 'Microsoft Power Automate', 'Tesseract / Azure AI Vision OCR', 'Pandas', 'Windows Task Scheduler'],
+    techStack: ['UiPath RPA', 'Python Playwright & Selenium', 'Microsoft Power Automate', 'Tesseract / Azure AI Vision OCR', 'Pandas', 'Windows Task Scheduler'],
     faqs: [
       {
-        question: 'Do we need to buy expensive RPA platform licenses like UiPath?',
-        answer: 'Not necessarily! For most mid-market requirements, we build tailored, license-free Python digital workers or leverage Microsoft Power Automate Desktop, saving you thousands of dollars in recurring software fees.',
+        question: 'Which automation tools do you use, and are recurring RPA licenses required?',
+        answer: 'UiPath RPA is part of our core automation capability alongside complementary scripting and workflow tools. Specific tool selection and licensing requirements depend on the scope of your automation project.',
       },
       {
-        question: 'What happens if a vendor changes their invoice layout?',
-        answer: 'Our OCR bots employ intelligent key-value matching and machine learning models that locate invoice numbers, dates, GSTINs, and totals even if the layout shifts.',
+        question: 'What happens when vendor invoice formats or external portal layouts change?',
+        answer: 'When source document layouts or portal workflows change, bots may require updates and re-testing to keep running reliably. Post-launch maintenance and update terms are agreed within the project scope.',
+      },
+      {
+        question: 'Where do RPA bots run, and what happens if an execution run fails?',
+        answer: 'Bot deployment environments depend on the client’s IT infrastructure and security requirements. Failure handling can include detailed execution logs, automated alerts, and controlled retries where configured.',
       },
     ],
   },
@@ -706,12 +726,16 @@ export const servicesData: Service[] = [
     techStack: ['Data Governance Frameworks', 'Star Schema Data Modeling', 'Power BI Enterprise', 'SQL Data Lakehouses', 'Azure / AWS Cloud Data Platforms'],
     faqs: [
       {
-        question: 'How long does a full BI Strategy engagement take?',
-        answer: 'Our initial Data Audit & Strategy Roadmap is delivered in just 2 to 3 weeks, including the full KPI dictionary, architectural blueprint, and prioritized implementation plan.',
+        question: 'Who is Business Intelligence Strategy consulting intended for?',
+        answer: 'This service is designed for businesses that want clearer performance reporting, consistent and reliable KPIs across departments, and stronger data foundations for executive decision-making.',
       },
       {
-        question: 'Can you work alongside our existing internal IT and accounting team?',
-        answer: 'Yes! We act as specialized data architects who elevate and train your internal staff rather than replacing them, leaving your team with self-sufficient capabilities.',
+        question: 'What deliverables and timeline are included in a BI Strategy engagement?',
+        answer: 'Deliverables typically cover a KPI review, source-system data assessment, reporting recommendations, and a practical implementation roadmap. Final scope and timeline are confirmed following discovery.',
+      },
+      {
+        question: 'Do you collaborate with and train our existing internal teams?',
+        answer: 'Yes. Requirements can be developed collaboratively alongside your internal IT and business teams, with formal training and handover documentation included as part of the agreed scope.',
       },
     ],
   },

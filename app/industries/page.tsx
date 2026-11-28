@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { industriesData } from '@/data/industries';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import FaqSection from '@/components/shared/FaqSection';
 import { getIndustryRealIcon } from '@/components/shared/BrandLogos';
 
 export const metadata = {
@@ -90,6 +91,16 @@ export default function IndustriesPage() {
           })}
         </div>
       </section>
+
+      <FaqSection
+        pageScope="industries-overview"
+        title="Industry Data & Integration FAQs"
+        subtitle="Explore how we assess ERP, plant hardware, sensitive audit controls, hospital HIS, telematics, and multi-store POS connectivity across each vertical."
+        showSearch={true}
+        showCategories={true}
+        className="bg-white border-t border-[#EAECF0]"
+        variant="light"
+      />
 
       <CtaBanner />
     </>

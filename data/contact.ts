@@ -13,7 +13,7 @@ export const CONTACT_INFO = {
   emailHref: 'mailto:dataliveintelligence@gmail.com',
   hours: 'Mon - Sat: 9:00 AM - 7:00 PM IST',
   slaGuarantee: 'Response within 4 business hours',
-  address: 'Global Delivery & India Regional Hubs',
+  address: 'Coimbatore, Tamil Nadu, India (India & Global Delivery)',
 
   /**
    * Generates a direct WhatsApp link with a custom or default inquiry message

@@ -63,7 +63,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#0284C7]" />
-                <span>Global Delivery & India Regional Hubs</span>
+                <span>{CONTACT_INFO.address}</span>
               </div>
             </div>
           </div>

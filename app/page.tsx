@@ -22,12 +22,12 @@ export default function HomePage() {
       <SkillsSection />
       <ProblemSolutionGrid />
       <Interactive3DCarousel />
-       <CtaBanner
+      <CtaBanner
         title="Ready to Eliminate Spreadsheet Chaos & See Your Business Live?"
         highlightText="Spreadsheet Chaos"
         subhead="Book a zero-cost 30-minute discovery call with our Principal BI Architect. We review your current bottlenecks and outline a concrete 3-step automation roadmap."
       />
-      <RoiCalculator />
+      {/* <RoiCalculator /> */}
       <ServicesMatrix />
       {/* <FeaturedCaseStudy /> */}
       {/* <Testimonials /> */}
@@ -35,7 +35,7 @@ export default function HomePage() {
         featuredOnly={true}
         limit={6}
         title="Frequently Asked Questions"
-        subtitle="Got questions about our rapid 14-day sprint, data privacy, or custom Tally & ERP integration? Here are direct answers."
+        subtitle="Direct answers on service selection, report automation, system integrations, project timelines, security arrangements, and file ownership."
         showSearch={false}
         showCategories={false}
         variant="light"

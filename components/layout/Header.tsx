@@ -9,57 +9,73 @@ import {
   Menu,
   X,
   ArrowRight,
-  BarChart3,
-  Factory,
-  Landmark,
-  HeartPulse,
-  Activity,
-  Truck,
-  ShoppingBag,
-  Database,
-  FileSpreadsheet,
-  FileText,
-  Bot,
-  LineChart,
-  Building2,
-  Compass,
-  ShieldCheck,
-  Award,
-  BookOpen,
-  HelpCircle,
   Sparkles,
 } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
+import { NavItem } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import MobileDrawer from './MobileDrawer';
+import { getNavRealIcon, type NavSectionGroup } from './navIcons';
 
-const navIconMap: Record<string, React.ElementType> = {
-  // Industries
-  Factory,
-  Landmark,
-  HeartPulse,
-  Activity: HeartPulse,
-  Truck,
-  ShoppingBag,
+interface DropdownNavItemProps {
+  group: NavSectionGroup;
+  item: NavItem;
+  detailed?: boolean;
+}
 
-  // Services
-  BarChart3,
-  Database,
-  FileSpreadsheet,
-  FileText,
-  Bot,
-  LineChart,
+function DropdownNavItem({ group, item, detailed = false }: DropdownNavItemProps) {
+  const { icon, containerClass } = getNavRealIcon(
+    group,
+    item,
+    detailed ? 'w-5 h-5' : 'w-4 h-4'
+  );
 
-  // About
-  Building2,
-  Compass,
-  ShieldCheck,
-
-  // Resources
-  Award,
-  BookOpen,
-  HelpCircle,
-};
+  return (
+    <Link
+      href={item.href}
+      className={cn(
+        'rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]',
+        detailed ? 'p-3' : 'p-2.5'
+      )}
+    >
+      <div
+        className={cn(
+          'rounded-lg border flex items-center justify-center shrink-0 mt-0.5 shadow-2xs transition-all duration-200 group-hover:scale-105 group-hover:shadow-sm',
+          detailed ? 'w-9 h-9' : 'w-8 h-8',
+          containerClass
+        )}
+      >
+        {icon}
+      </div>
+      <div className="flex-1 min-w-0">
+        {detailed ? (
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors font-display">
+              {item.title}
+            </span>
+            {item.badge && (
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F0F9FF] text-[#0369A1] border border-[#BAE6FD]">
+                {item.badge}
+              </span>
+            )}
+          </div>
+        ) : (
+          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
+            {item.title}
+          </span>
+        )}
+        <p
+          className={cn(
+            'text-xs text-[#475467] font-body',
+            detailed ? 'line-clamp-2 leading-relaxed' : 'mt-0.5 line-clamp-1'
+          )}
+        >
+          {item.description}
+        </p>
+      </div>
+    </Link>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -159,35 +175,14 @@ export default function Header() {
                       View All Services &rarr;
                     </Link>
                   </div>
-                  {servicesNav.map((item) => {
-                    const Icon = (item.iconName && navIconMap[item.iconName]) || BarChart3;
-                    return (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="p-3 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
-                      >
-                        <div className="w-9 h-9 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
-                          <Icon className="w-4.5 h-4.5" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors font-display">
-                              {item.title}
-                            </span>
-                            {item.badge && (
-                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F0F9FF] text-[#0369A1] border border-[#BAE6FD]">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-[#475467] line-clamp-2 leading-relaxed font-body">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                  {servicesNav.map((item) => (
+                    <DropdownNavItem
+                      key={item.href}
+                      group="services"
+                      item={item}
+                      detailed
+                    />
+                  ))}
                 </div>
               )}
             </div>
@@ -219,28 +214,13 @@ export default function Header() {
                       Overview &rarr;
                     </Link>
                   </div>
-                  {industriesNav.map((item) => {
-                    const Icon = (item.iconName && navIconMap[item.iconName]) || Factory;
-                    return (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="p-2.5 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
-                          <Icon className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
-                            {item.title}
-                          </span>
-                          <p className="text-xs text-[#475467] line-clamp-1 font-body">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                  {industriesNav.map((item) => (
+                    <DropdownNavItem
+                      key={item.href}
+                      group="industries"
+                      item={item}
+                    />
+                  ))}
                 </div>
               )}
             </div>
@@ -266,28 +246,13 @@ export default function Header() {
 
               {activeDropdown === 'about' && (
                 <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#BAE6FD] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
-                  {aboutNav.map((item) => {
-                    const Icon = (item.iconName && navIconMap[item.iconName]) || Building2;
-                    return (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="p-2.5 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
-                          <Icon className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
-                            {item.title}
-                          </span>
-                          <p className="text-xs text-[#475467] mt-0.5 font-body line-clamp-1">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                  {aboutNav.map((item) => (
+                    <DropdownNavItem
+                      key={item.href}
+                      group="about"
+                      item={item}
+                    />
+                  ))}
                 </div>
               )}
             </div>
@@ -313,28 +278,13 @@ export default function Header() {
 
               {activeDropdown === 'resources' && (
                 <div className="absolute top-full left-0 w-[340px] p-3 bg-white rounded-2xl shadow-xl border border-[#BAE6FD] flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-150">
-                  {resourcesNav.map((item) => {
-                    const Icon = (item.iconName && navIconMap[item.iconName]) || BookOpen;
-                    return (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="p-2.5 rounded-xl hover:bg-[#F9FAFB] transition-colors group flex items-start gap-3 border border-transparent hover:border-[#EAECF0]"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
-                          <Icon className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <span className="text-sm font-bold text-[#101828] group-hover:text-[#0284C7] transition-colors block font-display">
-                            {item.title}
-                          </span>
-                          <p className="text-xs text-[#475467] mt-0.5 font-body line-clamp-1">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                  {resourcesNav.map((item) => (
+                    <DropdownNavItem
+                      key={item.href}
+                      group="resources"
+                      item={item}
+                    />
+                  ))}
                 </div>
               )}
             </div>

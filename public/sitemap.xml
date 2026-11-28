@@ -126,5 +126,41 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://dataliveintelligence.com/resources/blog/power-bi-tally-erp-integration-guide</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dataliveintelligence.com/resources/blog/excel-vs-sql-vs-power-bi-enterprise-guide</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dataliveintelligence.com/resources/blog/automated-email-whatsapp-mis-reporting-architecture</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dataliveintelligence.com/resources/blog/uipath-rpa-bank-reconciliation-invoice-automation</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dataliveintelligence.com/resources/blog/sql-reporting-layer-indexing-performance-guide</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dataliveintelligence.com/resources/blog/enterprise-bi-strategy-kpi-dictionary-roadmap</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 

@@ -62,6 +62,8 @@ export interface FaqItem {
   tags?: string[];
   featured?: boolean;
   serviceSlug?: string | null;
+  industrySlug?: string | null;
+  pageScopes?: string[];
 }
 
 export interface NavItem {
@@ -70,5 +72,124 @@ export interface NavItem {
   description?: string;
   iconName?: string;
   badge?: string;
+}
+
+export type BlogSectionType =
+  | 'heading'
+  | 'paragraph'
+  | 'list'
+  | 'table'
+  | 'graph'
+  | 'image'
+  | 'callout'
+  | 'cta';
+
+export interface BlogHeadingSection {
+  type: 'heading';
+  level: 2 | 3;
+  text: string;
+  anchorId?: string;
+}
+
+export interface BlogParagraphSection {
+  type: 'paragraph';
+  text: string;
+}
+
+export interface BlogListSection {
+  type: 'list';
+  style: 'bullet' | 'numbered' | 'checklist';
+  title?: string;
+  items: string[];
+}
+
+export interface BlogTableSection {
+  type: 'table';
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
+
+export interface BlogGraphItem {
+  label: string;
+  value: number;
+  secondaryLabel?: string;
+  secondaryValue?: number;
+  note?: string;
+}
+
+export interface BlogGraphSection {
+  type: 'graph';
+  title: string;
+  subtitle?: string;
+  chartType: 'bar' | 'comparison' | 'metric' | 'line';
+  unit?: string;
+  primarySeriesLabel?: string;
+  secondarySeriesLabel?: string;
+  items: BlogGraphItem[];
+}
+
+export interface BlogImageSection {
+  type: 'image';
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface BlogCalloutSection {
+  type: 'callout';
+  variant?: 'tip' | 'info' | 'quote';
+  text: string;
+  citation?: string;
+}
+
+export interface BlogCtaSection {
+  type: 'cta';
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonHref: string;
+}
+
+export type BlogSection =
+  | BlogHeadingSection
+  | BlogParagraphSection
+  | BlogListSection
+  | BlogTableSection
+  | BlogGraphSection
+  | BlogImageSection
+  | BlogCalloutSection
+  | BlogCtaSection;
+
+export interface BlogLink {
+  word: string;
+  url: string;
+  isExternal: boolean;
+}
+
+export interface BlogAuthor {
+  name: string;
+  role: string;
+  location?: string;
+}
+
+export interface BlogArticle {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  tags: string[];
+  publishDate: string;
+  readTime: string;
+  thumbnail: string;
+  thumbnailAlt: string;
+  description: string;
+  author: BlogAuthor;
+  links: BlogLink[];
+  sections: BlogSection[];
+}
+
+export interface BlogsJsonData {
+  articles: BlogArticle[];
 }
 

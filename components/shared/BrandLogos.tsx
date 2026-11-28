@@ -314,6 +314,158 @@ export function getTechToolLogo(techName: string, className = 'w-4 h-4'): React.
   return null;
 }
 
+// -------------------------------------------------------------
+// Real Vibrant About & Resources Icons (Multi-Tone Vectors)
+// -------------------------------------------------------------
+
+export function CompanyRealIcon({ className = 'w-6 h-6' }: LogoProps) {
+  return (
+    <svg className={`${className} shrink-0`} viewBox="0 0 24 24" fill="none">
+      {/* Main Corporate Tower */}
+      <rect x="4" y="3" width="11" height="18" rx="1.8" fill="#E0F2FE" stroke="#0284C7" strokeWidth="1.7" />
+      {/* Side Wing */}
+      <path d="M15 9h3.5A1.5 1.5 0 0 1 20 10.5V21h-5V9z" fill="#BAE6FD" stroke="#0369A1" strokeWidth="1.7" strokeLinejoin="round" />
+      {/* Lit Office Windows */}
+      <rect x="6.5" y="6" width="2" height="2.2" rx="0.4" fill="#F59E0B" />
+      <rect x="10.5" y="6" width="2" height="2.2" rx="0.4" fill="#0284C7" />
+      <rect x="6.5" y="10" width="2" height="2.2" rx="0.4" fill="#0284C7" />
+      <rect x="10.5" y="10" width="2" height="2.2" rx="0.4" fill="#F59E0B" />
+      <rect x="16.5" y="12" width="1.8" height="2" rx="0.4" fill="#0369A1" />
+      <rect x="16.5" y="15.5" width="1.8" height="2" rx="0.4" fill="#0284C7" />
+      {/* Entrance & Ground */}
+      <rect x="8" y="15.5" width="3" height="5.5" rx="0.6" fill="#032B69" />
+      <path d="M2 21h20" stroke="#0369A1" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ApproachRealIcon({ className = 'w-6 h-6' }: LogoProps) {
+  return (
+    <svg className={`${className} shrink-0`} viewBox="0 0 24 24" fill="none">
+      {/* Compass Outer Dial */}
+      <circle cx="12" cy="12" r="9.5" fill="#EEF2FF" stroke="#4F46E5" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="6.8" stroke="#A5B4FC" strokeWidth="1" strokeDasharray="2 2" />
+      {/* North Needle (Coral Red) */}
+      <path d="M15.8 8.2L10.3 10.3L13.7 13.7L15.8 8.2Z" fill="#E11D48" />
+      {/* South Needle (Sky Blue) */}
+      <path d="M8.2 15.8L13.7 13.7L10.3 10.3L8.2 15.8Z" fill="#0284C7" />
+      {/* Gold Pivot */}
+      <circle cx="12" cy="12" r="1.4" fill="#FACC15" stroke="#B45309" strokeWidth="0.8" />
+    </svg>
+  );
+}
+
+export function WhyChooseUsRealIcon({ className = 'w-6 h-6' }: LogoProps) {
+  return (
+    <svg className={`${className} shrink-0`} viewBox="0 0 24 24" fill="none">
+      {/* Emerald Shield */}
+      <path
+        d="M12 2.5L4.5 5.8v5.7c0 5 3.2 9.4 7.5 10.5 4.3-1.1 7.5-5.5 7.5-10.5V5.8L12 2.5z"
+        fill="#D1FAE5"
+        stroke="#059669"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      {/* Verified Ribbon / Check */}
+      <path d="M8.8 12.2l2.2 2.2 4.4-4.6" stroke="#047857" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Gold Star Accent */}
+      <path d="M18.5 3.2l.6 1.2 1.3.5-1.3.5-.6 1.2-.6-1.2-1.3-.5 1.3-.5.6-1.2z" fill="#F59E0B" />
+    </svg>
+  );
+}
+
+export function CaseStudiesRealIcon({ className = 'w-6 h-6' }: LogoProps) {
+  return (
+    <svg className={`${className} shrink-0`} viewBox="0 0 24 24" fill="none">
+      {/* Handles */}
+      <path d="M6 5H3.8a1.3 1.3 0 0 0-1.3 1.3c0 2.5 1.4 4.4 3.5 4.9" stroke="#D97706" strokeWidth="1.7" strokeLinecap="round" />
+      <path d="M18 5h2.2a1.3 1.3 0 0 1 1.3 1.3c0 2.5-1.4 4.4-3.5 4.9" stroke="#D97706" strokeWidth="1.7" strokeLinecap="round" />
+      {/* Gold Cup */}
+      <path d="M6 4h12v5.5a6 6 0 0 1-12 0V4z" fill="#FDE68A" stroke="#D97706" strokeWidth="1.8" strokeLinejoin="round" />
+      {/* Star Inside Cup */}
+      <path d="M12 6.2l.8 1.6 1.7.3-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.3.8-1.6z" fill="#B45309" />
+      {/* Stem & Pedestal */}
+      <path d="M12 15.5V19" stroke="#B45309" strokeWidth="2" />
+      <rect x="7.5" y="19" width="9" height="2.5" rx="0.8" fill="#1E293B" />
+    </svg>
+  );
+}
+
+export function KnowledgeBlogRealIcon({ className = 'w-6 h-6' }: LogoProps) {
+  return (
+    <svg className={`${className} shrink-0`} viewBox="0 0 24 24" fill="none">
+      {/* Left & Right Book Pages */}
+      <path
+        d="M2.5 5.5A2.5 2.5 0 0 1 5 3h5.5A1.5 1.5 0 0 1 12 4.5v15a1.5 1.5 0 0 0-1.5-1.5H4a1.5 1.5 0 0 1-1.5-1.5V5.5z"
+        fill="#E0F2FE"
+        stroke="#0284C7"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M21.5 5.5A2.5 2.5 0 0 0 19 3h-5.5A1.5 1.5 0 0 0 12 4.5v15a1.5 1.5 0 0 1 1.5-1.5H20a1.5 1.5 0 0 0 1.5-1.5V5.5z"
+        fill="#CCFBF1"
+        stroke="#0D9488"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+      {/* Content Lines */}
+      <path d="M5.5 7.5h3.5M5.5 11h3.5M15 7.5h3.5M15 11h3.5" stroke="#0369A1" strokeWidth="1.4" strokeLinecap="round" />
+      {/* Orange Bookmark */}
+      <path d="M15.5 3v6.5l1.3-1 1.3 1V3" fill="#F97316" />
+    </svg>
+  );
+}
+
+export function FaqsRealIcon({ className = 'w-6 h-6' }: LogoProps) {
+  return (
+    <svg className={`${className} shrink-0`} viewBox="0 0 24 24" fill="none">
+      {/* Primary Question Bubble */}
+      <path
+        d="M3 5.5A2.5 2.5 0 0 1 5.5 3h9A2.5 2.5 0 0 1 17 5.5v6A2.5 2.5 0 0 1 14.5 14H8l-3.5 3V14H5.5A2.5 2.5 0 0 1 3 11.5v-6z"
+        fill="#7C3AED"
+        stroke="#6D28D9"
+        strokeWidth="1.4"
+        strokeLinejoin="round"
+      />
+      {/* Question Mark */}
+      <path d="M8.5 7.2a1.6 1.6 0 1 1 2.4 1.4c-.6.3-.9.7-.9 1.4" stroke="white" strokeWidth="1.7" strokeLinecap="round" />
+      <circle cx="10" cy="11.9" r="0.8" fill="white" />
+      {/* Overlapping Answer Bubble */}
+      <path
+        d="M11 11.5A2 2 0 0 1 13 9.5h6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v2.3l-2.5-2.3H13a2 2 0 0 1-2-2v-5z"
+        fill="#E0F2FE"
+        stroke="#0284C7"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M14 13h4.5M14 15.5h3" stroke="#0284C7" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function getAboutRealIcon(aboutKey: string, className = 'w-6 h-6'): React.ReactNode {
+  const key = aboutKey.toLowerCase();
+  if (key.includes('approach') || key.includes('compass')) {
+    return <ApproachRealIcon className={className} />;
+  }
+  if (key.includes('why') || key.includes('shield')) {
+    return <WhyChooseUsRealIcon className={className} />;
+  }
+  return <CompanyRealIcon className={className} />;
+}
+
+export function getResourceRealIcon(resourceKey: string, className = 'w-6 h-6'): React.ReactNode {
+  const key = resourceKey.toLowerCase();
+  if (key.includes('case') || key.includes('award')) {
+    return <CaseStudiesRealIcon className={className} />;
+  }
+  if (key.includes('faq') || key.includes('help')) {
+    return <FaqsRealIcon className={className} />;
+  }
+  return <KnowledgeBlogRealIcon className={className} />;
+}
+
 export function getIndustryRealIcon(industryId: string, className = 'w-6 h-6'): React.ReactNode {
   const key = industryId.toLowerCase();
 

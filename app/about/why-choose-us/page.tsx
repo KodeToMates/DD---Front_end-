@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, Check, X, ArrowRight, Zap, Trophy, Clock, Sparkles } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import FaqSection from '@/components/shared/FaqSection';
 
 export const metadata = {
   title: 'Why Choose DataLive Intelligence | Mid-Market Differentiators',
@@ -88,6 +89,16 @@ export default function WhyChooseUsPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection
+        pageScope="about-why"
+        title="Engagement, Expansion & Ownership FAQs"
+        subtitle="Practical details on pricing options, starting modularly, collaborating with internal teams, and post-launch support."
+        showSearch={false}
+        showCategories={false}
+        className="bg-white"
+        variant="light"
+      />
 
       <CtaBanner />
     </>

@@ -8,57 +8,69 @@ import {
   ArrowRight,
   X,
   Home,
-  Factory,
-  Landmark,
-  HeartPulse,
-  Truck,
-  ShoppingBag,
-  BarChart3,
-  Database,
-  FileSpreadsheet,
-  FileText,
-  Bot,
-  LineChart,
-  Building2,
-  Compass,
-  ShieldCheck,
-  Award,
-  BookOpen,
-  HelpCircle,
-  Phone,
   MessageSquare,
 } from 'lucide-react';
 import { servicesNav, industriesNav, aboutNav, resourcesNav } from '@/data/navigation';
+import { NavItem } from '@/lib/types';
 import { CONTACT_INFO } from '@/data/contact';
 import { cn } from '@/lib/utils';
+import { getNavRealIcon, type NavSectionGroup } from './navIcons';
 
-const navIconMap: Record<string, React.ElementType> = {
-  // Industries
-  Factory,
-  Landmark,
-  HeartPulse,
-  Activity: HeartPulse,
-  Truck,
-  ShoppingBag,
+interface MobileNavSectionProps {
+  group: NavSectionGroup;
+  label: string;
+  items: NavItem[];
+  compact?: boolean;
+  onClose: () => void;
+}
 
-  // Services
-  BarChart3,
-  Database,
-  FileSpreadsheet,
-  FileText,
-  Bot,
-  LineChart,
-
-  // About
-  Building2,
-  Compass,
-  ShieldCheck,
-
-  // Resources
-  Award,
-  BookOpen,
-  HelpCircle,
-};
+function MobileNavSection({
+  group,
+  label,
+  items,
+  compact = false,
+  onClose,
+}: MobileNavSectionProps) {
+  return (
+    <div className="space-y-1">
+      {label && (
+        <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] block mb-2">
+          {label}
+        </span>
+      )}
+      {items.map((item) => {
+        const { icon, containerClass } = getNavRealIcon(
+          group,
+          item,
+          compact ? 'w-3.5 h-3.5' : 'w-4 h-4'
+        );
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={onClose}
+            className={cn(
+              'group flex items-center gap-2.5 px-2 rounded-lg text-sm font-body transition-colors',
+              compact
+                ? 'py-1 text-[#475467] hover:text-[#101828] hover:bg-[#F9FAFB]'
+                : 'py-1.5 font-semibold text-[#344054] hover:text-[#0284C7] hover:bg-[#F9FAFB]'
+            )}
+          >
+            <div
+              className={cn(
+                'w-6 h-6 rounded-md border flex items-center justify-center shrink-0 shadow-2xs transition-all',
+                containerClass
+              )}
+            >
+              {icon}
+            </div>
+            <span>{item.title}</span>
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -124,85 +136,37 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               </Link>
             </div>
 
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Services</span>
-              <div className="mt-2 space-y-1">
-                {servicesNav.map((s) => {
-                  const Icon = (s.iconName && navIconMap[s.iconName]) || BarChart3;
-                  return (
-                    <Link
-                      key={s.href}
-                      href={s.href}
-                      onClick={onClose}
-                      className="flex items-center gap-2.5 py-1.5 px-2 rounded-lg text-sm font-semibold font-body text-[#344054] hover:text-[#0284C7] hover:bg-[#F9FAFB] transition-colors"
-                    >
-                      <div className="w-6 h-6 rounded-md bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0">
-                        <Icon className="w-3.5 h-3.5" />
-                      </div>
-                      <span>{s.title}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
+            <MobileNavSection
+              group="services"
+              label="Services"
+              items={servicesNav}
+              onClose={onClose}
+            />
 
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Industries</span>
-              <div className="mt-2 space-y-1">
-                {industriesNav.map((i) => {
-                  const Icon = (i.iconName && navIconMap[i.iconName]) || Factory;
-                  return (
-                    <Link
-                      key={i.href}
-                      href={i.href}
-                      onClick={onClose}
-                      className="flex items-center gap-2.5 py-1.5 px-2 rounded-lg text-sm font-semibold font-body text-[#344054] hover:text-[#0284C7] hover:bg-[#F9FAFB] transition-colors"
-                    >
-                      <div className="w-6 h-6 rounded-md bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] flex items-center justify-center shrink-0">
-                        <Icon className="w-3.5 h-3.5" />
-                      </div>
-                      <span>{i.title}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
+            <MobileNavSection
+              group="industries"
+              label="Industries"
+              items={industriesNav}
+              onClose={onClose}
+            />
 
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7]">Company & Resources</span>
               <div className="mt-2 space-y-1">
-                {aboutNav.map((a) => {
-                  const Icon = (a.iconName && navIconMap[a.iconName]) || Building2;
-                  return (
-                    <Link
-                      key={a.href}
-                      href={a.href}
-                      onClick={onClose}
-                      className="flex items-center gap-2.5 py-1 px-2 rounded-lg text-sm font-body text-[#475467] hover:text-[#101828] hover:bg-[#F9FAFB] transition-colors"
-                    >
-                      <div className="w-5 h-5 rounded bg-[#F0F9FF] text-[#0284C7] flex items-center justify-center shrink-0">
-                        <Icon className="w-3 h-3" />
-                      </div>
-                      <span>{a.title}</span>
-                    </Link>
-                  );
-                })}
-                {resourcesNav.map((r) => {
-                  const Icon = (r.iconName && navIconMap[r.iconName]) || BookOpen;
-                  return (
-                    <Link
-                      key={r.href}
-                      href={r.href}
-                      onClick={onClose}
-                      className="flex items-center gap-2.5 py-1 px-2 rounded-lg text-sm font-body text-[#475467] hover:text-[#101828] hover:bg-[#F9FAFB] transition-colors"
-                    >
-                      <div className="w-5 h-5 rounded bg-[#F0F9FF] text-[#0284C7] flex items-center justify-center shrink-0">
-                        <Icon className="w-3 h-3" />
-                      </div>
-                      <span>{r.title}</span>
-                    </Link>
-                  );
-                })}
+                <MobileNavSection
+                  group="about"
+                  label=""
+                  items={aboutNav}
+                  compact
+                  onClose={onClose}
+                />
+                <MobileNavSection
+                  group="resources"
+                  label=""
+                  items={resourcesNav}
+                  compact
+                  onClose={onClose}
+                />
                 <Link
                   href="/contact"
                   onClick={onClose}

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { industriesData } from '@/data/industries';
 import { ArrowRight, CheckCircle2, ChevronRight, BarChart3, Factory, ShieldCheck, TrendingUp } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import FaqSection from '@/components/shared/FaqSection';
 
 interface IndustryPageProps {
   params: Promise<{ slug: string }>;
@@ -154,6 +155,16 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
           </div>
         </div>
       </section>
+
+      <FaqSection
+        industrySlug={ind.slug}
+        title={`${ind.title} Integration & Engagement FAQs`}
+        subtitle={`Key questions on data integration feasibility, access controls, and implementation timelines for ${ind.title} teams.`}
+        showSearch={false}
+        showCategories={false}
+        className="bg-white border-t border-[#EAECF0]"
+        variant="light"
+      />
 
       <CtaBanner
         title={`Scale Your ${ind.title.split('&')[0]} Operations with DataLive`}

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, Target, HeartHandshake, Zap, ArrowRight, BarChart3, Users, Award, Sparkles } from 'lucide-react';
 import CtaBanner from '@/components/shared/CtaBanner';
+import FaqSection from '@/components/shared/FaqSection';
 
 export const metadata = {
   title: 'About Our Company | DataLive Intelligence',
@@ -88,6 +89,16 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection
+        pageScope="about-company"
+        title="About DataLive Intelligence: Common Questions"
+        subtitle="Where our team operates from, how we serve Indian and global clients, and how data security and deliverables are agreed upfront."
+        showSearch={false}
+        showCategories={false}
+        className="bg-white"
+        variant="light"
+      />
 
       <CtaBanner />
     </>

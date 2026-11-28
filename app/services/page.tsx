@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { servicesData } from '@/data/services';
+import { getFaqsForPage } from '@/lib/faqs';
 import { FaqItem } from '@/lib/types';
 import CtaBanner from '@/components/shared/CtaBanner';
 import ServicesScrollDeck from '@/components/services/ServicesScrollDeck';
@@ -8,20 +9,28 @@ import FaqSection from '@/components/shared/FaqSection';
 
 export const metadata = {
   title: 'Enterprise Services & Capabilities | DataLive Intelligence',
-  description: 'Explore our full spectrum of data engineering, Power BI, SQL database, MIS reporting, and RPA bot automation services.',
+  description: 'Explore our full spectrum of data engineering, Power BI, SQL database, MIS reporting, and UiPath RPA bot automation services.',
 };
 
 export default function ServicesPage() {
-  const serviceFaqItems: FaqItem[] = servicesData.flatMap((service) =>
-    service.faqs.map((faq, idx) => ({
-      id: `service-faq-${service.slug}-${idx}`,
-      category: service.title,
-      question: faq.question,
-      answer: faq.answer,
-      serviceSlug: service.slug,
-      tags: [service.slug, service.title.toLowerCase()],
-    }))
-  );
+  const overviewFaqItems: FaqItem[] = getFaqsForPage('services-overview').map((faq) => ({
+    ...faq,
+    category: 'Services Overview',
+  }));
+
+  const serviceFaqItems: FaqItem[] = [
+    ...overviewFaqItems,
+    ...servicesData.flatMap((service) =>
+      service.faqs.map((faq, idx) => ({
+        id: `service-faq-${service.slug}-${idx}`,
+        category: service.title,
+        question: faq.question,
+        answer: faq.answer,
+        serviceSlug: service.slug,
+        tags: [service.slug, service.title.toLowerCase()],
+      }))
+    ),
+  ];
 
   return (
     <>
@@ -59,7 +68,7 @@ export default function ServicesPage() {
       <FaqSection
         items={serviceFaqItems}
         title="Frequently Asked Questions Across All Services"
-        subtitle="Direct technical answers on ERP data connectors, cloud security, project timelines, and licensing across our 6 enterprise solutions."
+        subtitle="Direct answers on choosing the right solution, starting modularly, required access, system connectors, licensing, and support."
         showSearch={true}
         showCategories={true}
         variant="light"

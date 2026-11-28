@@ -19,14 +19,35 @@ export function getFaqsByCategory(category: string): FaqItem[] {
 }
 
 /**
- * Returns FAQs relevant to a specific service slug (or related services)
+ * Returns FAQs relevant to a specific service slug (from faqs.json)
  */
 export function getFaqsForService(serviceSlug: string): FaqItem[] {
   const directMatches = allFaqs.filter((f) => f.serviceSlug === serviceSlug);
   if (directMatches.length > 0) return directMatches;
 
-  // Fallback to general high-value questions if no direct service match
   return allFaqs.filter((f) => f.featured || f.category === 'General');
+}
+
+/**
+ * Returns FAQs relevant to a specific industry vertical slug plus shared industry onboarding Q&As
+ */
+export function getFaqsForIndustry(industrySlug: string): FaqItem[] {
+  const directMatches = allFaqs.filter((f) => f.industrySlug === industrySlug);
+  const sharedMatches = allFaqs.filter(
+    (f) => f.industrySlug !== industrySlug && f.pageScopes?.includes('industry-shared')
+  );
+  if (directMatches.length > 0) return [...directMatches, ...sharedMatches];
+
+  return allFaqs.filter((f) => f.featured || f.industrySlug !== null);
+}
+
+/**
+ * Returns FAQs tagged for a specific page scope (e.g. 'home', 'services-overview', 'about-company', 'contact')
+ */
+export function getFaqsForPage(pageScope: string, limit?: number): FaqItem[] {
+  const matched = allFaqs.filter((f) => f.pageScopes?.includes(pageScope));
+  const result = matched.length > 0 ? matched : getFeaturedFaqs();
+  return limit ? result.slice(0, limit) : result;
 }
 
 /**
